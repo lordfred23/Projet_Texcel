@@ -8,13 +8,18 @@ namespace Projet_Texcel
 {
     class Control
     {
+        Form1 form;
         public Control() { }
 
-        public void Init(bool value)
+        public Control(Form1 formulaire) { form = formulaire; }
+
+        public bool connexion(string uti, string pass)
         {
-            
+            bool connexion = false;
+            if ((uti == "admin") && (pass == "admin"))
+                connexion = true;
+            form.Init(connexion);
+            return connexion;
         }
-
-
     }
 }

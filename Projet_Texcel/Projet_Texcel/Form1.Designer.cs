@@ -128,8 +128,9 @@
             // 
             // connexionToolStripMenuItem
             // 
+            this.connexionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.connexionToolStripMenuItem.Name = "connexionToolStripMenuItem";
-            this.connexionToolStripMenuItem.Size = new System.Drawing.Size(91, 27);
+            this.connexionToolStripMenuItem.Size = new System.Drawing.Size(104, 27);
             this.connexionToolStripMenuItem.Text = "Connexion";
             this.connexionToolStripMenuItem.Click += new System.EventHandler(this.connexionToolStripMenuItem_Click);
             // 

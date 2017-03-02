@@ -12,18 +12,16 @@ namespace Projet_Texcel
 {
     public partial class Connexion : Form
     {
-        Control control = new Control();
+        Control control;
         public Connexion()
         {
             InitializeComponent();
+            control = new Control();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string uti = txtUti.Text;
-            string pass = txtPass.Text;
-            
-            
+            control.connexion(txtUti.Text, txtPass.Text);            
         }
     }
 }
