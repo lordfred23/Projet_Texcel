@@ -12,9 +12,21 @@ namespace Projet_Texcel
 {
     public partial class Jeu : Form
     {
-        public Jeu()
+        Form1 form;
+        public Jeu(Form1 form)
         {
             InitializeComponent();
+            this.form = form;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Jeu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            form.jeuConn = false;
         }
     }
 }

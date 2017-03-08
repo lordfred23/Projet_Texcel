@@ -39,6 +39,7 @@
             this.oSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.platformeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@
             this.équipeToolStripMenuItem,
             this.oSToolStripMenuItem,
             this.platformeToolStripMenuItem,
-            this.connexionToolStripMenuItem});
+            this.connexionToolStripMenuItem,
+            this.déconnexionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(857, 31);
@@ -75,24 +77,28 @@
             this.creerJeuToolStripMenuItem.Name = "creerJeuToolStripMenuItem";
             this.creerJeuToolStripMenuItem.Size = new System.Drawing.Size(230, 28);
             this.creerJeuToolStripMenuItem.Text = "Creer Jeu";
+            this.creerJeuToolStripMenuItem.Click += new System.EventHandler(this.creerJeuToolStripMenuItem_Click);
             // 
             // creerGenreToolStripMenuItem
             // 
             this.creerGenreToolStripMenuItem.Name = "creerGenreToolStripMenuItem";
             this.creerGenreToolStripMenuItem.Size = new System.Drawing.Size(230, 28);
             this.creerGenreToolStripMenuItem.Text = "Creer Genre";
+            this.creerGenreToolStripMenuItem.Click += new System.EventHandler(this.creerGenreToolStripMenuItem_Click);
             // 
             // creerClassificationToolStripMenuItem
             // 
             this.creerClassificationToolStripMenuItem.Name = "creerClassificationToolStripMenuItem";
             this.creerClassificationToolStripMenuItem.Size = new System.Drawing.Size(230, 28);
             this.creerClassificationToolStripMenuItem.Text = "Creer Classification";
+            this.creerClassificationToolStripMenuItem.Click += new System.EventHandler(this.creerClassificationToolStripMenuItem_Click);
             // 
             // creerCatégorieToolStripMenuItem
             // 
             this.creerCatégorieToolStripMenuItem.Name = "creerCatégorieToolStripMenuItem";
             this.creerCatégorieToolStripMenuItem.Size = new System.Drawing.Size(230, 28);
             this.creerCatégorieToolStripMenuItem.Text = "Creer Catégorie";
+            this.creerCatégorieToolStripMenuItem.Click += new System.EventHandler(this.creerCatégorieToolStripMenuItem_Click);
             // 
             // employéToolStripMenuItem
             // 
@@ -134,6 +140,14 @@
             this.connexionToolStripMenuItem.Text = "Connexion";
             this.connexionToolStripMenuItem.Click += new System.EventHandler(this.connexionToolStripMenuItem_Click);
             // 
+            // déconnexionToolStripMenuItem
+            // 
+            this.déconnexionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.déconnexionToolStripMenuItem.Name = "déconnexionToolStripMenuItem";
+            this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(122, 27);
+            this.déconnexionToolStripMenuItem.Text = "Déconnexion";
+            this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.deconnexionToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -163,6 +177,7 @@
         private System.Windows.Forms.ToolStripMenuItem oSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem platformeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connexionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem déconnexionToolStripMenuItem;
     }
 }
 

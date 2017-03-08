@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 namespace Projet_Texcel
 {
-    public partial class OS : Form
+    public partial class Genre : Form
     {
         Form1 form;
-        public OS(Form1 form)
+        public Genre(Form1 form)
         {
             InitializeComponent();
             this.form = form;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnCreerGenre_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void OS_FormClosing(object sender, FormClosingEventArgs e)
+        private void Genre_FormClosing(object sender, FormClosingEventArgs e)
         {
-            form.osConn = false;
+            form.genreConn = false;
         }
     }
 }

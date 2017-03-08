@@ -28,43 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCreerEmploye = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtNom = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPrenom = new System.Windows.Forms.TextBox();
-            this.txtTeleResid = new System.Windows.Forms.TextBox();
-            this.txtCour = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.lstEquipe = new System.Windows.Forms.ComboBox();
+            this.lstCategories = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtMatricule = new System.Windows.Forms.TextBox();
+            this.txtTelePoste = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtJours = new System.Windows.Forms.TextBox();
+            this.txtMois = new System.Windows.Forms.TextBox();
             this.txtAdresse = new System.Windows.Forms.TextBox();
             this.txtAnnee = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtMois = new System.Windows.Forms.TextBox();
-            this.txtJours = new System.Windows.Forms.TextBox();
-            this.txtMatricule = new System.Windows.Forms.TextBox();
-            this.txtTelePoste = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lstCategories = new System.Windows.Forms.ComboBox();
+            this.txtCour = new System.Windows.Forms.TextBox();
+            this.txtTeleResid = new System.Windows.Forms.TextBox();
+            this.txtPrenom = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lstEquipe = new System.Windows.Forms.ComboBox();
+            this.btnCreerEquipe = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnCreerEmploye
             // 
-            this.button1.Location = new System.Drawing.Point(50, 398);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Créer Employé";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCreerEmploye.Location = new System.Drawing.Point(50, 398);
+            this.btnCreerEmploye.Name = "btnCreerEmploye";
+            this.btnCreerEmploye.Size = new System.Drawing.Size(134, 38);
+            this.btnCreerEmploye.TabIndex = 0;
+            this.btnCreerEmploye.Text = "Créer Employé";
+            this.btnCreerEmploye.UseVisualStyleBackColor = true;
+            this.btnCreerEmploye.Click += new System.EventHandler(this.btnCreerEmploye_Click);
             // 
             // groupBox1
             // 
@@ -95,97 +96,68 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employé";
             // 
-            // txtNom
+            // lstCategories
             // 
-            this.txtNom.Location = new System.Drawing.Point(149, 29);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(174, 22);
-            this.txtNom.TabIndex = 14;
+            this.lstCategories.FormattingEnabled = true;
+            this.lstCategories.Location = new System.Drawing.Point(149, 264);
+            this.lstCategories.Name = "lstCategories";
+            this.lstCategories.Size = new System.Drawing.Size(121, 24);
+            this.lstCategories.TabIndex = 1;
             // 
-            // label4
+            // label10
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 177);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Courriel :";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 264);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 17);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Catégories :";
             // 
-            // label3
+            // txtMatricule
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 17);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Télé Résidence :";
+            this.txtMatricule.Location = new System.Drawing.Point(149, 233);
+            this.txtMatricule.Name = "txtMatricule";
+            this.txtMatricule.Size = new System.Drawing.Size(174, 22);
+            this.txtMatricule.TabIndex = 27;
             // 
-            // label2
+            // txtTelePoste
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Prénom :";
+            this.txtTelePoste.Location = new System.Drawing.Point(149, 205);
+            this.txtTelePoste.Name = "txtTelePoste";
+            this.txtTelePoste.Size = new System.Drawing.Size(174, 22);
+            this.txtTelePoste.TabIndex = 26;
             // 
-            // label1
+            // label7
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Nom :";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 233);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 17);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Matricule :";
             // 
-            // txtPrenom
+            // label8
             // 
-            this.txtPrenom.Location = new System.Drawing.Point(149, 57);
-            this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(174, 22);
-            this.txtPrenom.TabIndex = 15;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 205);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 17);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Télé Poste :";
             // 
-            // txtTeleResid
+            // txtJours
             // 
-            this.txtTeleResid.Location = new System.Drawing.Point(149, 147);
-            this.txtTeleResid.Name = "txtTeleResid";
-            this.txtTeleResid.Size = new System.Drawing.Size(174, 22);
-            this.txtTeleResid.TabIndex = 16;
+            this.txtJours.Location = new System.Drawing.Point(285, 87);
+            this.txtJours.Name = "txtJours";
+            this.txtJours.Size = new System.Drawing.Size(38, 22);
+            this.txtJours.TabIndex = 23;
             // 
-            // txtCour
+            // txtMois
             // 
-            this.txtCour.Location = new System.Drawing.Point(149, 177);
-            this.txtCour.Name = "txtCour";
-            this.txtCour.Size = new System.Drawing.Size(174, 22);
-            this.txtCour.TabIndex = 17;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.lstEquipe);
-            this.groupBox2.Location = new System.Drawing.Point(12, 312);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(358, 53);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Équipe";
-            // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(195, 398);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 38);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Créer Équipe";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // lstEquipe
-            // 
-            this.lstEquipe.FormattingEnabled = true;
-            this.lstEquipe.Location = new System.Drawing.Point(149, 18);
-            this.lstEquipe.Name = "lstEquipe";
-            this.lstEquipe.Size = new System.Drawing.Size(121, 24);
-            this.lstEquipe.TabIndex = 0;
+            this.txtMois.Location = new System.Drawing.Point(224, 87);
+            this.txtMois.Name = "txtMois";
+            this.txtMois.Size = new System.Drawing.Size(38, 22);
+            this.txtMois.TabIndex = 22;
             // 
             // txtAdresse
             // 
@@ -219,68 +191,98 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Date de naissance :";
             // 
-            // txtMois
+            // txtCour
             // 
-            this.txtMois.Location = new System.Drawing.Point(224, 87);
-            this.txtMois.Name = "txtMois";
-            this.txtMois.Size = new System.Drawing.Size(38, 22);
-            this.txtMois.TabIndex = 22;
+            this.txtCour.Location = new System.Drawing.Point(149, 177);
+            this.txtCour.Name = "txtCour";
+            this.txtCour.Size = new System.Drawing.Size(174, 22);
+            this.txtCour.TabIndex = 17;
             // 
-            // txtJours
+            // txtTeleResid
             // 
-            this.txtJours.Location = new System.Drawing.Point(285, 87);
-            this.txtJours.Name = "txtJours";
-            this.txtJours.Size = new System.Drawing.Size(38, 22);
-            this.txtJours.TabIndex = 23;
+            this.txtTeleResid.Location = new System.Drawing.Point(149, 147);
+            this.txtTeleResid.Name = "txtTeleResid";
+            this.txtTeleResid.Size = new System.Drawing.Size(174, 22);
+            this.txtTeleResid.TabIndex = 16;
             // 
-            // txtMatricule
+            // txtPrenom
             // 
-            this.txtMatricule.Location = new System.Drawing.Point(149, 233);
-            this.txtMatricule.Name = "txtMatricule";
-            this.txtMatricule.Size = new System.Drawing.Size(174, 22);
-            this.txtMatricule.TabIndex = 27;
+            this.txtPrenom.Location = new System.Drawing.Point(149, 57);
+            this.txtPrenom.Name = "txtPrenom";
+            this.txtPrenom.Size = new System.Drawing.Size(174, 22);
+            this.txtPrenom.TabIndex = 15;
             // 
-            // txtTelePoste
+            // label4
             // 
-            this.txtTelePoste.Location = new System.Drawing.Point(149, 205);
-            this.txtTelePoste.Name = "txtTelePoste";
-            this.txtTelePoste.Size = new System.Drawing.Size(174, 22);
-            this.txtTelePoste.TabIndex = 26;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 177);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Courriel :";
             // 
-            // label8
+            // txtNom
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 205);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 17);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Télé Poste :";
+            this.txtNom.Location = new System.Drawing.Point(149, 29);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(174, 22);
+            this.txtNom.TabIndex = 14;
             // 
-            // label7
+            // label1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 233);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 17);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Matricule :";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Nom :";
             // 
-            // label10
+            // label3
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 264);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 17);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Catégories :";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Télé Résidence :";
             // 
-            // lstCategories
+            // label2
             // 
-            this.lstCategories.FormattingEnabled = true;
-            this.lstCategories.Location = new System.Drawing.Point(149, 264);
-            this.lstCategories.Name = "lstCategories";
-            this.lstCategories.Size = new System.Drawing.Size(121, 24);
-            this.lstCategories.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Prénom :";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lstEquipe);
+            this.groupBox2.Location = new System.Drawing.Point(12, 312);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(358, 53);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Équipe";
+            // 
+            // lstEquipe
+            // 
+            this.lstEquipe.FormattingEnabled = true;
+            this.lstEquipe.Location = new System.Drawing.Point(149, 18);
+            this.lstEquipe.Name = "lstEquipe";
+            this.lstEquipe.Size = new System.Drawing.Size(121, 24);
+            this.lstEquipe.TabIndex = 0;
+            // 
+            // btnCreerEquipe
+            // 
+            this.btnCreerEquipe.Enabled = false;
+            this.btnCreerEquipe.Location = new System.Drawing.Point(195, 398);
+            this.btnCreerEquipe.Name = "btnCreerEquipe";
+            this.btnCreerEquipe.Size = new System.Drawing.Size(134, 38);
+            this.btnCreerEquipe.TabIndex = 14;
+            this.btnCreerEquipe.Text = "Créer Équipe";
+            this.btnCreerEquipe.UseVisualStyleBackColor = true;
+            this.btnCreerEquipe.Click += new System.EventHandler(this.btnCreerEquipe_Click);
             // 
             // Employes
             // 
@@ -288,12 +290,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(382, 478);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCreerEquipe);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCreerEmploye);
             this.Name = "Employes";
             this.Text = "Employes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Employes_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -303,7 +306,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCreerEmploye;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtCour;
         private System.Windows.Forms.TextBox txtTeleResid;
@@ -314,7 +317,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCreerEquipe;
         private System.Windows.Forms.TextBox txtJours;
         private System.Windows.Forms.TextBox txtMois;
         private System.Windows.Forms.TextBox txtAdresse;

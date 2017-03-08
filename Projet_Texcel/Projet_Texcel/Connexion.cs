@@ -12,16 +12,14 @@ namespace Projet_Texcel
 {
     public partial class Connexion : Form
     {
-        Control control;
-        public Connexion()
-        {
-            InitializeComponent();
-            control = new Control();
-        }
+        Form1 form;
+
+        public Connexion(Form1 form) { InitializeComponent(); this.form = form; }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            control.connexion(txtUti.Text, txtPass.Text);            
+            form.connect(txtUti.Text, txtPass.Text);
+            Close();   
         }
     }
 }

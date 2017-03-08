@@ -12,9 +12,26 @@ namespace Projet_Texcel
 {
     public partial class Platforme : Form
     {
-        public Platforme()
+        Form1 form;
+        public Platforme(Form1 form)
         {
             InitializeComponent();
+            this.form = form;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Platforme_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            form.platConn = false;
         }
     }
 }

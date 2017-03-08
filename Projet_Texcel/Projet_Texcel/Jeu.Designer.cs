@@ -55,6 +55,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Créer Jeu";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -203,6 +204,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Jeu";
             this.Text = "Jeu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Jeu_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

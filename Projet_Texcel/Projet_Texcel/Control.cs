@@ -3,23 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Projet_Texcel
 {
     class Control
     {
-        Form1 form;
+        DBprovider BD = new DBprovider();
         public Control() { }
-
-        public Control(Form1 formulaire) { form = formulaire; }
 
         public bool connexion(string uti, string pass)
         {
             bool connexion = false;
             if ((uti == "admin") && (pass == "admin"))
                 connexion = true;
-            form.Init(connexion);
             return connexion;
+            //return BD.connexion(uti,pass); retour d'un tableau bool[] ( [0] = uti ok? [1] directeur ou admin )
+        }
+
+        public void erreur(string erreur)
+        {
+            MessageBox.Show(erreur);
         }
     }
 }
