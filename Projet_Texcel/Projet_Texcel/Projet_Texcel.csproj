@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+
     <Compile Include="ClasseObjBd\CCategorieTest.cs" />
     <Compile Include="ClasseObjBd\CClassification.cs" />
     <Compile Include="ClasseObjBd\CEmploye.cs" />
@@ -64,14 +64,14 @@
     <Compile Include="ClasseObjBd\CTest.cs" />
     <Compile Include="ClasseObjBd\CTheme.cs" />
     <Compile Include="ClasseObjBd\CTravail.cs" />
-=======
+
     <Compile Include="Categorie.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Categorie.Designer.cs">
       <DependentUpon>Categorie.cs</DependentUpon>
     </Compile>
->>>>>>> 19d2ac5b5badd3c69fd9207c90d2319e2c11c2a5
+
     <Compile Include="Classification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +178,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+	
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
