@@ -30,5 +30,10 @@ namespace Projet_Texcel
         {
             MessageBox.Show(erreur);
         }
+
+        public void validation(object validate)
+        {
+
+        }
     }
 }

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="ClasseObjBd\CCategorieTest.cs" />
     <Compile Include="ClasseObjBd\CClassification.cs" />
     <Compile Include="ClasseObjBd\CEmploye.cs" />
@@ -63,6 +64,14 @@
     <Compile Include="ClasseObjBd\CTest.cs" />
     <Compile Include="ClasseObjBd\CTheme.cs" />
     <Compile Include="ClasseObjBd\CTravail.cs" />
+=======
+    <Compile Include="Categorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorie.Designer.cs">
+      <DependentUpon>Categorie.cs</DependentUpon>
+    </Compile>
+>>>>>>> 19d2ac5b5badd3c69fd9207c90d2319e2c11c2a5
     <Compile Include="Classification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +91,12 @@
     </Compile>
     <Compile Include="Employes.Designer.cs">
       <DependentUpon>Employes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipe.Designer.cs">
+      <DependentUpon>Equipe.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -115,6 +130,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Categorie.resx">
+      <DependentUpon>Categorie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Classification.resx">
       <DependentUpon>Classification.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employes.resx">
       <DependentUpon>Employes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipe.resx">
+      <DependentUpon>Equipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
