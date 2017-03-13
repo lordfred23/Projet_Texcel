@@ -21,8 +21,9 @@ namespace Projet_Texcel
         Platforme platforme;
         Employes employes;
         OS os;
+        Equipe equipe;
 
-        public bool conConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false;
+        public bool conConn = false, equipeConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false;
                 
         public Form1()
         {
@@ -67,7 +68,15 @@ namespace Projet_Texcel
 
         private void equipeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (!equipeConn)
+            {
+                equipe = new Equipe(this);
+                equipe.Text = "Équipe";
+                equipe.MdiParent = this;
+                equipe.StartPosition = FormStartPosition.CenterScreen;
+                equipe.Show();
+                equipeConn = true;
+            }
         }
 
         private void creerJeuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,7 +84,7 @@ namespace Projet_Texcel
             if (!jeuConn)
             {
                 jeu = new Jeu(this);
-                jeu.Text = "OS";
+                jeu.Text = "Jeux";
                 jeu.MdiParent = this;
                 jeu.StartPosition = FormStartPosition.CenterScreen;
                 jeu.Show();
@@ -88,7 +97,7 @@ namespace Projet_Texcel
             if (!genreConn)
             {
                 genre = new Genre(this);
-                genre.Text = "OS";
+                genre.Text = "Genre";
                 genre.MdiParent = this;
                 genre.StartPosition = FormStartPosition.CenterScreen;
                 genre.Show();
@@ -101,7 +110,7 @@ namespace Projet_Texcel
             if (!clasConn)
             {
                 classification = new Classification(this);
-                classification.Text = "OS";
+                classification.Text = "Classification";
                 classification.MdiParent = this;
                 classification.StartPosition = FormStartPosition.CenterScreen;
                 classification.Show();
@@ -114,7 +123,7 @@ namespace Projet_Texcel
             if (!cateConn)
             {
                 categorie = new Categorie(this);
-                categorie.Text = "OS";
+                categorie.Text = "Catégories";
                 categorie.MdiParent = this;
                 categorie.StartPosition = FormStartPosition.CenterScreen;
                 categorie.Show();
