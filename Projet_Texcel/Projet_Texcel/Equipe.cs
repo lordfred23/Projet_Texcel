@@ -27,15 +27,15 @@ namespace Projet_Texcel
             cptEmploye++;
             Equipe frmEquipe = this;
             ComboBox lstNewEmploye = new ComboBox();
+            lstNewEmploye.Show();
             lstNewEmploye.Name = "lstEmploye" + cptEmploye;
             lstNewEmploye.Height = previousLST.Height;
             lstNewEmploye.Width = previousLST.Width;
             lstNewEmploye.Items.Add(previousLST.Items); //utiliser une fonction dans control pour chercher les employes dans BD
-            lstNewEmploye.Location = previousLST.Location;
-            lstNewEmploye.Top = previousLST.Height + 20;
+            lstNewEmploye.Top = previousLST.Top + previousLST.Height + 20;
+            lstNewEmploye.Left = previousLST.Left;
             frmEquipe.Height += previousLST.Height + 20;
             btnCreerEquipe.Top += previousLST.Height + 20;
-            lstNewEmploye.Show();
             previousLST = lstNewEmploye;
         }
 
