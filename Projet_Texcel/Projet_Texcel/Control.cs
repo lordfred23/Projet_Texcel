@@ -4,12 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Projet_Texcel.ClasseObjBd; //  heyhey namespace different pour les classes de "BD" alex.
 
 namespace Projet_Texcel
 {
     class Control
     {
         DBprovider BD = new DBprovider();
+        
+        
+        
+        
         public Control() { }
 
         public bool connexion(string uti, string pass)

@@ -46,6 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClasseObjBd\CCategorieTest.cs" />
+    <Compile Include="ClasseObjBd\CClassification.cs" />
+    <Compile Include="ClasseObjBd\CEmploye.cs" />
+    <Compile Include="ClasseObjBd\CEmployeEquipe.cs" />
+    <Compile Include="ClasseObjBd\CEquipe.cs" />
+    <Compile Include="ClasseObjBd\CGenre.cs" />
+    <Compile Include="ClasseObjBd\CGenreJeu.cs" />
+    <Compile Include="ClasseObjBd\CJeu.cs" />
+    <Compile Include="ClasseObjBd\CJeuTheme.cs" />
+    <Compile Include="ClasseObjBd\CPlatform.cs" />
+    <Compile Include="ClasseObjBd\CPlatformJeu.cs" />
+    <Compile Include="ClasseObjBd\CProjet.cs" />
+    <Compile Include="ClasseObjBd\CRole.cs" />
+    <Compile Include="ClasseObjBd\CSysExp.cs" />
+    <Compile Include="ClasseObjBd\CTest.cs" />
+    <Compile Include="ClasseObjBd\CTheme.cs" />
+    <Compile Include="ClasseObjBd\CTravail.cs" />
     <Compile Include="Classification.cs">
       <SubType>Form</SubType>
     </Compile>
