@@ -218,6 +218,7 @@ go
 IF OBJECT_ID('bdTexelFredAlex.dbo.tblEmployeEquipe') IS NOT NULL
 DROP TABLE bdTexelFredAlex.dbo.tblEmployeEquipe
 CREATE TABLE tblEmployeEquipe
+(
 	matricule			char(7)			not null,
 	idEquipe			int				not null,
 	primary key(matricule,idEquipe)
@@ -231,7 +232,7 @@ go
 IF OBJECT_ID('bdTexelFredAlex.dbo.tblEquipe') IS NOT NULL
 DROP TABLE bdTexelFredAlex.dbo.tblEquipe
 CREATE TABLE tblEquipe
-	
+(	
 	idEquipe			int				not null   	identity(1,1), 
 	nom 				varchar(40)		not null,
 	tag					varchar			null,
@@ -246,7 +247,7 @@ go
 IF OBJECT_ID('bdTexelFredAlex.dbo.tblProjet') IS NOT NULL
 DROP TABLE bdTexelFredAlex.dbo.tblProjet
 CREATE TABLE tblProjet
-	
+(	
 	idProjet			int				not null	identity(1,1),
 	description			varchar(150)	not null,
 	idJeu				int				not null,
@@ -263,7 +264,7 @@ go
 IF OBJECT_ID('bdTexelFredAlex.dbo.tblCategorieTest') IS NOT NULL
 DROP TABLE bdTexelFredAlex.dbo.tblCategorieTest
 CREATE TABLE tblCategorieTest
-	
+(	
 	idCategorieTest		int				not null	identity(1,1),
 	nom					varchar(50)		not null,
 	description			varchar(150)	not null,
@@ -279,9 +280,9 @@ go
 IF OBJECT_ID('bdTexelFredAlex.dbo.tblTest') IS NOT NULL
 DROP TABLE bdTexelFredAlex.dbo.tblTest
 CREATE TABLE tblTest
-	
+(	
 	idTest				int				not null	identity(1,1),
-	resultat			double      	not null,
+	resultat			int      		not null,
 	description			varchar(150)	not null,
 	idCategorieTest		int				not null,
 	tag					varchar			null,
@@ -296,7 +297,7 @@ go
 IF OBJECT_ID('bdTexelFredAlex.dbo.tblTravail') IS NOT NULL
 DROP TABLE bdTexelFredAlex.dbo.tblTravail
 CREATE TABLE tblTravail
-	
+(	
 	idTest				int				not null,
 	idEquipe			int				not null,
 	idProjet			int				not null,
