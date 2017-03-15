@@ -1,3 +1,4 @@
+
 CREATE TRIGGER TR_SystemExploitation
 on tblSystemExploitation
 AFTER INSERT
@@ -6,10 +7,10 @@ BEGIN
 	SET NOCOUNT ON
 
 	DECLARE @id AS INT
-	DEClARE @nom AS VARCHAR
-	DECLARE @version AS VARCHAR
-	DECLARE @edition as VARCHAR
-	DECLARE @str as varchar
+	DEClARE @nom AS VARCHAR(1000)
+	DECLARE @version AS VARCHAR(1000)
+	DECLARE @edition as VARCHAR(1000)
+	DECLARE @str as varchar(1000)
 
 	DECLARE cInserted CURSOR FOR
 			SELECT  idSysExp,nom,version,edition FROM inserted;
@@ -18,13 +19,14 @@ BEGIN
 	
 	WHILE(@@FETCH_STATUS=0)BEGIN
 		
-		@str=@id+","+@nom+","+@version+","+@edition
-		
 		UPDATE tblSystemExploitation
-		SET tag=@str
+		SET tag=@nom+','+@version+','+@edition
 		WHERE idSysExp=@id
+		FETCH cInserted INTO @id,@nom,@version,@edition;
+		
 		END
-	
+	CLOSE cInserted
+	DEALLOCATE cInserted
 END
 
 	

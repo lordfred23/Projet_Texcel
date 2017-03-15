@@ -36,7 +36,7 @@ CREATE TABLE tblSystemExploitation
 	nom 				varchar(100)	not null,
 	version 			varchar(100)	not null,
 	edition 			varchar(100)	null,
-	tag					varchar			null,
+	tag					varchar(1000)			null,
 	constraint PK_tblSystemExploitation_idSysExp PRIMARY KEY(idSysExp)
 );
 
