@@ -82,7 +82,7 @@ DROP TABLE bdTexelFredAlex.dbo.tblJeu
 CREATE TABLE tblJeu
 (
 	idJeu 				int				not null 	identity(1,1),
-	developppeur		varchar(100)	not null,
+	developpeur			varchar(100)	not null,
 	description			varchar(250)	not null,
 	minimalConfig		varchar(250)	null,
 	idClassification	int				not null,
@@ -249,6 +249,7 @@ DROP TABLE bdTexelFredAlex.dbo.tblProjet
 CREATE TABLE tblProjet
 (	
 	idProjet			int				not null	identity(1,1),
+	nom					varchar(50)		not null,
 	description			varchar(150)	not null,
 	idJeu				int				not null,
 	tag					varchar			null,
@@ -301,7 +302,7 @@ CREATE TABLE tblTravail
 	idTest				int				not null,
 	idEquipe			int				not null,
 	idProjet			int				not null,
-	tag					varchar			null,
+	
 	primary key (idTest,idEquipe,idProjet)
 );
 
