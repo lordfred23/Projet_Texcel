@@ -87,7 +87,9 @@ CREATE TABLE tblJeu
 	minimalConfig		varchar(250)	null,
 	idClassification	int				not null,
 	idJeu1				int				not null,
+	nom					varchar(100)	not null,
 	tag					varchar			null,
+	
 	constraint PK_tblJeu_idJeu PRIMARY KEY(idJeu)
 );
 
