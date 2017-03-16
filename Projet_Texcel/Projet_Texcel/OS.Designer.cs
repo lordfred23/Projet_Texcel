@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OS));
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lstVersion = new System.Windows.Forms.ComboBox();
@@ -38,12 +39,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.picValid1 = new System.Windows.Forms.PictureBox();
+            this.picError1 = new System.Windows.Forms.PictureBox();
+            this.picValid2 = new System.Windows.Forms.PictureBox();
+            this.picError2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError2)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(89, 272);
+            this.button2.Location = new System.Drawing.Point(114, 204);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(134, 38);
             this.button2.TabIndex = 1;
@@ -53,6 +62,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.picValid2);
+            this.groupBox1.Controls.Add(this.picError2);
+            this.groupBox1.Controls.Add(this.picValid1);
+            this.groupBox1.Controls.Add(this.picError1);
             this.groupBox1.Controls.Add(this.lstVersion);
             this.groupBox1.Controls.Add(this.lstEdition);
             this.groupBox1.Controls.Add(this.txtCode);
@@ -63,7 +76,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(299, 152);
+            this.groupBox1.Size = new System.Drawing.Size(346, 152);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Système d\'Exploitation";
@@ -90,6 +103,7 @@
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(178, 22);
             this.txtCode.TabIndex = 8;
+            this.txtCode.Tag = "2";
             // 
             // txtNom
             // 
@@ -97,6 +111,7 @@
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(178, 22);
             this.txtNom.TabIndex = 7;
+            this.txtNom.Tag = "1";
             // 
             // label4
             // 
@@ -134,12 +149,56 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Nom :";
             // 
+            // picValid1
+            // 
+            this.picValid1.Image = global::Projet_Texcel.Properties.Resources.images__1_;
+            this.picValid1.Location = new System.Drawing.Point(299, 26);
+            this.picValid1.Name = "picValid1";
+            this.picValid1.Size = new System.Drawing.Size(20, 21);
+            this.picValid1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picValid1.TabIndex = 14;
+            this.picValid1.TabStop = false;
+            this.picValid1.Visible = false;
+            // 
+            // picError1
+            // 
+            this.picError1.Image = ((System.Drawing.Image)(resources.GetObject("picError1.Image")));
+            this.picError1.Location = new System.Drawing.Point(299, 26);
+            this.picError1.Name = "picError1";
+            this.picError1.Size = new System.Drawing.Size(20, 21);
+            this.picError1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError1.TabIndex = 13;
+            this.picError1.TabStop = false;
+            this.picError1.Visible = false;
+            // 
+            // picValid2
+            // 
+            this.picValid2.Image = global::Projet_Texcel.Properties.Resources.images__1_;
+            this.picValid2.Location = new System.Drawing.Point(298, 53);
+            this.picValid2.Name = "picValid2";
+            this.picValid2.Size = new System.Drawing.Size(20, 21);
+            this.picValid2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picValid2.TabIndex = 16;
+            this.picValid2.TabStop = false;
+            this.picValid2.Visible = false;
+            // 
+            // picError2
+            // 
+            this.picError2.Image = ((System.Drawing.Image)(resources.GetObject("picError2.Image")));
+            this.picError2.Location = new System.Drawing.Point(298, 53);
+            this.picError2.Name = "picError2";
+            this.picError2.Size = new System.Drawing.Size(20, 21);
+            this.picError2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError2.TabIndex = 15;
+            this.picError2.TabStop = false;
+            this.picError2.Visible = false;
+            // 
             // OS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(323, 345);
+            this.ClientSize = new System.Drawing.Size(370, 269);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Name = "OS";
@@ -147,6 +206,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OS_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,5 +226,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picValid2;
+        private System.Windows.Forms.PictureBox picError2;
+        private System.Windows.Forms.PictureBox picValid1;
+        private System.Windows.Forms.PictureBox picError1;
     }
 }

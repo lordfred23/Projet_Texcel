@@ -66,7 +66,7 @@ namespace Projet_Texcel
             }            
         }
 
-        private void equipeToolStripMenuItem_Click(object sender, EventArgs e)
+        public void equipeToolStripMenuItem_Click(object sender = null, EventArgs e = null)
         {
             if (!equipeConn)
             {

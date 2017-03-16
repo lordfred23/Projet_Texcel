@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Classification));
             this.label1 = new System.Windows.Forms.Label();
             this.txtClassif = new System.Windows.Forms.TextBox();
             this.btnCreerClassif = new System.Windows.Forms.Button();
+            this.picError1 = new System.Windows.Forms.PictureBox();
+            this.picValid1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picError1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,6 +53,7 @@
             this.txtClassif.Name = "txtClassif";
             this.txtClassif.Size = new System.Drawing.Size(159, 22);
             this.txtClassif.TabIndex = 9;
+            this.txtClassif.Tag = "1";
             // 
             // btnCreerClassif
             // 
@@ -59,17 +65,43 @@
             this.btnCreerClassif.UseVisualStyleBackColor = true;
             this.btnCreerClassif.Click += new System.EventHandler(this.btnCreerClassif_Click);
             // 
+            // picError1
+            // 
+            this.picError1.Image = ((System.Drawing.Image)(resources.GetObject("picError1.Image")));
+            this.picError1.Location = new System.Drawing.Point(215, 39);
+            this.picError1.Name = "picError1";
+            this.picError1.Size = new System.Drawing.Size(20, 21);
+            this.picError1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError1.TabIndex = 11;
+            this.picError1.TabStop = false;
+            this.picError1.Visible = false;
+            // 
+            // picValid1
+            // 
+            this.picValid1.Image = global::Projet_Texcel.Properties.Resources.images__1_;
+            this.picValid1.Location = new System.Drawing.Point(215, 39);
+            this.picValid1.Name = "picValid1";
+            this.picValid1.Size = new System.Drawing.Size(20, 21);
+            this.picValid1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picValid1.TabIndex = 12;
+            this.picValid1.TabStop = false;
+            this.picValid1.Visible = false;
+            // 
             // Classification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 173);
+            this.ClientSize = new System.Drawing.Size(275, 173);
+            this.Controls.Add(this.picValid1);
+            this.Controls.Add(this.picError1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtClassif);
             this.Controls.Add(this.btnCreerClassif);
             this.Name = "Classification";
             this.Text = "Classification";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Classification_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.picError1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,5 +112,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtClassif;
         private System.Windows.Forms.Button btnCreerClassif;
+        private System.Windows.Forms.PictureBox picError1;
+        private System.Windows.Forms.PictureBox picValid1;
     }
 }

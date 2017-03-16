@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Genre));
             this.btnCreerGenre = new System.Windows.Forms.Button();
             this.txtGenre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.picValid1 = new System.Windows.Forms.PictureBox();
+            this.picError1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCreerGenre
@@ -49,6 +54,7 @@
             this.txtGenre.Name = "txtGenre";
             this.txtGenre.Size = new System.Drawing.Size(159, 22);
             this.txtGenre.TabIndex = 6;
+            this.txtGenre.Tag = "1";
             // 
             // label1
             // 
@@ -59,17 +65,43 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Nom du genre :";
             // 
+            // picValid1
+            // 
+            this.picValid1.Image = global::Projet_Texcel.Properties.Resources.images__1_;
+            this.picValid1.Location = new System.Drawing.Point(229, 41);
+            this.picValid1.Name = "picValid1";
+            this.picValid1.Size = new System.Drawing.Size(20, 21);
+            this.picValid1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picValid1.TabIndex = 14;
+            this.picValid1.TabStop = false;
+            this.picValid1.Visible = false;
+            // 
+            // picError1
+            // 
+            this.picError1.Image = ((System.Drawing.Image)(resources.GetObject("picError1.Image")));
+            this.picError1.Location = new System.Drawing.Point(229, 41);
+            this.picError1.Name = "picError1";
+            this.picError1.Size = new System.Drawing.Size(20, 21);
+            this.picError1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError1.TabIndex = 13;
+            this.picError1.TabStop = false;
+            this.picError1.Visible = false;
+            // 
             // Genre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 176);
+            this.Controls.Add(this.picValid1);
+            this.Controls.Add(this.picError1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtGenre);
             this.Controls.Add(this.btnCreerGenre);
             this.Name = "Genre";
             this.Text = "Genre";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Genre_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.picValid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,5 +112,7 @@
         private System.Windows.Forms.Button btnCreerGenre;
         private System.Windows.Forms.TextBox txtGenre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picValid1;
+        private System.Windows.Forms.PictureBox picError1;
     }
 }
