@@ -1,0 +1,47 @@
+tblSystemExploitation
+	-PR_SystemExploitation
+	-vwSystemExploitation
+	
+tblPlatform
+	-PR_Platform
+	-vwPlatform
+
+tblJeu
+	-PR_Jeu
+	-vwJeu
+
+tblTheme
+	-PR_Theme
+	-vwTheme
+	
+tblGenre
+	-PR_Genre
+	-vwGenre
+
+tblClassification
+	-PR_Classification
+	-vwClassification
+	
+tblRole
+	-PR_Role
+	-vwRole
+
+tblEmploye
+	-PR_Employe
+	-vwEmploye
+	
+tblEquipe
+	-PR_Equipe
+	-vwEquipe
+	
+tblProjet
+	-PR_Projet
+	-vwProjet
+
+tblCategorieTest
+	-PR_CategorieTest
+	-vwCategorieTest
+	
+tblTest
+	-PR_Test
+	-vwTest
