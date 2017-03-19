@@ -14,20 +14,20 @@ namespace Projet_Texcel
     public partial class OS : Form
     {
         Form1 form;
-        DBprovider db;
+        
         int cptValide = 0;
         public OS(Form1 form)
         {
             InitializeComponent();
             this.form = form;
-            db = new DBprovider();
+            
             btnCreerOS.Enabled = false;
         }
 
         private void button_Click(object sender, EventArgs e)
         {
             PictureBox image;
-            db.AddSystemExploitation(txtNom.Text, "xp", "famillial");
+            
             cptValide = 0;
             for (int i = 1; i <= 4; i++)
             {
@@ -35,7 +35,7 @@ namespace Projet_Texcel
                 image.Visible = false;
             }
             btnCreerOS.Enabled = false;
-            //Code pour inserer l'OS dans la bd
+           
         }
 
         private void OS_FormClosing(object sender, FormClosingEventArgs e)
