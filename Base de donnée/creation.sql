@@ -86,7 +86,7 @@ CREATE TABLE tblJeu
 	description			varchar(250)	not null,
 	minimalConfig		varchar(250)	null,
 	idClassification	int				not null,
-	idJeu1				int				not null,
+	idJeu1				int				null,
 	nom					varchar(100)	not null,
 	tag					varchar			null,
 	
