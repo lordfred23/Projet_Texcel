@@ -20,14 +20,12 @@ namespace Projet_Texcel
         {
             InitializeComponent();
             this.form = form;
-            
             btnCreerOS.Enabled = false;
         }
 
         private void button_Click(object sender, EventArgs e)
         {
             PictureBox image;
-            
             cptValide = 0;
             for (int i = 1; i <= 4; i++)
             {
@@ -35,7 +33,6 @@ namespace Projet_Texcel
                 image.Visible = false;
             }
             btnCreerOS.Enabled = false;
-           
         }
 
         private void OS_FormClosing(object sender, FormClosingEventArgs e)

@@ -19,6 +19,7 @@ namespace Projet_Texcel
             InitializeComponent();
             this.form = form;
             btnCreerEmploye.Enabled = false;
+            remplirListeEquipe();
         }
 
         private void btnCreerEquipe_Click(object sender, EventArgs e)
@@ -42,6 +43,11 @@ namespace Projet_Texcel
         private void Employes_FormClosing(object sender, FormClosingEventArgs e)
         {
             form.empConn = false;
+        }
+
+        private void remplirListeEquipe()
+        {
+            form.employeRemplirListeEquipe();
         }
 
         private void TextBox_Leave(object sender, EventArgs e)

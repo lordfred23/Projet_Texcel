@@ -177,6 +177,11 @@ namespace Projet_Texcel
             Init(false);
         }
 
+        public void employeRemplirListeEquipe()
+        {
+            control.employeRemplirListeEquipe();
+        }
+
         public int validate(TextBox textBox)
         {
             Regex regex = new Regex("^[a-zA-Z\\s]+$");
