@@ -47,7 +47,7 @@ namespace Projet_Texcel
 
         private void remplirListeEquipe()
         {
-            form.employeRemplirListeEquipe();
+            string[] lstEquipe = form.employeRemplirListeEquipe();
         }
 
         private void TextBox_Leave(object sender, EventArgs e)

@@ -177,9 +177,9 @@ namespace Projet_Texcel
             Init(false);
         }
 
-        public void employeRemplirListeEquipe()
+        public string[] employeRemplirListeEquipe()
         {
-            control.employeRemplirListeEquipe();
+            return control.employeRemplirListeEquipe();
         }
 
         public int validate(TextBox textBox)

@@ -28,10 +28,17 @@ namespace Projet_Texcel
             MessageBox.Show(erreur);
         }
 
-        public void employeRemplirListeEquipe()
+        public string[] employeRemplirListeEquipe()
         {
-            BD.DisplayEquipe();
-
+            List<CEquipe> equipe = BD.DisplayEquipe();
+            string[] lstEquipe = new string[equipe.Count];
+            int i = 0;
+            foreach (CEquipe valeur in equipe)
+            {
+                lstEquipe[i] = valeur.Nom;
+                i++;
+            }
+            return lstEquipe;
         }
     }
 }
