@@ -75,7 +75,7 @@ BEGIN
 	
 
 	DECLARE cInserted CURSOR FOR
-			SELECT  idJeu,nom,config,dev,description FROM inserted;
+			SELECT  idJeu,nom,minimalConfig,developpeur,description FROM inserted;
 	OPEN cInserted;
 	FETCH cInserted INTO @id,@nom,@config,@dev,@descr;
 	
@@ -111,7 +111,7 @@ BEGIN
 	
 	WHILE(@@FETCH_STATUS=0)BEGIN
 		
-		UPDATE tblJeu
+		UPDATE tblTheme
 		SET tag=@nom+','+@descr
 		WHERE idTheme=@id
 		FETCH cInserted INTO @id,@nom,@descr;
@@ -230,7 +230,7 @@ BEGIN
 	
 
 	DECLARE cInserted CURSOR FOR
-			SELECT  matricuke,nom,prenom,dateNaissance,adresse,noTelephone,posteTelephone,noTelephoneMaison FROM inserted;
+			SELECT  matricule,nom,prenom,dateNaissance,adresse,noTelephone,posteTelephone,noTelephoneMaison FROM inserted;
 	OPEN cInserted;
 	FETCH cInserted INTO @id,@nom,@prenom,@dateN,@adresse,@noTel,@posteT,@noTelM;
 	
@@ -238,7 +238,7 @@ BEGIN
 		
 		UPDATE tblEmploye
 		SET tag=@nom+','+@prenom+','+@dateN+','+@adresse+','+@noTel+','+@posteT+','+@noTelM
-		WHERE idEmploye=@id
+		WHERE matricule=@id
 		FETCH cInserted INTO @id,@nom,@prenom,@dateN,@adresse,@noTel,@posteT,@noTelM;
 		
 		END
@@ -297,7 +297,7 @@ BEGIN
 	
 	WHILE(@@FETCH_STATUS=0)BEGIN
 		
-		UPDATE tblRole
+		UPDATE tblProjet
 		SET tag=@nom+','+@descr
 		WHERE idProjet=@id
 		FETCH cInserted INTO @id,@nom,@descr;
@@ -354,14 +354,14 @@ BEGIN
 	DECLARE cInserted CURSOR FOR
 			SELECT  idCategorieTest,description FROM inserted;
 	OPEN cInserted;
-	FETCH cInserted INTO @id,@descr,;
+	FETCH cInserted INTO @id,@descr;
 	
 	WHILE(@@FETCH_STATUS=0)BEGIN
 		
 		UPDATE tblTest
 		SET tag=@descr
 		WHERE idTest=@id
-		FETCH cInserted INTO @id,@descr,;
+		FETCH cInserted INTO @id,@descr;
 		
 		END
 	CLOSE cInserted

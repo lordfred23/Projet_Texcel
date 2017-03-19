@@ -121,8 +121,8 @@ DROP TABLE bdTexelFredAlex.dbo.tblGenre
 CREATE TABLE tblGenre
 (
 	idGenre				int				not null	identity(1,1),
-	nom					varchar(60)		not null,
-	description			varchar(150)	null,
+	nom					varchar(100)		not null,
+	description			varchar(700)	null,
 	tag					varchar			null,
 	constraint PK_tblGenre_idGenre PRIMARY KEY(idGenre)
 );
@@ -204,9 +204,9 @@ CREATE TABLE tblEmploye
 	prenom				varchar(60)		not null,
 	dateNaissance       varchar(50)		not null,
 	adresse				varchar(150)	not null,
-	noTelephone			char(7)			not null,
+	noTelephone			char(10)			not null,
 	posteTelephone		char (3)		not null,
-	noTelephoneMaison	char(9)			not null,
+	noTelephoneMaison	char(10)			not null,
 	idRole				int				not null,
 	tag					varchar			null,
 	constraint PK_tblEmploye_matricule PRIMARY KEY(matricule)
