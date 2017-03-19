@@ -10,17 +10,21 @@ using System.Windows.Forms;
 
 namespace Projet_Texcel
 {
+    
     public partial class OS : Form
     {
         Form1 form;
+        DBprovider db;
         public OS(Form1 form)
         {
             InitializeComponent();
             this.form = form;
+            db = new DBprovider();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            db.AddSystemExploitation(txtNom.Text, "xp", "famillial");
 
         }
 
