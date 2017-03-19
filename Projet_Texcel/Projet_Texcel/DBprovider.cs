@@ -36,6 +36,7 @@ namespace Projet_Texcel
         static List<CCategorieTest> categTestList = new List<CCategorieTest>();
         static List<CProjet> projetList = new List<CProjet>();
         static List<CTest> testList = new List<CTest>();
+
         public DBprovider() {
             Connection();
         }
@@ -77,7 +78,7 @@ namespace Projet_Texcel
 
          }
 
-        static void DisplaySysExp()
+        public void DisplaySysExp()
         {
 
             bool unDouble;
@@ -113,7 +114,7 @@ namespace Projet_Texcel
          }
 
 
-        static void AddPlatform(string nom, string config, string typePlatform,int idSysExp)
+        public void AddPlatform(string nom, string config, string typePlatform,int idSysExp)
         {
 
             conn.Open();
@@ -137,7 +138,7 @@ namespace Projet_Texcel
 
         }
 
-        static void DisplayPlatform()
+        public void DisplayPlatform()
         {
 
             bool unDouble;
@@ -173,41 +174,24 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-        static void AddPlatformToGame(int idJeu,int idPlatform)
+
+
+        public void AddGame(string developpeur,string description,string minimalConfig,int idClassification,int idGenre,int idTheme,int idPlatform,string nom)
         {
 
             conn.Open();
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblPlatformJeu(idJeu,idPlatform) VALUES(@idJeu, @idPlatform)", conn))
-                {
-                    command.Parameters.Add(new SqlParameter("idJeu", idJeu));
-                    command.Parameters.Add(new SqlParameter("idPlatform", idPlatform));
-                    command.ExecuteNonQuery();
-                }
-            }
-            catch
-            {
-                //Console.WriteLine("Count not insert.");
-            }
-            conn.Close();
-
-        }
-
-        static void AddGame(string developpeur,string description,string minimalConfig,int idClassification,string nom)
-        {
-
-            conn.Open();
-            try
-            {
-                using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblJeu(developpeur,description,minimalConfig,idClassification,nom) VALUES(@developpeur,@description,@minimalConfig,@idClassification,@nom)", conn))
+                    "INSERT INTO tblJeu(developpeur,description,minimalConfig,idClassification,idGenre,idTheme,idPlatform,nom) VALUES(@developpeur,@description,@minimalConfig,@idClassification,@idGenre,@idTheme,@idPlatform,@nom)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("developpeur", developpeur));
                     command.Parameters.Add(new SqlParameter("description", description));
                     command.Parameters.Add(new SqlParameter("minimalConfig", minimalConfig));
                     command.Parameters.Add(new SqlParameter("idClassification", idClassification));
+                    command.Parameters.Add(new SqlParameter("idGenre", idGenre));
+                    command.Parameters.Add(new SqlParameter("idTheme", idTheme));
+                    command.Parameters.Add(new SqlParameter("idPlatform", idPlatform));
                     command.Parameters.Add(new SqlParameter("nom", nom));
                     command.ExecuteNonQuery();
                 }
@@ -220,7 +204,7 @@ namespace Projet_Texcel
 
         }
 
-        static void DisplayJeu()
+        public void DisplayJeu()
         {
 
             bool unDouble;
@@ -246,9 +230,12 @@ namespace Projet_Texcel
                         string description = reader.GetString(2);
                         string minimalConfig = reader.GetString(3);
                         int idClassification = reader.GetInt32(4);
-                        string nom = reader.GetString(5);
-                        string tag = reader.GetString(6);
-                        jeu = new CJeu(idJeu, idClassification, developpeur,description, minimalConfig, tag);
+                        int idGenre = reader.GetInt32(5);
+                        int idTheme = reader.GetInt32(6);
+                        int idPlatform = reader.GetInt32(7);
+                        string nom = reader.GetString(8);
+                        string tag = reader.GetString(9);
+                        jeu = new CJeu(idJeu, idClassification,idGenre,idTheme,idPlatform, developpeur,description, minimalConfig, tag);
                         jeuList.Add(jeu);
                     }
 
@@ -257,7 +244,7 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-        static void AddTheme(string nom,string description)
+        public void AddTheme(string nom,string description)
         {
 
             conn.Open();
@@ -279,7 +266,7 @@ namespace Projet_Texcel
 
         }
 
-        static void DisplayTheme()
+        public void DisplayTheme()
         {
 
             bool unDouble;
@@ -314,7 +301,7 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-        static void AddGenre(string nom, string description)
+        public void AddGenre(string nom, string description)
         {
 
             conn.Open();
@@ -336,7 +323,7 @@ namespace Projet_Texcel
 
         }
 
-        static void DisplayGenre()
+        public void DisplayGenre()
         {
 
             bool unDouble;
@@ -371,7 +358,7 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-        static void AddClassification(string nom, string description)
+        public void AddClassification(string nom, string description)
         {
 
             conn.Open();
@@ -392,7 +379,7 @@ namespace Projet_Texcel
             conn.Close();
 
         }
-        static void DisplayClassif()
+        public void DisplayClassif()
         {
 
             bool unDouble;
@@ -428,7 +415,7 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-        static void AddThemeToGame(int idJeu, int idTheme)
+        public void AddThemeToGame(int idJeu, int idTheme)
         {
 
             conn.Open();
@@ -450,7 +437,7 @@ namespace Projet_Texcel
 
         }
 
-        static void AddGenreToGame(int idJeu, int idGenre)
+        public void AddGenreToGame(int idJeu, int idGenre)
         {
 
             conn.Open();
@@ -472,7 +459,7 @@ namespace Projet_Texcel
 
         }
 
-        static void AddRole(string nom, string description)
+        public void AddRole(string nom, string description)
         {
 
             conn.Open();
@@ -494,7 +481,7 @@ namespace Projet_Texcel
 
         }
 
-        static void DisplayRole()
+        public void DisplayRole()
         {
 
             bool unDouble;
@@ -530,7 +517,7 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-        static void AddEmploye(string matricule,string nom,string prenom,string dateNaissance,string adresse,string noTelephone,string posteTelephone,string noTelephoneMaison,int idRole)
+        public void AddEmploye(string matricule,string nom,string prenom,string dateNaissance,string adresse,string noTelephone,string posteTelephone,string noTelephoneMaison,int idRole)
         {
 
             conn.Open();
@@ -559,7 +546,7 @@ namespace Projet_Texcel
 
         }
 
-        static void DisplayEmploye()
+        public void DisplayEmploye()
         {
 
             bool unDouble;
@@ -601,7 +588,7 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-        static void AddEmployeToTeam(string matricule, int idEquipe)
+        public void AddEmployeToTeam(string matricule, int idEquipe)
         {
 
             conn.Open();
@@ -623,7 +610,7 @@ namespace Projet_Texcel
 
         }
 
-        static void AddEquipe(string nom)
+        public void AddEquipe(string nom)
         {
 
             conn.Open();
@@ -645,7 +632,7 @@ namespace Projet_Texcel
 
         }
 
-        static void DisplayEquipe()
+        public void DisplayEquipe()
         {
 
             bool unDouble;
@@ -680,7 +667,7 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-        static void AddCategorieTest(string nom, string description)
+        public void AddCategorieTest(string nom, string description)
         {
 
             conn.Open();
@@ -702,7 +689,7 @@ namespace Projet_Texcel
             conn.Close();
 
         }
-        static void DisplayCategTest()
+        public void DisplayCategTest()
         {
 
             bool unDouble;
@@ -738,7 +725,7 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-        static void AddProjet(string nom,string description,int idJeu)
+        public void AddProjet(string nom,string description,int idJeu)
         {
 
             conn.Open();
@@ -762,7 +749,7 @@ namespace Projet_Texcel
 
         }
 
-        static void DisplayProjet()
+        public void DisplayProjet()
         {
 
             bool unDouble;
@@ -798,7 +785,7 @@ namespace Projet_Texcel
             }
             conn.Close();
         }
-        static void AddTest(int resutlat,string nom, string description,int idCategorieTest)
+        public void AddTest(int resutlat,string nom, string description,int idCategorieTest)
         {
 
             conn.Open();
@@ -822,7 +809,7 @@ namespace Projet_Texcel
             conn.Close();
 
         }
-        static void DisplayTest()
+        public void DisplayTest()
         {
 
             bool unDouble;
@@ -859,7 +846,7 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-        static void AddWrok(int idTest, int idEquipe,int idProjet)
+        public void AddWrok(int idTest, int idEquipe,int idProjet)
         {
 
             conn.Open();

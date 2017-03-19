@@ -63,14 +63,7 @@ PRINT('Création tblPlatformJeu')
 -- -------------------------------------------------------
 go
 
-IF OBJECT_ID('bdTexelFredAlex.dbo.tblPlatformJeu') IS NOT NULL
-DROP TABLE bdTexelFredAlex.dbo.tblPlatformJeu
-CREATE TABLE tblPlatformJeu
-(
-	idJeu				int				not null,
-	idPlatform			int 			not null,
-	primary key(idJeu,idPlatform)
-);
+
 
 go
 PRINT('Création tblJeu')
@@ -86,7 +79,9 @@ CREATE TABLE tblJeu
 	description			varchar(250)	not null,
 	minimalConfig		varchar(250)	null,
 	idClassification	int				not null,
-	idJeu1				int				null,
+	idGenre				int				not null,
+	idTheme				int 			not null,
+	idPlatform			int				not null,
 	nom					varchar(100)	not null,
 	tag					varchar			null,
 	
@@ -148,28 +143,14 @@ PRINT('Création tblJeuTheme')
 -- -------------------------------------------------------
 go
 
-IF OBJECT_ID('bdTexelFredAlex.dbo.tblJeuTheme') IS NOT NULL
-DROP TABLE bdTexelFredAlex.dbo.tblJeuTheme
-CREATE TABLE tblJeuTheme
-(
-	idTheme				int				not null,
-	idJeu				int				not null,
-	primary key(idJeu,idTheme)
-);
+
 
 go
 PRINT('Création tblGenreJeu')
 -- -------------------------------------------------------
 go
 
-IF OBJECT_ID('bdTexelFredAlex.dbo.tblGenreJeu') IS NOT NULL
-DROP TABLE bdTexelFredAlex.dbo.tblGenreJeu
-CREATE TABLE tblGenreJeu
-(
-	idGenre				int				not null,
-	idJeu				int				not null,
-	primary key(idGenre,idJeu)
-);
+
 
 
 

@@ -46,30 +46,20 @@ values
 SET IDENTITY_INSERT tblClassification off
 
 
-insert into tblJeuTheme(idJeu,idTheme)
-values
-(1,1),
-(2,3);
 
 
 
-insert into tblGenreJeu(idJeu,idGenre)
-values
-(1,1),
-(2,2);
+
 
 
 SET IDENTITY_INSERT tblJeu ON
-insert into tblJeu(idJeu,developpeur,description,minimalConfig,idClassification,nom)
+insert into tblJeu(idJeu,developpeur,description,minimalConfig,idClassification,idGenre,idTheme,idPlatform,nom)
 values
-(1,'Ubisoft','Jeu d''assassin historique','4gb de ram,gtx 960+',3,'Assassin''s Creed'),
-(2,'CD Projekt RED','Jeu de role médiéval','8GB de ram gtx 980+',5,'The Witcher 3');
+(1,'Ubisoft','Jeu d''assassin historique','4gb de ram,gtx 960+',3,3,1,1,'Assassin''s Creed'),
+(2,'CD Projekt RED','Jeu de role médiéval','8GB de ram gtx 980+',5,2,3,2,'The Witcher 3');
 SET IDENTITY_INSERT tblJeu Off
 
-insert into tblPlatformJeu(idJeu,idPlatform)
-values
-(1,2),
-(2,2);
+
 
 
 SET IDENTITY_INSERT tblRole ON

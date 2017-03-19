@@ -9,15 +9,9 @@ alter table tblPlatformJeu add foreign key(idPlatform)references tblPlatform(idP
 -- --tblJeu
 alter table tblJeu add foreign key(idClassification)references tblClassification(idClassification);
 alter table tblJeu add foreign key(idJeu1) references tblJeu(idJeu);
-
--- -- tblJeuTheme
-alter table tblJeuTheme add foreign key(idTheme)references tblTheme(idTheme);
-alter table tblJeuTheme add foreign key(idJeu) references tblJeu(idJeu);
-
--- --tblGenreJeu
-alter table tblGenreJeu add foreign key(idGenre)references tblGenre(idGenre);
-alter table tblGenreJeu add foreign key(idJeu)references tblJeu(idJeu);
-
+alter table tblJeu add foreign key(idTheme)references tblTheme(idTheme);
+alter table tblJeu add foreign key(idGenre)references tblGenre(idGenre);
+alter table tblJeu add foreign key(idPlatform)references tblPlatform(idPlatform);
 
 -- --tblProjet
 alter table tblProjet add foreign key(idJeu)references tblJeu(idJeu);

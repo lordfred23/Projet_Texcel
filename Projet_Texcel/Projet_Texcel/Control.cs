@@ -30,7 +30,7 @@ namespace Projet_Texcel
 
         public void employeRemplirListeEquipe()
         {
-            
+            BD.DisplayEquipe();
         }
     }
 }
