@@ -59,7 +59,7 @@ namespace Projet_Texcel
                 image = (PictureBox)groupBox1.Controls["picValid" + textBox.Tag];
                 image.Visible = true;
             }
-            if (cptValide >= 6)//Nombre de textbox a valider
+            if (cptValide >= 3)//Nombre de textbox a valider
                 btnCreerJeu.Enabled = true;
         }
     }
