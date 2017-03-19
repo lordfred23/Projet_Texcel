@@ -21,7 +21,7 @@ namespace Projet_Texcel
 
         private void btnCreerEquipe_Click(object sender, EventArgs e)
         {
-
+            form.equipeToolStripMenuItem_Click();
         }
 
         private void btnCreerEmploye_Click(object sender, EventArgs e)

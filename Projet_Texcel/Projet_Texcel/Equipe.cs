@@ -27,7 +27,6 @@ namespace Projet_Texcel
             cptEmploye++;
             Equipe frmEquipe = this;
             ComboBox lstNewEmploye = new ComboBox();
-            lstNewEmploye.Show();
             lstNewEmploye.Name = "lstEmploye" + cptEmploye;
             lstNewEmploye.Height = previousLST.Height;
             lstNewEmploye.Width = previousLST.Width;
@@ -37,6 +36,8 @@ namespace Projet_Texcel
             frmEquipe.Height += previousLST.Height + 20;
             btnCreerEquipe.Top += previousLST.Height + 20;
             previousLST = lstNewEmploye;
+            //InitializeComponent();
+            lstNewEmploye.Show();
         }
 
         private void Equipe_FormClosing(object sender, FormClosingEventArgs e)

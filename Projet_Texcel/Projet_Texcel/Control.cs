@@ -10,10 +10,7 @@ namespace Projet_Texcel
 {
     class Control
     {
-        DBprovider BD = new DBprovider();
-        
-        
-        
+        DBprovider BD = new DBprovider();       
         
         public Control() { }
 
