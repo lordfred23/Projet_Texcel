@@ -50,15 +50,15 @@ namespace Projet_Texcel
             int erreur = form.validate(textBox);//Envoie le textbox a valider
             if (erreur > 0)
             {
-                image = (PictureBox)Controls["picError" + erreur];
+                image = (PictureBox)groupBox1.Controls["picError" + erreur];
                 image.Visible = true;
             }
             else
             {
                 cptValide++;//Ajoute un au compteur de validation
-                image = (PictureBox)Controls["picError" + textBox.Tag];
+                image = (PictureBox)groupBox1.Controls["picError" + textBox.Tag];
                 image.Visible = false;
-                image = (PictureBox)Controls["picValid" + textBox.Tag];
+                image = (PictureBox)groupBox1.Controls["picValid" + textBox.Tag];
                 image.Visible = true;
             }
             if (cptValide == 4)//Nombre de textbox a valider
