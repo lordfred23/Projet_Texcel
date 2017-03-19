@@ -16,11 +16,12 @@ namespace Projet_Texcel
 
         public void Connection()
         {
-            using (conn = new SqlConnection())
-            {
-                conn.ConnectionString = "Server=[server_name];Database=[database_name];Trusted_Connection=true";
+            conn = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=bdTexelFredAlex;Trusted_Connection=True;");
+            
                 
-            };
+
+
+           
         }
         public void Deconnection()
         {
@@ -34,7 +35,7 @@ namespace Projet_Texcel
                 try
                 {
                     using (SqlCommand command = new SqlCommand(
-                        "INSERT INTO tblSystemExploitation VALUES(@nom, @version, @edition)", conn))
+                        "INSERT INTO tblSystemExploitation(nom,version,edition) VALUES(@nom, @version, @edition)", conn))
                     {
                         command.Parameters.Add(new SqlParameter("nom", nom));
                         command.Parameters.Add(new SqlParameter("version", version));
