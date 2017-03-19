@@ -9,16 +9,21 @@ namespace Projet_Texcel
 {
     class DBprovider
     {
+        SqlConnection conn;
         public DBprovider() {
         }
 
-        public void connection()
+        public void Connection()
         {
-            using (SqlConnection conn = new SqlConnection())
+            using (conn = new SqlConnection())
             {
                 conn.ConnectionString = "Server=[server_name];Database=[database_name];Trusted_Connection=true";
-                // using the code here...
+                conn.Open();
             };
+        }
+        public void Deconnection()
+        {
+            conn.Close();
         }
 
     }
