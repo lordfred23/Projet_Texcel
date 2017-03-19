@@ -111,6 +111,7 @@ namespace Projet_Texcel
                     }
                 }
             conn.Close();
+            
          }
 
 
@@ -632,7 +633,7 @@ namespace Projet_Texcel
 
         }
 
-        public void DisplayEquipe()
+        public List<CEquipe> DisplayEquipe()
         {
 
             bool unDouble;
@@ -665,6 +666,7 @@ namespace Projet_Texcel
                 }
             }
             conn.Close();
+            return equipeList;
         }
 
         public void AddCategorieTest(string nom, string description)
