@@ -57,6 +57,7 @@
             this.txtNomEquipe.Size = new System.Drawing.Size(173, 22);
             this.txtNomEquipe.TabIndex = 7;
             this.txtNomEquipe.Tag = "1";
+            this.txtNomEquipe.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // label1
             // 

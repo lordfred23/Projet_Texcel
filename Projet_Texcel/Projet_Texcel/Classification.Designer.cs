@@ -54,6 +54,7 @@
             this.txtClassif.Size = new System.Drawing.Size(159, 22);
             this.txtClassif.TabIndex = 9;
             this.txtClassif.Tag = "1";
+            this.txtClassif.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // btnCreerClassif
             // 

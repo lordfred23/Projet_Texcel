@@ -30,14 +30,25 @@ namespace Projet_Texcel
             lstNewEmploye.Name = "lstEmploye" + cptEmploye;
             lstNewEmploye.Height = previousLST.Height;
             lstNewEmploye.Width = previousLST.Width;
-            lstNewEmploye.Items.Add(previousLST.Items); //utiliser une fonction dans control pour chercher les employes dans BD
+            ajoutEmploye(lstNewEmploye); 
             lstNewEmploye.Top = previousLST.Top + previousLST.Height + 20;
             lstNewEmploye.Left = previousLST.Left;
             frmEquipe.Height += previousLST.Height + 20;
             btnCreerEquipe.Top += previousLST.Height + 20;
+            Controls.Add(lstNewEmploye);
+            lstNewEmploye.TextChanged += new EventHandler(comboBox1_TextChanged);
             previousLST = lstNewEmploye;
-            //InitializeComponent();
             lstNewEmploye.Show();
+        }
+
+        private void ajoutEmploye(ComboBox lstNewEmploye)
+        {
+            //utiliser une fonction dans control pour chercher les employes dans BD
+            string[] employe = new string[] { "Alexandre Tremblay", "Frédéric Côté" };
+            for(int i = 0; i < employe.Count(); i++)
+            {
+                lstNewEmploye.Items.Add(employe[i]);
+            }
         }
 
         private void Equipe_FormClosing(object sender, FormClosingEventArgs e)
@@ -48,6 +59,11 @@ namespace Projet_Texcel
         private void btnCreerEquipe_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TextBox_Leave(object sender, EventArgs e)
+        {
+            int erreur = form.validate((TextBox)sender);
         }
     }
 }

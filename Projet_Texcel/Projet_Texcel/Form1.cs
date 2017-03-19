@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Projet_Texcel
 {
@@ -131,7 +132,7 @@ namespace Projet_Texcel
             }
         }
 
-        private void osToolStripMenuItem_Click(object sender, EventArgs e)
+        public void osToolStripMenuItem_Click(object sender = null, EventArgs e = null)
         {
             if (!osConn)
             {
@@ -174,6 +175,24 @@ namespace Projet_Texcel
         {
             conConn = false;
             Init(false);
+        }
+
+        public int validate(TextBox textBox)
+        {
+            return validerInfo(textBox);
+        }
+
+        private int validerInfo(TextBox textBox)
+        {
+            Regex regex = new Regex("^[a-zA-Z\\s]+$");
+            Match match = regex.Match(textBox.Text);
+            //int tag = textBox.Tag;
+            if (match.Success)
+            {
+                return 0;
+            }
+            else
+                return Convert.ToInt32(textBox.Tag);
         }
     }
 }

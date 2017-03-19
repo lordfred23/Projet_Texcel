@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Platforme));
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCreerOs = new System.Windows.Forms.Button();
+            this.btnCreerPlat = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picValid1 = new System.Windows.Forms.PictureBox();
+            this.picError1 = new System.Windows.Forms.PictureBox();
             this.lstOS = new System.Windows.Forms.ComboBox();
             this.lstPlatform = new System.Windows.Forms.ComboBox();
             this.lstConfig = new System.Windows.Forms.ComboBox();
@@ -40,32 +42,30 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.picValid1 = new System.Windows.Forms.PictureBox();
-            this.picError1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picValid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnCreerOs
             // 
-            this.button2.Location = new System.Drawing.Point(183, 220);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 38);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Créer OS";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCreerOs.Location = new System.Drawing.Point(183, 220);
+            this.btnCreerOs.Name = "btnCreerOs";
+            this.btnCreerOs.Size = new System.Drawing.Size(134, 38);
+            this.btnCreerOs.TabIndex = 2;
+            this.btnCreerOs.Text = "Créer OS";
+            this.btnCreerOs.UseVisualStyleBackColor = true;
+            this.btnCreerOs.Click += new System.EventHandler(this.btnCreerOs_Click);
             // 
-            // button1
+            // btnCreerPlat
             // 
-            this.button1.Location = new System.Drawing.Point(43, 220);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 38);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Créer Platforme";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCreerPlat.Location = new System.Drawing.Point(43, 220);
+            this.btnCreerPlat.Name = "btnCreerPlat";
+            this.btnCreerPlat.Size = new System.Drawing.Size(134, 38);
+            this.btnCreerPlat.TabIndex = 3;
+            this.btnCreerPlat.Text = "Créer Platforme";
+            this.btnCreerPlat.UseVisualStyleBackColor = true;
+            this.btnCreerPlat.Click += new System.EventHandler(this.btnCreerPlat_Click);
             // 
             // groupBox1
             // 
@@ -85,6 +85,28 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Platforme";
+            // 
+            // picValid1
+            // 
+            this.picValid1.Image = global::Projet_Texcel.Properties.Resources.images__1_;
+            this.picValid1.Location = new System.Drawing.Point(299, 22);
+            this.picValid1.Name = "picValid1";
+            this.picValid1.Size = new System.Drawing.Size(20, 21);
+            this.picValid1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picValid1.TabIndex = 14;
+            this.picValid1.TabStop = false;
+            this.picValid1.Visible = false;
+            // 
+            // picError1
+            // 
+            this.picError1.Image = ((System.Drawing.Image)(resources.GetObject("picError1.Image")));
+            this.picError1.Location = new System.Drawing.Point(299, 22);
+            this.picError1.Name = "picError1";
+            this.picError1.Size = new System.Drawing.Size(20, 21);
+            this.picError1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError1.TabIndex = 13;
+            this.picError1.TabStop = false;
+            this.picError1.Visible = false;
             // 
             // lstOS
             // 
@@ -116,6 +138,7 @@
             this.txtNom.Size = new System.Drawing.Size(140, 22);
             this.txtNom.TabIndex = 4;
             this.txtNom.Tag = "1";
+            this.txtNom.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // label4
             // 
@@ -153,28 +176,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom :";
             // 
-            // picValid1
-            // 
-            this.picValid1.Image = global::Projet_Texcel.Properties.Resources.images__1_;
-            this.picValid1.Location = new System.Drawing.Point(299, 22);
-            this.picValid1.Name = "picValid1";
-            this.picValid1.Size = new System.Drawing.Size(20, 21);
-            this.picValid1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picValid1.TabIndex = 14;
-            this.picValid1.TabStop = false;
-            this.picValid1.Visible = false;
-            // 
-            // picError1
-            // 
-            this.picError1.Image = ((System.Drawing.Image)(resources.GetObject("picError1.Image")));
-            this.picError1.Location = new System.Drawing.Point(299, 22);
-            this.picError1.Name = "picError1";
-            this.picError1.Size = new System.Drawing.Size(20, 21);
-            this.picError1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picError1.TabIndex = 13;
-            this.picError1.TabStop = false;
-            this.picError1.Visible = false;
-            // 
             // Platforme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -182,8 +183,8 @@
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(358, 276);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCreerPlat);
+            this.Controls.Add(this.btnCreerOs);
             this.Name = "Platforme";
             this.Text = "Platforme";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Platforme_FormClosing);
@@ -197,8 +198,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCreerOs;
+        private System.Windows.Forms.Button btnCreerPlat;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

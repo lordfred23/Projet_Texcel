@@ -21,5 +21,10 @@ namespace Projet_Texcel
             form.connect(txtUti.Text, txtPass.Text);
             Close();   
         }
+
+        private void TextBox_Leave(object sender, EventArgs e)
+        {
+            int erreur = form.validate((TextBox)sender);
+        }
     }
 }

@@ -54,6 +54,7 @@
             this.txtCatego.Size = new System.Drawing.Size(159, 22);
             this.txtCatego.TabIndex = 9;
             this.txtCatego.Tag = "1";
+            this.txtCatego.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // btnCreerCatego
             // 

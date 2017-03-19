@@ -28,5 +28,10 @@ namespace Projet_Texcel
         {
             form.genreConn = false;
         }
+
+        private void TextBox_Leave(object sender, EventArgs e)
+        {
+            int erreur = form.validate((TextBox)sender);
+        }
     }
 }
