@@ -8,16 +8,16 @@ namespace Projet_Texcel.ClasseObjBd
 {
     class CJeu
     {
-        int idJeu, idClassification, idJeu1;
+        int idJeu, idClassification;
         string developpeur, description, minimalConfig,tag;
 
         
 
-        public CJeu(int idJeu,int idClassification,int idJeu1,string developpeur,string description,string minimalConfig,string tag)
+        public CJeu(int idJeu,int idClassification,string developpeur,string description,string minimalConfig,string tag)
         {
             this.IdJeu = idJeu;
             this.IdClassification = idClassification;
-            this.IdJeu1 = idJeu1;
+            
             this.Description = description;
             this.Developpeur = developpeur;
             this.MinimalConfig = minimalConfig;
@@ -50,18 +50,7 @@ namespace Projet_Texcel.ClasseObjBd
             }
         }
 
-        public int IdJeu1
-        {
-            get
-            {
-                return idJeu1;
-            }
-
-            set
-            {
-                idJeu1 = value;
-            }
-        }
+        
 
         public string Developpeur
         {
