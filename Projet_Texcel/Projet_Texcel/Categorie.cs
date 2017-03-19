@@ -18,11 +18,15 @@ namespace Projet_Texcel
         {
             InitializeComponent();
             this.form = form;
+            btnCreerCatego.Enabled = false;
         }
 
         private void btnCreerCatego_Click(object sender, EventArgs e)
         {
-
+            cptValide = 0;
+            btnCreerCatego.Enabled = false;
+            picValid1.Visible = false;
+            //Code pour insérer la catego dans la BD
         }
 
         private void Categorie_FormClosing(object sender, FormClosingEventArgs e)
@@ -48,7 +52,7 @@ namespace Projet_Texcel
                 image = (PictureBox)Controls["picValid" + textBox.Tag];
                 image.Visible = true;
             }
-            if (cptValide == 2)//Nombre de textbox a valider
+            if (cptValide == 1)//Nombre de textbox a valider
                 btnCreerCatego.Enabled = true;
         }
     }

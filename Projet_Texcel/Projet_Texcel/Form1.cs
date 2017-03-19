@@ -179,14 +179,107 @@ namespace Projet_Texcel
 
         public int validate(TextBox textBox)
         {
-            return validerInfo(textBox);
-        }
-
-        private int validerInfo(TextBox textBox)
-        {
             Regex regex = new Regex("^[a-zA-Z\\s]+$");
             Match match = regex.Match(textBox.Text);
-            //int tag = textBox.Tag;
+            if (match.Success)
+            {
+                return 0;
+            }
+            else
+                return Convert.ToInt32(textBox.Tag);
+        }
+
+        public int validateDate(TextBox textBox)
+        {
+            if(Convert.ToInt32(textBox.Tag) == 3)
+            {
+                Regex regex = new Regex("^[0-9]{4}");
+                Match match = regex.Match(textBox.Text);
+                if (match.Success)
+                {
+                    return 0;
+                }
+                else
+                    return Convert.ToInt32(textBox.Tag);
+            }
+            else
+            {
+                Regex regex = new Regex("^[0-9]{2}");
+                Match match = regex.Match(textBox.Text);
+                if (match.Success)
+                {
+                    if(Convert.ToInt32(textBox.Tag) == 4)
+                    {
+                        if ((Convert.ToInt32(textBox.Text) > 0) && (Convert.ToInt32(textBox.Text) < 13))
+                            return 0;
+                        else
+                            return Convert.ToInt32(textBox.Tag);
+                    }
+                    else
+                    {
+                        if ((Convert.ToInt32(textBox.Text) > 0) && (Convert.ToInt32(textBox.Text) < 32))
+                            return 0;
+                        else
+                            return Convert.ToInt32(textBox.Tag);
+                    }
+                }
+                else
+                    return Convert.ToInt32(textBox.Tag);
+            }
+        }
+
+        public int validateAddresse(TextBox textBox)
+        {
+            Regex regex = new Regex("^([0-9]{1,8} ([aA-zZ]{1,20}) ([aA-zZ]{1,20}))");
+            Match match = regex.Match(textBox.Text);
+            if (match.Success)
+            {
+                return 0;
+            }
+            else
+                return Convert.ToInt32(textBox.Tag);
+        }
+
+        public int validateEmail(TextBox textBox)
+        {
+            Regex regex = new Regex("^[a-z0-9._-]+@[a-z0-9._-]{2,}\\.[a-z]{2,4}");
+            Match match = regex.Match(textBox.Text);
+            if (match.Success)
+            {
+                return 0;
+            }
+            else
+                return Convert.ToInt32(textBox.Tag);
+        }
+
+        public int validateMatricule(TextBox textBox)
+        {
+            Regex regex = new Regex("^[aA-zZ0-9]{4,8}");
+            Match match = regex.Match(textBox.Text);
+            if (match.Success)
+            {
+                return 0;
+            }
+            else
+                return Convert.ToInt32(textBox.Tag);
+        }
+
+        public int validatePoste(TextBox textBox)
+        {
+            Regex regex = new Regex("^[0-9]{4}");
+            Match match = regex.Match(textBox.Text);
+            if (match.Success)
+            {
+                return 0;
+            }
+            else
+                return Convert.ToInt32(textBox.Tag);
+        }
+
+        public int validateTel(TextBox textBox)
+        {
+            Regex regex = new Regex("^([0-9]{3}-[0-9]{3}-[0-9]{4})");
+            Match match = regex.Match(textBox.Text);
             if (match.Success)
             {
                 return 0;

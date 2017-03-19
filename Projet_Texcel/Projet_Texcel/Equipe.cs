@@ -15,11 +15,13 @@ namespace Projet_Texcel
         static int cptEmploye = 1;
         ComboBox previousLST;
         Form1 form;
+        int cptValide = 0;
         public Equipe(Form1 form)
         {
             InitializeComponent();
             this.form = form;
             previousLST = lstEmploye1;
+            btnCreerEquipe.Enabled = false;
         }
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
@@ -58,12 +60,32 @@ namespace Projet_Texcel
 
         private void btnCreerEquipe_Click(object sender, EventArgs e)
         {
-
+            picValid1.Visible = false;
+            cptValide = 0;
+            btnCreerEquipe.Enabled = false;
+            //Code pour ajouter l'equipe a la bd
         }
 
         private void TextBox_Leave(object sender, EventArgs e)
         {
-            int erreur = form.validate((TextBox)sender);
+            TextBox textBox = (TextBox)sender;
+            PictureBox image;
+            int erreur = form.validate(textBox);//Envoie le textbox a valider
+            if (erreur > 0)
+            {
+                image = (PictureBox)Controls["picError" + erreur];
+                image.Visible = true;
+            }
+            else
+            {
+                cptValide++;//Ajoute un au compteur de validation
+                image = (PictureBox)Controls["picError" + textBox.Tag];
+                image.Visible = false;
+                image = (PictureBox)Controls["picValid" + textBox.Tag];
+                image.Visible = true;
+            }
+            if (cptValide == 1)//Nombre de textbox a valider
+                btnCreerEquipe.Enabled = true;
         }
     }
 }

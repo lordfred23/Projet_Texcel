@@ -55,7 +55,7 @@
             this.txtGenre.Size = new System.Drawing.Size(159, 22);
             this.txtGenre.TabIndex = 6;
             this.txtGenre.Tag = "1";
-            this.txtGenre.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.txtGenre.TextChanged += new System.EventHandler(this.TextBox_Leave);
             // 
             // label1
             // 

@@ -29,45 +29,57 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OS));
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCreerOS = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.picValid2 = new System.Windows.Forms.PictureBox();
             this.picError2 = new System.Windows.Forms.PictureBox();
             this.picValid1 = new System.Windows.Forms.PictureBox();
             this.picError1 = new System.Windows.Forms.PictureBox();
-            this.lstVersion = new System.Windows.Forms.ComboBox();
-            this.lstEdition = new System.Windows.Forms.ComboBox();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEdition = new System.Windows.Forms.TextBox();
+            this.picValid3 = new System.Windows.Forms.PictureBox();
+            this.picError3 = new System.Windows.Forms.PictureBox();
+            this.picValid4 = new System.Windows.Forms.PictureBox();
+            this.picError4 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picValid2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError4)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnCreerOS
             // 
-            this.button2.Location = new System.Drawing.Point(114, 204);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 38);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Créer OS";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCreerOS.Location = new System.Drawing.Point(114, 204);
+            this.btnCreerOS.Name = "btnCreerOS";
+            this.btnCreerOS.Size = new System.Drawing.Size(134, 38);
+            this.btnCreerOS.TabIndex = 1;
+            this.btnCreerOS.Text = "Créer OS";
+            this.btnCreerOS.UseVisualStyleBackColor = true;
+            this.btnCreerOS.Click += new System.EventHandler(this.button_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.picValid4);
+            this.groupBox1.Controls.Add(this.picError4);
+            this.groupBox1.Controls.Add(this.picValid3);
+            this.groupBox1.Controls.Add(this.picError3);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtEdition);
             this.groupBox1.Controls.Add(this.picValid2);
             this.groupBox1.Controls.Add(this.picError2);
             this.groupBox1.Controls.Add(this.picValid1);
             this.groupBox1.Controls.Add(this.picError1);
-            this.groupBox1.Controls.Add(this.lstVersion);
-            this.groupBox1.Controls.Add(this.lstEdition);
             this.groupBox1.Controls.Add(this.txtCode);
             this.groupBox1.Controls.Add(this.txtNom);
             this.groupBox1.Controls.Add(this.label4);
@@ -125,22 +137,6 @@
             this.picError1.TabStop = false;
             this.picError1.Visible = false;
             // 
-            // lstVersion
-            // 
-            this.lstVersion.FormattingEnabled = true;
-            this.lstVersion.Location = new System.Drawing.Point(115, 108);
-            this.lstVersion.Name = "lstVersion";
-            this.lstVersion.Size = new System.Drawing.Size(121, 24);
-            this.lstVersion.TabIndex = 10;
-            // 
-            // lstEdition
-            // 
-            this.lstEdition.FormattingEnabled = true;
-            this.lstEdition.Location = new System.Drawing.Point(115, 79);
-            this.lstEdition.Name = "lstEdition";
-            this.lstEdition.Size = new System.Drawing.Size(121, 24);
-            this.lstEdition.TabIndex = 9;
-            // 
             // txtCode
             // 
             this.txtCode.Location = new System.Drawing.Point(115, 53);
@@ -195,6 +191,68 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Nom :";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(115, 105);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(178, 22);
+            this.textBox1.TabIndex = 18;
+            this.textBox1.Tag = "2";
+            this.textBox1.TextChanged += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtEdition
+            // 
+            this.txtEdition.Location = new System.Drawing.Point(115, 78);
+            this.txtEdition.Name = "txtEdition";
+            this.txtEdition.Size = new System.Drawing.Size(178, 22);
+            this.txtEdition.TabIndex = 17;
+            this.txtEdition.Tag = "1";
+            this.txtEdition.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // picValid3
+            // 
+            this.picValid3.Image = global::Projet_Texcel.Properties.Resources.images__1_;
+            this.picValid3.Location = new System.Drawing.Point(298, 79);
+            this.picValid3.Name = "picValid3";
+            this.picValid3.Size = new System.Drawing.Size(20, 21);
+            this.picValid3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picValid3.TabIndex = 20;
+            this.picValid3.TabStop = false;
+            this.picValid3.Visible = false;
+            // 
+            // picError3
+            // 
+            this.picError3.Image = ((System.Drawing.Image)(resources.GetObject("picError3.Image")));
+            this.picError3.Location = new System.Drawing.Point(298, 79);
+            this.picError3.Name = "picError3";
+            this.picError3.Size = new System.Drawing.Size(20, 21);
+            this.picError3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError3.TabIndex = 19;
+            this.picError3.TabStop = false;
+            this.picError3.Visible = false;
+            // 
+            // picValid4
+            // 
+            this.picValid4.Image = global::Projet_Texcel.Properties.Resources.images__1_;
+            this.picValid4.Location = new System.Drawing.Point(299, 105);
+            this.picValid4.Name = "picValid4";
+            this.picValid4.Size = new System.Drawing.Size(20, 21);
+            this.picValid4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picValid4.TabIndex = 22;
+            this.picValid4.TabStop = false;
+            this.picValid4.Visible = false;
+            // 
+            // picError4
+            // 
+            this.picError4.Image = ((System.Drawing.Image)(resources.GetObject("picError4.Image")));
+            this.picError4.Location = new System.Drawing.Point(299, 105);
+            this.picError4.Name = "picError4";
+            this.picError4.Size = new System.Drawing.Size(20, 21);
+            this.picError4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError4.TabIndex = 21;
+            this.picError4.TabStop = false;
+            this.picError4.Visible = false;
+            // 
             // OS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,7 +260,7 @@
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(370, 269);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCreerOS);
             this.Name = "OS";
             this.Text = "OS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OS_FormClosing);
@@ -212,16 +270,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.picError2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError4)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCreerOS;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox lstVersion;
-        private System.Windows.Forms.ComboBox lstEdition;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label label4;
@@ -232,5 +292,11 @@
         private System.Windows.Forms.PictureBox picError2;
         private System.Windows.Forms.PictureBox picValid1;
         private System.Windows.Forms.PictureBox picError1;
+        private System.Windows.Forms.PictureBox picValid4;
+        private System.Windows.Forms.PictureBox picError4;
+        private System.Windows.Forms.PictureBox picValid3;
+        private System.Windows.Forms.PictureBox picError3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEdition;
     }
 }

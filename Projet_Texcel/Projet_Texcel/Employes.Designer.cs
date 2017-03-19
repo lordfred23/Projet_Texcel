@@ -397,6 +397,7 @@
             // txtMatricule
             // 
             this.txtMatricule.Location = new System.Drawing.Point(149, 233);
+            this.txtMatricule.MaxLength = 8;
             this.txtMatricule.Name = "txtMatricule";
             this.txtMatricule.Size = new System.Drawing.Size(220, 22);
             this.txtMatricule.TabIndex = 27;
@@ -406,6 +407,7 @@
             // txtTelePoste
             // 
             this.txtTelePoste.Location = new System.Drawing.Point(149, 205);
+            this.txtTelePoste.MaxLength = 4;
             this.txtTelePoste.Name = "txtTelePoste";
             this.txtTelePoste.Size = new System.Drawing.Size(220, 22);
             this.txtTelePoste.TabIndex = 26;
@@ -433,19 +435,23 @@
             // txtJours
             // 
             this.txtJours.Location = new System.Drawing.Point(331, 87);
+            this.txtJours.MaxLength = 2;
             this.txtJours.Name = "txtJours";
             this.txtJours.Size = new System.Drawing.Size(38, 22);
             this.txtJours.TabIndex = 23;
             this.txtJours.Tag = "5";
+            this.txtJours.Text = "Jour";
             this.txtJours.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // txtMois
             // 
             this.txtMois.Location = new System.Drawing.Point(246, 87);
+            this.txtMois.MaxLength = 2;
             this.txtMois.Name = "txtMois";
             this.txtMois.Size = new System.Drawing.Size(38, 22);
             this.txtMois.TabIndex = 22;
             this.txtMois.Tag = "4";
+            this.txtMois.Text = "Mois";
             this.txtMois.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // txtAdresse
@@ -460,10 +466,12 @@
             // txtAnnee
             // 
             this.txtAnnee.Location = new System.Drawing.Point(149, 87);
+            this.txtAnnee.MaxLength = 4;
             this.txtAnnee.Name = "txtAnnee";
             this.txtAnnee.Size = new System.Drawing.Size(52, 22);
             this.txtAnnee.TabIndex = 20;
             this.txtAnnee.Tag = "3";
+            this.txtAnnee.Text = "Annee";
             this.txtAnnee.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // label5

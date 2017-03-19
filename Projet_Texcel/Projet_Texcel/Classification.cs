@@ -13,10 +13,12 @@ namespace Projet_Texcel
     public partial class Classification : Form
     {
         Form1 form;
+        int cptValide = 0;
         public Classification(Form1 form)
         {
             InitializeComponent();
             this.form = form;
+            btnCreerClassif.Enabled = false;
         }
 
         private void btnCreerClassif_Click(object sender, EventArgs e)
@@ -31,7 +33,24 @@ namespace Projet_Texcel
 
         private void TextBox_Leave(object sender, EventArgs e)
         {
-            int erreur = form.validate((TextBox)sender);
+            TextBox textBox = (TextBox)sender;
+            PictureBox image;
+            int erreur = form.validate(textBox);//Envoie le textbox a valider
+            if (erreur > 0)
+            {
+                image = (PictureBox)Controls["picError" + erreur];
+                image.Visible = true;
+            }
+            else
+            {
+                cptValide++;//Ajoute un au compteur de validation
+                image = (PictureBox)Controls["picError" + textBox.Tag];
+                image.Visible = false;
+                image = (PictureBox)Controls["picValid" + textBox.Tag];
+                image.Visible = true;
+            }
+            if (cptValide == 1)//Nombre de textbox a valider
+                btnCreerClassif.Enabled = true;
         }
     }
 }
