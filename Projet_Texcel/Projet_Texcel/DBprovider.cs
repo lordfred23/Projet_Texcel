@@ -4,12 +4,15 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Projet_Texcel.ClasseObjBd; //  heyhey namespace different pour les classes de "BD" alex.
 
 namespace Projet_Texcel
 {
     class DBprovider
     {
         static SqlConnection conn;
+        static ClasseObjBd.CSysExp SysExp;
+        static List<CSysExp> sysList = new List<CSysExp>();
         public DBprovider() {
             Connection();
         }
@@ -51,6 +54,41 @@ namespace Projet_Texcel
 
          }
 
+        static void DisplaySysExp()
+        {
+
+            bool unDouble;
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand("SELECT * FROM tblSystemExploitation", conn))
+                {
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        unDouble = false;
+                        foreach (CSysExp cc in sysList)
+                        {
+                            if (reader.GetInt32(0) == cc.IdSysExp )
+                            {
+                                unDouble = true;
+                            }
+                        }
+                        if(unDouble==false)
+                        {
+                        int idSysExp = reader.GetInt32(0);
+                        string nom = reader.GetString(1);
+                        string version = reader.GetString(2);
+                        string edition = reader.GetString(3);
+                        string tag = reader.GetString(4);
+                        SysExp = new CSysExp(idSysExp, nom, version, edition, tag);
+                        sysList.Add(SysExp);
+                        }
+                        
+                    }
+                }
+            conn.Close();
+         }
+
 
         static void AddPlatform(string nom, string config, string typePlatform,int idSysExp)
         {
@@ -59,7 +97,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblPlatform VALUES(@nom, @config, @typePlatform,@idSysExp)", conn))
+                    "INSERT INTO tblPlatform(nom,config,typePlatform,idSysExp) VALUES(@nom, @config, @typePlatform,@idSysExp)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("nom", nom));
                     command.Parameters.Add(new SqlParameter("config", config));
@@ -83,7 +121,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblPlatformJeu VALUES(@idJeu, @idPlatform)", conn))
+                    "INSERT INTO tblPlatformJeu(idJeu,idPlatform) VALUES(@idJeu, @idPlatform)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("idJeu", idJeu));
                     command.Parameters.Add(new SqlParameter("idPlatform", idPlatform));
@@ -105,7 +143,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblJeu VALUES(@developpeur,@description,@minimalConfig,@idClassification,@nom)", conn))
+                    "INSERT INTO tblJeu(developpeur,description,minimalConfig,idClassification,nom) VALUES(@developpeur,@description,@minimalConfig,@idClassification,@nom)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("developpeur", developpeur));
                     command.Parameters.Add(new SqlParameter("description", description));
@@ -130,7 +168,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblTheme VALUES(@nom, @description)", conn))
+                    "INSERT INTO tblTheme(nom,description) VALUES(@nom, @description)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("nom", nom));
                     command.Parameters.Add(new SqlParameter("description", description));
@@ -152,7 +190,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblGenre VALUES(@nom, @description)", conn))
+                    "INSERT INTO tblGenre(nom,description) VALUES(@nom, @description)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("nom", nom));
                     command.Parameters.Add(new SqlParameter("description", description));
@@ -174,7 +212,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblClassification VALUES(@nom, @description)", conn))
+                    "INSERT INTO tblClassification(nom,description) VALUES(@nom, @description)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("nom", nom));
                     command.Parameters.Add(new SqlParameter("description", description));
@@ -196,7 +234,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblJeuTheme VALUES(@idJeu, @idTheme)", conn))
+                    "INSERT INTO tblJeuTheme(idJeu,idTheme) VALUES(@idJeu, @idTheme)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("idJeu", idJeu));
                     command.Parameters.Add(new SqlParameter("idTheme", idTheme));
@@ -218,7 +256,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblGenreJeu VALUES(@idJeu, @idGenre)", conn))
+                    "INSERT INTO tblGenreJeu(idJeu,IdGenre) VALUES(@idJeu, @idGenre)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("idJeu", idJeu));
                     command.Parameters.Add(new SqlParameter("idGenre", idGenre));
@@ -240,7 +278,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblRole VALUES(@nom, @description)", conn))
+                    "INSERT INTO tblRole(nom,description) VALUES(@nom, @description)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("nom", nom));
                     command.Parameters.Add(new SqlParameter("description", description));
@@ -262,7 +300,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblEmploye VALUES(@matricule,@nom,@prenom,@dateNaissance,@adresse,@noTelephone,@posteTelephone,@noTelephoneMaison,@idRole)", conn))
+                    "INSERT INTO tblEmploye(matricule,nom,prenom,dateNaissance,adresse,noTelephone,posteTelephone,noTelephoneMaison,idRole) VALUES(@matricule,@nom,@prenom,@dateNaissance,@adresse,@noTelephone,@posteTelephone,@noTelephoneMaison,@idRole)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("matricule", matricule));
                     command.Parameters.Add(new SqlParameter("nom", nom));
@@ -291,7 +329,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblEmployeEquipe VALUES(@matricule, @idEquipe)", conn))
+                    "INSERT INTO tblEmployeEquipe(matricule,idEquipe) VALUES(@matricule, @idEquipe)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("matricule", matricule));
                     command.Parameters.Add(new SqlParameter("idEquipe", idEquipe));
@@ -313,7 +351,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblEquipe VALUES(@nom)", conn))
+                    "INSERT INTO tblEquipe(nom) VALUES(@nom)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("nom", nom));
                     
@@ -335,7 +373,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblCategorieTest VALUES(@nom, @description)", conn))
+                    "INSERT INTO tblCategorieTest(nom,description) VALUES(@nom, @description)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("nom", nom));
                     command.Parameters.Add(new SqlParameter("description", description));
@@ -358,7 +396,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblTest VALUES(@resultat,@nom, @description,@idCategorieTest)", conn))
+                    "INSERT INTO tblTest(resultat,nom,description,idCategorieTest) VALUES(@resultat,@nom, @description,@idCategorieTest)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("nom", nom));
                     command.Parameters.Add(new SqlParameter("description", description));
@@ -383,7 +421,7 @@ namespace Projet_Texcel
             try
             {
                 using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblTravail VALUES(@idTest, @idEquipe,@idProjet)", conn))
+                    "INSERT INTO tblTravail(idTest,idEquipe,idProjet) VALUES(@idTest, @idEquipe,@idProjet)", conn))
                 {
                     command.Parameters.Add(new SqlParameter("idTest", idTest));
                     command.Parameters.Add(new SqlParameter("idEquipe", idEquipe));
@@ -398,6 +436,8 @@ namespace Projet_Texcel
             conn.Close();
 
         }
+
+
 
 
 
