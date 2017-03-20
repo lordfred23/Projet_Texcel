@@ -31,36 +31,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OS));
             this.btnCreerOS = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtCode = new System.Windows.Forms.TextBox();
-            this.txtNom = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtVersion = new System.Windows.Forms.TextBox();
-            this.txtEdition = new System.Windows.Forms.TextBox();
             this.picValid4 = new System.Windows.Forms.PictureBox();
             this.picError4 = new System.Windows.Forms.PictureBox();
             this.picValid3 = new System.Windows.Forms.PictureBox();
             this.picError3 = new System.Windows.Forms.PictureBox();
-            this.picValid2 = new System.Windows.Forms.PictureBox();
-            this.picError2 = new System.Windows.Forms.PictureBox();
+            this.txtVersion = new System.Windows.Forms.TextBox();
+            this.txtEdition = new System.Windows.Forms.TextBox();
             this.picValid1 = new System.Windows.Forms.PictureBox();
             this.picError1 = new System.Windows.Forms.PictureBox();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picValid4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValid3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picValid2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picError2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCreerOS
             // 
-            this.btnCreerOS.Location = new System.Drawing.Point(114, 204);
+            this.btnCreerOS.Location = new System.Drawing.Point(111, 150);
             this.btnCreerOS.Name = "btnCreerOS";
             this.btnCreerOS.Size = new System.Drawing.Size(134, 38);
             this.btnCreerOS.TabIndex = 1;
@@ -76,99 +70,23 @@
             this.groupBox1.Controls.Add(this.picError3);
             this.groupBox1.Controls.Add(this.txtVersion);
             this.groupBox1.Controls.Add(this.txtEdition);
-            this.groupBox1.Controls.Add(this.picValid2);
-            this.groupBox1.Controls.Add(this.picError2);
             this.groupBox1.Controls.Add(this.picValid1);
             this.groupBox1.Controls.Add(this.picError1);
-            this.groupBox1.Controls.Add(this.txtCode);
             this.groupBox1.Controls.Add(this.txtNom);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(346, 152);
+            this.groupBox1.Size = new System.Drawing.Size(346, 118);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Système d\'Exploitation";
             // 
-            // txtCode
-            // 
-            this.txtCode.Location = new System.Drawing.Point(115, 53);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(178, 22);
-            this.txtCode.TabIndex = 8;
-            this.txtCode.Tag = "2";
-            this.txtCode.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // txtNom
-            // 
-            this.txtNom.Location = new System.Drawing.Point(115, 26);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(178, 22);
-            this.txtNom.TabIndex = 7;
-            this.txtNom.Tag = "1";
-            this.txtNom.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Version :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Edition :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Code :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nom :";
-            // 
-            // txtVersion
-            // 
-            this.txtVersion.Location = new System.Drawing.Point(115, 105);
-            this.txtVersion.Name = "txtVersion";
-            this.txtVersion.Size = new System.Drawing.Size(178, 22);
-            this.txtVersion.TabIndex = 18;
-            this.txtVersion.Tag = "4";
-            this.txtVersion.TextChanged += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // txtEdition
-            // 
-            this.txtEdition.Location = new System.Drawing.Point(115, 78);
-            this.txtEdition.Name = "txtEdition";
-            this.txtEdition.Size = new System.Drawing.Size(178, 22);
-            this.txtEdition.TabIndex = 17;
-            this.txtEdition.Tag = "3";
-            this.txtEdition.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
             // picValid4
             // 
             this.picValid4.Image = global::Projet_Texcel.Properties.Resources.images__1_;
-            this.picValid4.Location = new System.Drawing.Point(299, 105);
+            this.picValid4.Location = new System.Drawing.Point(299, 79);
             this.picValid4.Name = "picValid4";
             this.picValid4.Size = new System.Drawing.Size(20, 21);
             this.picValid4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,7 +97,7 @@
             // picError4
             // 
             this.picError4.Image = ((System.Drawing.Image)(resources.GetObject("picError4.Image")));
-            this.picError4.Location = new System.Drawing.Point(299, 105);
+            this.picError4.Location = new System.Drawing.Point(299, 79);
             this.picError4.Name = "picError4";
             this.picError4.Size = new System.Drawing.Size(20, 21);
             this.picError4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +108,7 @@
             // picValid3
             // 
             this.picValid3.Image = global::Projet_Texcel.Properties.Resources.images__1_;
-            this.picValid3.Location = new System.Drawing.Point(298, 79);
+            this.picValid3.Location = new System.Drawing.Point(298, 53);
             this.picValid3.Name = "picValid3";
             this.picValid3.Size = new System.Drawing.Size(20, 21);
             this.picValid3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,7 +119,7 @@
             // picError3
             // 
             this.picError3.Image = ((System.Drawing.Image)(resources.GetObject("picError3.Image")));
-            this.picError3.Location = new System.Drawing.Point(298, 79);
+            this.picError3.Location = new System.Drawing.Point(298, 53);
             this.picError3.Name = "picError3";
             this.picError3.Size = new System.Drawing.Size(20, 21);
             this.picError3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -209,27 +127,23 @@
             this.picError3.TabStop = false;
             this.picError3.Visible = false;
             // 
-            // picValid2
+            // txtVersion
             // 
-            this.picValid2.Image = global::Projet_Texcel.Properties.Resources.images__1_;
-            this.picValid2.Location = new System.Drawing.Point(298, 53);
-            this.picValid2.Name = "picValid2";
-            this.picValid2.Size = new System.Drawing.Size(20, 21);
-            this.picValid2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picValid2.TabIndex = 16;
-            this.picValid2.TabStop = false;
-            this.picValid2.Visible = false;
+            this.txtVersion.Location = new System.Drawing.Point(115, 79);
+            this.txtVersion.Name = "txtVersion";
+            this.txtVersion.Size = new System.Drawing.Size(178, 22);
+            this.txtVersion.TabIndex = 18;
+            this.txtVersion.Tag = "4";
+            this.txtVersion.TextChanged += new System.EventHandler(this.TextBox_Leave);
             // 
-            // picError2
+            // txtEdition
             // 
-            this.picError2.Image = ((System.Drawing.Image)(resources.GetObject("picError2.Image")));
-            this.picError2.Location = new System.Drawing.Point(298, 53);
-            this.picError2.Name = "picError2";
-            this.picError2.Size = new System.Drawing.Size(20, 21);
-            this.picError2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picError2.TabIndex = 15;
-            this.picError2.TabStop = false;
-            this.picError2.Visible = false;
+            this.txtEdition.Location = new System.Drawing.Point(115, 52);
+            this.txtEdition.Name = "txtEdition";
+            this.txtEdition.Size = new System.Drawing.Size(178, 22);
+            this.txtEdition.TabIndex = 17;
+            this.txtEdition.Tag = "3";
+            this.txtEdition.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // picValid1
             // 
@@ -253,12 +167,48 @@
             this.picError1.TabStop = false;
             this.picError1.Visible = false;
             // 
+            // txtNom
+            // 
+            this.txtNom.Location = new System.Drawing.Point(115, 26);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(178, 22);
+            this.txtNom.TabIndex = 7;
+            this.txtNom.Tag = "1";
+            this.txtNom.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Version :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Edition :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nom :";
+            // 
             // OS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(370, 269);
+            this.ClientSize = new System.Drawing.Size(370, 204);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCreerOS);
             this.Name = "OS";
@@ -270,8 +220,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picError4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValid3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picValid2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picError2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError1)).EndInit();
             this.ResumeLayout(false);
@@ -282,14 +230,10 @@
 
         private System.Windows.Forms.Button btnCreerOS;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox picValid2;
-        private System.Windows.Forms.PictureBox picError2;
         private System.Windows.Forms.PictureBox picValid1;
         private System.Windows.Forms.PictureBox picError1;
         private System.Windows.Forms.PictureBox picValid4;
