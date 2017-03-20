@@ -168,6 +168,7 @@
             this.txtDesc.TabIndex = 7;
             this.txtDesc.Tag = "3";
             this.txtDesc.Text = "";
+            this.txtDesc.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // label7
             // 
