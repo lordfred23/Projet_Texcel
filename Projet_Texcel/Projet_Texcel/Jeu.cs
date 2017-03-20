@@ -88,6 +88,12 @@ namespace Projet_Texcel
 
         private void TextBox_Leave(object sender, EventArgs e)
         {
+            if(sender.GetType() == txtDesc.GetType())
+            {
+                cptValide++;
+                picValid3.Visible = true;
+                return;
+            }
             TextBox textBox = (TextBox)sender;
             PictureBox image;
             int erreur = 0;
