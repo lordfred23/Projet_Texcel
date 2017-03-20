@@ -54,7 +54,6 @@ namespace Projet_Texcel
             {
                 lstEquipe.Items.Add(valeur);
             }
-            lstEquipe.Text = equipe[equipe.Count() - 1];
         }
 
         private void TextBox_Leave(object sender, EventArgs e)

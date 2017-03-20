@@ -191,7 +191,7 @@
             // txtMatricule
             // 
             this.txtMatricule.Location = new System.Drawing.Point(149, 263);
-            this.txtMatricule.MaxLength = 8;
+            this.txtMatricule.MaxLength = 7;
             this.txtMatricule.Name = "txtMatricule";
             this.txtMatricule.Size = new System.Drawing.Size(220, 22);
             this.txtMatricule.TabIndex = 27;
@@ -201,7 +201,7 @@
             // txtTelePoste
             // 
             this.txtTelePoste.Location = new System.Drawing.Point(149, 235);
-            this.txtTelePoste.MaxLength = 4;
+            this.txtTelePoste.MaxLength = 3;
             this.txtTelePoste.Name = "txtTelePoste";
             this.txtTelePoste.Size = new System.Drawing.Size(220, 22);
             this.txtTelePoste.TabIndex = 26;

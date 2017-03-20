@@ -29,7 +29,7 @@ namespace Projet_Texcel
             cptValide = 0;
             for (int i = 1; i <= 4; i++)
             {
-                image = (PictureBox)Controls["picValid" + i];
+                image = (PictureBox)groupBox1.Controls["picValid" + i];
                 image.Visible = false;
             }
             btnCreerOS.Enabled = false;
