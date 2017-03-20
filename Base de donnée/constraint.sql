@@ -3,12 +3,11 @@ USE bdTexelFredAlex
 alter table tblPlatform add foreign key(idSysExp) references tblSystemExploitation(idSysExp);
 
 -- --tblPlatformJeu
-alter table tblPlatformJeu add foreign key(idJeu) references tblJeu(idJeu);
-alter table tblPlatformJeu add foreign key(idPlatform)references tblPlatform(idPlatform);
+
 
 -- --tblJeu
 alter table tblJeu add foreign key(idClassification)references tblClassification(idClassification);
-alter table tblJeu add foreign key(idJeu1) references tblJeu(idJeu);
+
 alter table tblJeu add foreign key(idTheme)references tblTheme(idTheme);
 alter table tblJeu add foreign key(idGenre)references tblGenre(idGenre);
 alter table tblJeu add foreign key(idPlatform)references tblPlatform(idPlatform);

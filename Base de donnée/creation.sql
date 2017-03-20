@@ -36,7 +36,7 @@ CREATE TABLE tblSystemExploitation
 	nom 				varchar(100)	not null,
 	version 			varchar(100)	not null,
 	edition 			varchar(100)	null,
-	tag					varchar(1000)			null,
+	tag					varchar(3000)			null,
 	constraint PK_tblSystemExploitation_idSysExp PRIMARY KEY(idSysExp)
 );
 
@@ -54,7 +54,7 @@ CREATE TABLE tblPlatform
 	config				varchar(250)	not null,
 	typePlatform 		varchar(50)		not null,
 	idSysExp			int				not null,
-	tag					varchar			null,
+	tag					varchar(3000)			null,
 	constraint PK_tblPlatform_idPlatform PRIMARY KEY(idPlatform)
 );
 
@@ -83,7 +83,7 @@ CREATE TABLE tblJeu
 	idTheme				int 			not null,
 	idPlatform			int				not null,
 	nom					varchar(100)	not null,
-	tag					varchar			null,
+	tag					varchar(3000)			null,
 	
 	constraint PK_tblJeu_idJeu PRIMARY KEY(idJeu)
 );
@@ -101,7 +101,7 @@ CREATE TABLE tblTheme
 	idTheme				int				not null	identity(1,1),
 	nom					varchar(60)		not null,
 	description			varchar(150)	null,
-	tag					varchar			null,
+	tag					varchar(3000)		null,
 	constraint PK_tblTheme_idTheme PRIMARY KEY(idTheme)
 );
 
@@ -118,7 +118,7 @@ CREATE TABLE tblGenre
 	idGenre				int				not null	identity(1,1),
 	nom					varchar(100)		not null,
 	description			varchar(700)	null,
-	tag					varchar			null,
+	tag					varchar(3000)			null,
 	constraint PK_tblGenre_idGenre PRIMARY KEY(idGenre)
 );
 
@@ -134,7 +134,7 @@ CREATE TABLE tblClassification
 	idClassification 	int				not null	identity(1,1),
 	nom					varchar(60)		not null,
 	description			varchar(150)	null,
-	tag					varchar			null,
+	tag					varchar(3000)			null,
 	constraint PK_tblClassification_idClassification PRIMARY KEY(idClassification)
 );
 
@@ -166,7 +166,7 @@ CREATE TABLE tblRole
 	idRole				int				not null	identity(1,1),
 	nom					varchar(60)		not null,
 	description			varchar(250)	not null,
-	tag					varchar			null,
+	tag					varchar(3000)		null,
 	constraint PK_tblRole_idRole PRIMARY KEY(idRole)
 );
 
@@ -189,7 +189,7 @@ CREATE TABLE tblEmploye
 	posteTelephone		char (3)		not null,
 	noTelephoneMaison	char(10)			not null,
 	idRole				int				not null,
-	tag					varchar			null,
+	tag					varchar(3000)			null,
 	constraint PK_tblEmploye_matricule PRIMARY KEY(matricule)
 );
 
@@ -218,7 +218,7 @@ CREATE TABLE tblEquipe
 (	
 	idEquipe			int				not null   	identity(1,1), 
 	nom 				varchar(40)		not null,
-	tag					varchar			null,
+	tag					varchar(3000)			null,
 	constraint PK_tblEquipe_idEquipe PRIMARY KEY(idEquipe)
 );
 
@@ -235,7 +235,7 @@ CREATE TABLE tblProjet
 	nom					varchar(50)		not null,
 	description			varchar(150)	not null,
 	idJeu				int				not null,
-	tag					varchar			null,
+	tag					varchar(3000)			null,
 	constraint PK_tblProjet_idProjet PRIMARY KEY(idProjet)
 );
 
@@ -252,7 +252,7 @@ CREATE TABLE tblCategorieTest
 	idCategorieTest		int				not null	identity(1,1),
 	nom					varchar(50)		not null,
 	description			varchar(150)	not null,
-	tag					varchar			null,
+	tag					varchar(3000)			null,
 	constraint PK_tblCategorieTest_idCategorieTest PRIMARY KEY(idCategorieTest)
 );
 
@@ -269,7 +269,7 @@ CREATE TABLE tblTest
 	resultat			int      		not null,
 	description			varchar(150)	not null,
 	idCategorieTest		int				not null,
-	tag					varchar			null,
+	tag					varchar(3000)			null,
 	constraint PK_tblTest_idTest PRIMARY KEY(idTest)
 );
 
