@@ -167,7 +167,193 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employé";
             // 
+<<<<<<< HEAD
             // picValid11
+=======
+            // lstRoles
+            // 
+            this.lstRoles.FormattingEnabled = true;
+            this.lstRoles.Items.AddRange(new object[] {
+            "Administrateur",
+            "Utilisateur"});
+            this.lstRoles.Location = new System.Drawing.Point(149, 294);
+            this.lstRoles.Name = "lstRoles";
+            this.lstRoles.Size = new System.Drawing.Size(121, 24);
+            this.lstRoles.TabIndex = 1;
+            this.lstRoles.Text = "Utilisateur";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 294);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 17);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Rôles :";
+            // 
+            // txtMatricule
+            // 
+            this.txtMatricule.Location = new System.Drawing.Point(149, 263);
+            this.txtMatricule.MaxLength = 7;
+            this.txtMatricule.Name = "txtMatricule";
+            this.txtMatricule.Size = new System.Drawing.Size(220, 22);
+            this.txtMatricule.TabIndex = 27;
+            this.txtMatricule.Tag = "10";
+            this.txtMatricule.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtTelePoste
+            // 
+            this.txtTelePoste.Location = new System.Drawing.Point(149, 235);
+            this.txtTelePoste.MaxLength = 3;
+            this.txtTelePoste.Name = "txtTelePoste";
+            this.txtTelePoste.Size = new System.Drawing.Size(220, 22);
+            this.txtTelePoste.TabIndex = 26;
+            this.txtTelePoste.Tag = "9";
+            this.txtTelePoste.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 263);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 17);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Matricule :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 235);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 17);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Télé Poste :";
+            // 
+            // txtJours
+            // 
+            this.txtJours.Location = new System.Drawing.Point(331, 87);
+            this.txtJours.MaxLength = 2;
+            this.txtJours.Name = "txtJours";
+            this.txtJours.Size = new System.Drawing.Size(38, 22);
+            this.txtJours.TabIndex = 23;
+            this.txtJours.Tag = "5";
+            this.txtJours.Text = "Jour";
+            this.txtJours.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtMois
+            // 
+            this.txtMois.Location = new System.Drawing.Point(246, 87);
+            this.txtMois.MaxLength = 2;
+            this.txtMois.Name = "txtMois";
+            this.txtMois.Size = new System.Drawing.Size(38, 22);
+            this.txtMois.TabIndex = 22;
+            this.txtMois.Tag = "4";
+            this.txtMois.Text = "Mois";
+            this.txtMois.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtAdresse
+            // 
+            this.txtAdresse.Location = new System.Drawing.Point(149, 118);
+            this.txtAdresse.Name = "txtAdresse";
+            this.txtAdresse.Size = new System.Drawing.Size(220, 22);
+            this.txtAdresse.TabIndex = 21;
+            this.txtAdresse.Tag = "6";
+            this.txtAdresse.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtAnnee
+            // 
+            this.txtAnnee.Location = new System.Drawing.Point(149, 87);
+            this.txtAnnee.MaxLength = 4;
+            this.txtAnnee.Name = "txtAnnee";
+            this.txtAnnee.Size = new System.Drawing.Size(52, 22);
+            this.txtAnnee.TabIndex = 20;
+            this.txtAnnee.Tag = "3";
+            this.txtAnnee.Text = "Annee";
+            this.txtAnnee.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 17);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Adresse :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 88);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 17);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Date de naissance :";
+            // 
+            // txtCour
+            // 
+            this.txtCour.Location = new System.Drawing.Point(149, 207);
+            this.txtCour.Name = "txtCour";
+            this.txtCour.Size = new System.Drawing.Size(220, 22);
+            this.txtCour.TabIndex = 17;
+            this.txtCour.Tag = "8";
+            this.txtCour.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtTeleResid
+            // 
+            this.txtTeleResid.Location = new System.Drawing.Point(149, 147);
+            this.txtTeleResid.Name = "txtTeleResid";
+            this.txtTeleResid.Size = new System.Drawing.Size(220, 22);
+            this.txtTeleResid.TabIndex = 16;
+            this.txtTeleResid.Tag = "7";
+            this.txtTeleResid.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtPrenom
+            // 
+            this.txtPrenom.Location = new System.Drawing.Point(149, 57);
+            this.txtPrenom.Name = "txtPrenom";
+            this.txtPrenom.Size = new System.Drawing.Size(220, 22);
+            this.txtPrenom.TabIndex = 15;
+            this.txtPrenom.Tag = "2";
+            this.txtPrenom.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 207);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Courriel :";
+            // 
+            // txtNom
+            // 
+            this.txtNom.Location = new System.Drawing.Point(149, 29);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(220, 22);
+            this.txtNom.TabIndex = 14;
+            this.txtNom.Tag = "1";
+            this.txtNom.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Nom :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Télé Résidence :";
+            // 
+            // label2
+>>>>>>> 640930004055cf838c2dd5dc0f215640e4136e68
             // 
             this.picValid11.Image = global::Projet_Texcel.Properties.Resources.images__1_;
             this.picValid11.Location = new System.Drawing.Point(384, 177);

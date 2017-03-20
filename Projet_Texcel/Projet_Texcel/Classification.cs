@@ -25,6 +25,9 @@ namespace Projet_Texcel
         private void btnCreerClassif_Click(object sender, EventArgs e)
         {
             db.AddClassification(txtClassif.Text, "Description");
+            cptValide = 0;
+            picValid1.Visible = false;
+            btnCreerClassif.Enabled = false;
         }
 
         private void Classification_FormClosing(object sender, FormClosingEventArgs e)

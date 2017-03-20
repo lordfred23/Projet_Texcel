@@ -301,7 +301,7 @@ namespace Projet_Texcel
 
         public int validatePoste(TextBox textBox)
         {
-            Regex regex = new Regex("^[0-9]{4}");
+            Regex regex = new Regex("^[0-9]{3}");
             Match match = regex.Match(textBox.Text);
             if (match.Success)
             {

@@ -61,6 +61,7 @@
             this.txtUti.Size = new System.Drawing.Size(187, 22);
             this.txtUti.TabIndex = 1;
             this.txtUti.Tag = "1";
+            this.txtUti.Text = "admin";
             // 
             // txtPass
             // 
@@ -69,6 +70,7 @@
             this.txtPass.Size = new System.Drawing.Size(187, 22);
             this.txtPass.TabIndex = 2;
             this.txtPass.Tag = "2";
+            this.txtPass.Text = "admin";
             // 
             // label1
             // 

@@ -134,7 +134,7 @@
             this.txtVersion.Size = new System.Drawing.Size(178, 22);
             this.txtVersion.TabIndex = 3;
             this.txtVersion.Tag = "4";
-            this.txtVersion.Text = "###-###-###";
+            this.txtVersion.Text = "###-###-####";
             this.txtVersion.TextChanged += new System.EventHandler(this.TextBox_Leave);
             // 
             // txtEdition

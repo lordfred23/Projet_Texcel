@@ -60,7 +60,7 @@ namespace Projet_Texcel
             int i = 0;
             foreach (CEmploye valeur in emp)
             {
-                lstEmp[i] = valeur.Nom;
+                lstEmp[i] = valeur.Prenom + valeur.Nom;
                 i++;
             }
             return lstEmp;
