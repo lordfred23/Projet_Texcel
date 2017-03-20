@@ -176,6 +176,25 @@ namespace Projet_Texcel
             conn.Close();
             return platList;
         }
+        public int DisplayPlatformID(string nom)
+        {
+            int idEquipe = 0;
+
+
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT idPlatform FROM tblPlatform where nom=@nom", conn))
+            {
+                command.Parameters.Add(new SqlParameter("nom", nom));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    idEquipe = reader.GetInt32(0);
+                }
+            }
+            conn.Close();
+            return idEquipe;
+        }
 
 
 
@@ -305,6 +324,25 @@ namespace Projet_Texcel
             conn.Close();
             return themeList;
         }
+        public int DisplayThemeID(string nom)
+        {
+            int idEquipe = 0;
+
+
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT idTheme FROM tblTheme where nom=@nom", conn))
+            {
+                command.Parameters.Add(new SqlParameter("nom", nom));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    idEquipe = reader.GetInt32(0);
+                }
+            }
+            conn.Close();
+            return idEquipe;
+        }
 
         public void AddGenre(string nom, string description)
         {
@@ -363,6 +401,25 @@ namespace Projet_Texcel
             conn.Close();
             return genreList;
         }
+        public int DisplayGenreID(string nom)
+        {
+            int idEquipe = 0;
+
+
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT idGenre FROM tblGenre where nom=@nom", conn))
+            {
+                command.Parameters.Add(new SqlParameter("nom", nom));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    idEquipe = reader.GetInt32(0);
+                }
+            }
+            conn.Close();
+            return idEquipe;
+        }
 
         public void AddClassification(string nom, string description)
         {
@@ -420,6 +477,25 @@ namespace Projet_Texcel
             }
             conn.Close();
             return classifList;
+        }
+        public int DisplayClassifID(string nom)
+        {
+            int idEquipe = 0;
+
+
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT idClassification FROM tblClassification where nom=@nom", conn))
+            {
+                command.Parameters.Add(new SqlParameter("nom", nom));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    idEquipe = reader.GetInt32(0);
+                }
+            }
+            conn.Close();
+            return idEquipe;
         }
 
         public void AddThemeToGame(int idJeu, int idTheme)
@@ -523,6 +599,26 @@ namespace Projet_Texcel
             }
             conn.Close();
             return roleList;
+        }
+
+        public int DisplayRoleID(string nom)
+        {
+            int idEquipe = 0;
+
+
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT idRole FROM tblRole where nom=@nom", conn))
+            {
+                command.Parameters.Add(new SqlParameter("nom", nom));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    idEquipe = reader.GetInt32(0);
+                }
+            }
+            conn.Close();
+            return idEquipe;
         }
 
         public void AddEmploye(string matricule,string nom,string prenom,string dateNaissance,string adresse,string noTelephone,string posteTelephone,string noTelephoneMaison,int idRole)
@@ -657,7 +753,7 @@ namespace Projet_Texcel
                 while (reader.Read())
                 {
                      idEquipe = reader.GetInt32(0);
-                    }
+                }
             }
             conn.Close();
             return idEquipe;

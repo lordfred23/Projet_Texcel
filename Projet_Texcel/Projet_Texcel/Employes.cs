@@ -12,6 +12,7 @@ namespace Projet_Texcel
 {
     public partial class Employes : Form
     {
+        DBprovider db = new DBprovider();
         Form1 form;
         int cptValide = 0;
         public Employes(Form1 form)
@@ -38,6 +39,7 @@ namespace Projet_Texcel
             }
             btnCreerEmploye.Enabled = false;
             //Code pour ajouter l'employer dans la bd
+            db.AddEmploye(txtMatricule.Text, txtNom.Text, txtPrenom.Text, txtAnnee.Text + txtMois.Text + txtJours.Text, txtAdresse.Text, txtCellulaire.Text, txtTelePoste.Text, txtTeleResid.Text, db.DisplayRoleID(lstRoles.Text));
         }
 
         private void Employes_FormClosing(object sender, FormClosingEventArgs e)
