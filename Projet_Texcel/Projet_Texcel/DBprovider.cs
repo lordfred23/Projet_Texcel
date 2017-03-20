@@ -43,12 +43,7 @@ namespace Projet_Texcel
 
         public void Connection()
         {
-            conn = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=bdTexelFredAlex;Trusted_Connection=True;");
-            
-                
-
-
-           
+            conn = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=bdTexelFredAlex;Trusted_Connection=True;");   
         }
         public void Deconnection()
         {

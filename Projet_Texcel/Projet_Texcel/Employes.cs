@@ -47,7 +47,12 @@ namespace Projet_Texcel
 
         private void remplirListeEquipe()
         {
-            string[] lstEquipe = form.employeRemplirListeEquipe();
+            string[] equipe = form.employeRemplirListeEquipe();
+            foreach (string valeur in equipe)
+            {
+                lstEquipe.Items.Add(valeur);
+            }
+            lstEquipe.Text = equipe[equipe.Count() - 1];
         }
 
         private void TextBox_Leave(object sender, EventArgs e)
@@ -81,6 +86,9 @@ namespace Projet_Texcel
                     break;
                 case 10:
                     erreur = form.validateMatricule(textBox);//Envoie le textbox pour valider le matricule
+                    break;
+                case 11:
+                    erreur = form.validateTel(textBox);//Envoie le textbox pour valider le # de cellulaire
                     break;
             }
 

@@ -32,7 +32,7 @@ namespace Projet_Texcel
             lstNewEmploye.Name = "lstEmploye" + cptEmploye;
             lstNewEmploye.Height = previousLST.Height;
             lstNewEmploye.Width = previousLST.Width;
-            ajoutEmploye(lstNewEmploye); 
+            remplirListeEmploye(lstNewEmploye); 
             lstNewEmploye.Top = previousLST.Top + previousLST.Height + 20;
             lstNewEmploye.Left = previousLST.Left;
             frmEquipe.Height += previousLST.Height + 20;
@@ -43,13 +43,12 @@ namespace Projet_Texcel
             lstNewEmploye.Show();
         }
 
-        private void ajoutEmploye(ComboBox lstNewEmploye)
+        private void remplirListeEmploye(ComboBox employe)
         {
-            //utiliser une fonction dans control pour chercher les employes dans BD
-            string[] employe = new string[] { "Alexandre Tremblay", "Frédéric Côté" };
-            for(int i = 0; i < employe.Count(); i++)
+            string[] travailleur = form.equipeRemplirListeEmploye();
+            foreach (string valeur in travailleur)
             {
-                lstNewEmploye.Items.Add(employe[i]);
+                employe.Items.Add(valeur);
             }
         }
 

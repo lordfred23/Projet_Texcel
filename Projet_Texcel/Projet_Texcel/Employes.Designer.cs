@@ -31,27 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employes));
             this.btnCreerEmploye = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.picValid10 = new System.Windows.Forms.PictureBox();
-            this.picError10 = new System.Windows.Forms.PictureBox();
-            this.picValid9 = new System.Windows.Forms.PictureBox();
-            this.picError9 = new System.Windows.Forms.PictureBox();
-            this.picValid8 = new System.Windows.Forms.PictureBox();
-            this.picError8 = new System.Windows.Forms.PictureBox();
-            this.picValid7 = new System.Windows.Forms.PictureBox();
-            this.picError7 = new System.Windows.Forms.PictureBox();
-            this.picValid6 = new System.Windows.Forms.PictureBox();
-            this.picError6 = new System.Windows.Forms.PictureBox();
-            this.picValid5 = new System.Windows.Forms.PictureBox();
-            this.picError5 = new System.Windows.Forms.PictureBox();
-            this.picValid4 = new System.Windows.Forms.PictureBox();
-            this.picError4 = new System.Windows.Forms.PictureBox();
-            this.picValid3 = new System.Windows.Forms.PictureBox();
-            this.picError3 = new System.Windows.Forms.PictureBox();
-            this.picValid2 = new System.Windows.Forms.PictureBox();
-            this.picError2 = new System.Windows.Forms.PictureBox();
-            this.picValid1 = new System.Windows.Forms.PictureBox();
-            this.picError1 = new System.Windows.Forms.PictureBox();
-            this.lstCategories = new System.Windows.Forms.ComboBox();
+            this.lstRoles = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtMatricule = new System.Windows.Forms.TextBox();
             this.txtTelePoste = new System.Windows.Forms.TextBox();
@@ -74,7 +54,32 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lstEquipe = new System.Windows.Forms.ComboBox();
             this.btnCreerEquipe = new System.Windows.Forms.Button();
+            this.picValid10 = new System.Windows.Forms.PictureBox();
+            this.picError10 = new System.Windows.Forms.PictureBox();
+            this.picValid9 = new System.Windows.Forms.PictureBox();
+            this.picError9 = new System.Windows.Forms.PictureBox();
+            this.picValid8 = new System.Windows.Forms.PictureBox();
+            this.picError8 = new System.Windows.Forms.PictureBox();
+            this.picValid7 = new System.Windows.Forms.PictureBox();
+            this.picError7 = new System.Windows.Forms.PictureBox();
+            this.picValid6 = new System.Windows.Forms.PictureBox();
+            this.picError6 = new System.Windows.Forms.PictureBox();
+            this.picValid5 = new System.Windows.Forms.PictureBox();
+            this.picError5 = new System.Windows.Forms.PictureBox();
+            this.picValid4 = new System.Windows.Forms.PictureBox();
+            this.picError4 = new System.Windows.Forms.PictureBox();
+            this.picValid3 = new System.Windows.Forms.PictureBox();
+            this.picError3 = new System.Windows.Forms.PictureBox();
+            this.picValid2 = new System.Windows.Forms.PictureBox();
+            this.picError2 = new System.Windows.Forms.PictureBox();
+            this.picValid1 = new System.Windows.Forms.PictureBox();
+            this.picError1 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtCellulaire = new System.Windows.Forms.TextBox();
+            this.picValid11 = new System.Windows.Forms.PictureBox();
+            this.picError11 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picValid10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValid9)).BeginInit();
@@ -95,12 +100,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.picError2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError1)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picValid11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError11)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCreerEmploye
             // 
-            this.btnCreerEmploye.Location = new System.Drawing.Point(81, 398);
+            this.btnCreerEmploye.Location = new System.Drawing.Point(83, 417);
             this.btnCreerEmploye.Name = "btnCreerEmploye";
             this.btnCreerEmploye.Size = new System.Drawing.Size(134, 38);
             this.btnCreerEmploye.TabIndex = 0;
@@ -110,6 +116,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.picValid11);
+            this.groupBox1.Controls.Add(this.picError11);
+            this.groupBox1.Controls.Add(this.txtCellulaire);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.picValid10);
             this.groupBox1.Controls.Add(this.picError10);
             this.groupBox1.Controls.Add(this.picValid9);
@@ -130,7 +140,7 @@
             this.groupBox1.Controls.Add(this.picError2);
             this.groupBox1.Controls.Add(this.picValid1);
             this.groupBox1.Controls.Add(this.picError1);
-            this.groupBox1.Controls.Add(this.lstCategories);
+            this.groupBox1.Controls.Add(this.lstRoles);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtMatricule);
             this.groupBox1.Controls.Add(this.txtTelePoste);
@@ -152,15 +162,234 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(425, 301);
+            this.groupBox1.Size = new System.Drawing.Size(425, 332);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employé";
             // 
+            // lstRoles
+            // 
+            this.lstRoles.FormattingEnabled = true;
+            this.lstRoles.Items.AddRange(new object[] {
+            "Administrateur",
+            "Utilisateur"});
+            this.lstRoles.Location = new System.Drawing.Point(149, 294);
+            this.lstRoles.Name = "lstRoles";
+            this.lstRoles.Size = new System.Drawing.Size(121, 24);
+            this.lstRoles.TabIndex = 1;
+            this.lstRoles.Text = "Utilisateur";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 294);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 17);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Rôles :";
+            // 
+            // txtMatricule
+            // 
+            this.txtMatricule.Location = new System.Drawing.Point(149, 263);
+            this.txtMatricule.MaxLength = 8;
+            this.txtMatricule.Name = "txtMatricule";
+            this.txtMatricule.Size = new System.Drawing.Size(220, 22);
+            this.txtMatricule.TabIndex = 27;
+            this.txtMatricule.Tag = "10";
+            this.txtMatricule.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtTelePoste
+            // 
+            this.txtTelePoste.Location = new System.Drawing.Point(149, 235);
+            this.txtTelePoste.MaxLength = 4;
+            this.txtTelePoste.Name = "txtTelePoste";
+            this.txtTelePoste.Size = new System.Drawing.Size(220, 22);
+            this.txtTelePoste.TabIndex = 26;
+            this.txtTelePoste.Tag = "9";
+            this.txtTelePoste.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 263);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 17);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Matricule :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 235);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 17);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Télé Poste :";
+            // 
+            // txtJours
+            // 
+            this.txtJours.Location = new System.Drawing.Point(331, 87);
+            this.txtJours.MaxLength = 2;
+            this.txtJours.Name = "txtJours";
+            this.txtJours.Size = new System.Drawing.Size(38, 22);
+            this.txtJours.TabIndex = 23;
+            this.txtJours.Tag = "5";
+            this.txtJours.Text = "Jour";
+            this.txtJours.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtMois
+            // 
+            this.txtMois.Location = new System.Drawing.Point(246, 87);
+            this.txtMois.MaxLength = 2;
+            this.txtMois.Name = "txtMois";
+            this.txtMois.Size = new System.Drawing.Size(38, 22);
+            this.txtMois.TabIndex = 22;
+            this.txtMois.Tag = "4";
+            this.txtMois.Text = "Mois";
+            this.txtMois.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtAdresse
+            // 
+            this.txtAdresse.Location = new System.Drawing.Point(149, 118);
+            this.txtAdresse.Name = "txtAdresse";
+            this.txtAdresse.Size = new System.Drawing.Size(220, 22);
+            this.txtAdresse.TabIndex = 21;
+            this.txtAdresse.Tag = "6";
+            this.txtAdresse.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtAnnee
+            // 
+            this.txtAnnee.Location = new System.Drawing.Point(149, 87);
+            this.txtAnnee.MaxLength = 4;
+            this.txtAnnee.Name = "txtAnnee";
+            this.txtAnnee.Size = new System.Drawing.Size(52, 22);
+            this.txtAnnee.TabIndex = 20;
+            this.txtAnnee.Tag = "3";
+            this.txtAnnee.Text = "Annee";
+            this.txtAnnee.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 17);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Adresse :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 88);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 17);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Date de naissance :";
+            // 
+            // txtCour
+            // 
+            this.txtCour.Location = new System.Drawing.Point(149, 207);
+            this.txtCour.Name = "txtCour";
+            this.txtCour.Size = new System.Drawing.Size(220, 22);
+            this.txtCour.TabIndex = 17;
+            this.txtCour.Tag = "8";
+            this.txtCour.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtTeleResid
+            // 
+            this.txtTeleResid.Location = new System.Drawing.Point(149, 147);
+            this.txtTeleResid.Name = "txtTeleResid";
+            this.txtTeleResid.Size = new System.Drawing.Size(220, 22);
+            this.txtTeleResid.TabIndex = 16;
+            this.txtTeleResid.Tag = "7";
+            this.txtTeleResid.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // txtPrenom
+            // 
+            this.txtPrenom.Location = new System.Drawing.Point(149, 57);
+            this.txtPrenom.Name = "txtPrenom";
+            this.txtPrenom.Size = new System.Drawing.Size(220, 22);
+            this.txtPrenom.TabIndex = 15;
+            this.txtPrenom.Tag = "2";
+            this.txtPrenom.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 207);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Courriel :";
+            // 
+            // txtNom
+            // 
+            this.txtNom.Location = new System.Drawing.Point(149, 29);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(220, 22);
+            this.txtNom.TabIndex = 14;
+            this.txtNom.Tag = "1";
+            this.txtNom.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Nom :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Télé Résidence :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Prénom :";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lstEquipe);
+            this.groupBox2.Location = new System.Drawing.Point(14, 343);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(425, 53);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Équipe";
+            // 
+            // lstEquipe
+            // 
+            this.lstEquipe.FormattingEnabled = true;
+            this.lstEquipe.Location = new System.Drawing.Point(149, 18);
+            this.lstEquipe.Name = "lstEquipe";
+            this.lstEquipe.Size = new System.Drawing.Size(121, 24);
+            this.lstEquipe.TabIndex = 0;
+            // 
+            // btnCreerEquipe
+            // 
+            this.btnCreerEquipe.Location = new System.Drawing.Point(228, 417);
+            this.btnCreerEquipe.Name = "btnCreerEquipe";
+            this.btnCreerEquipe.Size = new System.Drawing.Size(134, 38);
+            this.btnCreerEquipe.TabIndex = 14;
+            this.btnCreerEquipe.Text = "Créer Équipe";
+            this.btnCreerEquipe.UseVisualStyleBackColor = true;
+            this.btnCreerEquipe.Click += new System.EventHandler(this.btnCreerEquipe_Click);
+            // 
             // picValid10
             // 
             this.picValid10.Image = global::Projet_Texcel.Properties.Resources.images__1_;
-            this.picValid10.Location = new System.Drawing.Point(384, 233);
+            this.picValid10.Location = new System.Drawing.Point(384, 264);
             this.picValid10.Name = "picValid10";
             this.picValid10.Size = new System.Drawing.Size(20, 21);
             this.picValid10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,7 +400,7 @@
             // picError10
             // 
             this.picError10.Image = ((System.Drawing.Image)(resources.GetObject("picError10.Image")));
-            this.picError10.Location = new System.Drawing.Point(385, 233);
+            this.picError10.Location = new System.Drawing.Point(385, 264);
             this.picError10.Name = "picError10";
             this.picError10.Size = new System.Drawing.Size(20, 21);
             this.picError10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -182,7 +411,7 @@
             // picValid9
             // 
             this.picValid9.Image = global::Projet_Texcel.Properties.Resources.images__1_;
-            this.picValid9.Location = new System.Drawing.Point(384, 205);
+            this.picValid9.Location = new System.Drawing.Point(384, 236);
             this.picValid9.Name = "picValid9";
             this.picValid9.Size = new System.Drawing.Size(20, 21);
             this.picValid9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -193,7 +422,7 @@
             // picError9
             // 
             this.picError9.Image = ((System.Drawing.Image)(resources.GetObject("picError9.Image")));
-            this.picError9.Location = new System.Drawing.Point(385, 205);
+            this.picError9.Location = new System.Drawing.Point(385, 236);
             this.picError9.Name = "picError9";
             this.picError9.Size = new System.Drawing.Size(20, 21);
             this.picError9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -204,7 +433,7 @@
             // picValid8
             // 
             this.picValid8.Image = global::Projet_Texcel.Properties.Resources.images__1_;
-            this.picValid8.Location = new System.Drawing.Point(384, 177);
+            this.picValid8.Location = new System.Drawing.Point(384, 208);
             this.picValid8.Name = "picValid8";
             this.picValid8.Size = new System.Drawing.Size(20, 21);
             this.picValid8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -215,7 +444,7 @@
             // picError8
             // 
             this.picError8.Image = ((System.Drawing.Image)(resources.GetObject("picError8.Image")));
-            this.picError8.Location = new System.Drawing.Point(385, 177);
+            this.picError8.Location = new System.Drawing.Point(385, 208);
             this.picError8.Name = "picError8";
             this.picError8.Size = new System.Drawing.Size(20, 21);
             this.picError8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -377,220 +606,45 @@
             this.picError1.TabStop = false;
             this.picError1.Visible = false;
             // 
-            // lstCategories
+            // label9
             // 
-            this.lstCategories.FormattingEnabled = true;
-            this.lstCategories.Location = new System.Drawing.Point(149, 264);
-            this.lstCategories.Name = "lstCategories";
-            this.lstCategories.Size = new System.Drawing.Size(121, 24);
-            this.lstCategories.TabIndex = 1;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 177);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 17);
+            this.label9.TabIndex = 50;
+            this.label9.Text = "Cellulaire :";
             // 
-            // label10
+            // txtCellulaire
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 264);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 17);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Catégories :";
+            this.txtCellulaire.Location = new System.Drawing.Point(149, 177);
+            this.txtCellulaire.Name = "txtCellulaire";
+            this.txtCellulaire.Size = new System.Drawing.Size(220, 22);
+            this.txtCellulaire.TabIndex = 51;
+            this.txtCellulaire.Tag = "11";
             // 
-            // txtMatricule
+            // picValid11
             // 
-            this.txtMatricule.Location = new System.Drawing.Point(149, 233);
-            this.txtMatricule.MaxLength = 8;
-            this.txtMatricule.Name = "txtMatricule";
-            this.txtMatricule.Size = new System.Drawing.Size(220, 22);
-            this.txtMatricule.TabIndex = 27;
-            this.txtMatricule.Tag = "10";
-            this.txtMatricule.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.picValid11.Image = global::Projet_Texcel.Properties.Resources.images__1_;
+            this.picValid11.Location = new System.Drawing.Point(384, 177);
+            this.picValid11.Name = "picValid11";
+            this.picValid11.Size = new System.Drawing.Size(20, 21);
+            this.picValid11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picValid11.TabIndex = 53;
+            this.picValid11.TabStop = false;
+            this.picValid11.Visible = false;
             // 
-            // txtTelePoste
+            // picError11
             // 
-            this.txtTelePoste.Location = new System.Drawing.Point(149, 205);
-            this.txtTelePoste.MaxLength = 4;
-            this.txtTelePoste.Name = "txtTelePoste";
-            this.txtTelePoste.Size = new System.Drawing.Size(220, 22);
-            this.txtTelePoste.TabIndex = 26;
-            this.txtTelePoste.Tag = "9";
-            this.txtTelePoste.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 233);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 17);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Matricule :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 205);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 17);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Télé Poste :";
-            // 
-            // txtJours
-            // 
-            this.txtJours.Location = new System.Drawing.Point(331, 87);
-            this.txtJours.MaxLength = 2;
-            this.txtJours.Name = "txtJours";
-            this.txtJours.Size = new System.Drawing.Size(38, 22);
-            this.txtJours.TabIndex = 23;
-            this.txtJours.Tag = "5";
-            this.txtJours.Text = "Jour";
-            this.txtJours.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // txtMois
-            // 
-            this.txtMois.Location = new System.Drawing.Point(246, 87);
-            this.txtMois.MaxLength = 2;
-            this.txtMois.Name = "txtMois";
-            this.txtMois.Size = new System.Drawing.Size(38, 22);
-            this.txtMois.TabIndex = 22;
-            this.txtMois.Tag = "4";
-            this.txtMois.Text = "Mois";
-            this.txtMois.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // txtAdresse
-            // 
-            this.txtAdresse.Location = new System.Drawing.Point(149, 118);
-            this.txtAdresse.Name = "txtAdresse";
-            this.txtAdresse.Size = new System.Drawing.Size(220, 22);
-            this.txtAdresse.TabIndex = 21;
-            this.txtAdresse.Tag = "6";
-            this.txtAdresse.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // txtAnnee
-            // 
-            this.txtAnnee.Location = new System.Drawing.Point(149, 87);
-            this.txtAnnee.MaxLength = 4;
-            this.txtAnnee.Name = "txtAnnee";
-            this.txtAnnee.Size = new System.Drawing.Size(52, 22);
-            this.txtAnnee.TabIndex = 20;
-            this.txtAnnee.Tag = "3";
-            this.txtAnnee.Text = "Annee";
-            this.txtAnnee.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 118);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 17);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Adresse :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 17);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Date de naissance :";
-            // 
-            // txtCour
-            // 
-            this.txtCour.Location = new System.Drawing.Point(149, 177);
-            this.txtCour.Name = "txtCour";
-            this.txtCour.Size = new System.Drawing.Size(220, 22);
-            this.txtCour.TabIndex = 17;
-            this.txtCour.Tag = "8";
-            this.txtCour.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // txtTeleResid
-            // 
-            this.txtTeleResid.Location = new System.Drawing.Point(149, 147);
-            this.txtTeleResid.Name = "txtTeleResid";
-            this.txtTeleResid.Size = new System.Drawing.Size(220, 22);
-            this.txtTeleResid.TabIndex = 16;
-            this.txtTeleResid.Tag = "7";
-            this.txtTeleResid.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // txtPrenom
-            // 
-            this.txtPrenom.Location = new System.Drawing.Point(149, 57);
-            this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(220, 22);
-            this.txtPrenom.TabIndex = 15;
-            this.txtPrenom.Tag = "2";
-            this.txtPrenom.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 177);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Courriel :";
-            // 
-            // txtNom
-            // 
-            this.txtNom.Location = new System.Drawing.Point(149, 29);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(220, 22);
-            this.txtNom.TabIndex = 14;
-            this.txtNom.Tag = "1";
-            this.txtNom.Leave += new System.EventHandler(this.TextBox_Leave);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Nom :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 17);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Télé Résidence :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Prénom :";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.lstEquipe);
-            this.groupBox2.Location = new System.Drawing.Point(12, 312);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(425, 53);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Équipe";
-            // 
-            // lstEquipe
-            // 
-            this.lstEquipe.FormattingEnabled = true;
-            this.lstEquipe.Location = new System.Drawing.Point(149, 18);
-            this.lstEquipe.Name = "lstEquipe";
-            this.lstEquipe.Size = new System.Drawing.Size(121, 24);
-            this.lstEquipe.TabIndex = 0;
-            // 
-            // btnCreerEquipe
-            // 
-            this.btnCreerEquipe.Location = new System.Drawing.Point(226, 398);
-            this.btnCreerEquipe.Name = "btnCreerEquipe";
-            this.btnCreerEquipe.Size = new System.Drawing.Size(134, 38);
-            this.btnCreerEquipe.TabIndex = 14;
-            this.btnCreerEquipe.Text = "Créer Équipe";
-            this.btnCreerEquipe.UseVisualStyleBackColor = true;
-            this.btnCreerEquipe.Click += new System.EventHandler(this.btnCreerEquipe_Click);
+            this.picError11.Image = ((System.Drawing.Image)(resources.GetObject("picError11.Image")));
+            this.picError11.Location = new System.Drawing.Point(385, 177);
+            this.picError11.Name = "picError11";
+            this.picError11.Size = new System.Drawing.Size(20, 21);
+            this.picError11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError11.TabIndex = 52;
+            this.picError11.TabStop = false;
+            this.picError11.Tag = "11";
+            this.picError11.Visible = false;
             // 
             // Employes
             // 
@@ -607,6 +661,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Employes_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picValid10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValid9)).EndInit();
@@ -627,7 +682,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picError2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picValid11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -653,7 +709,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox lstEquipe;
-        private System.Windows.Forms.ComboBox lstCategories;
+        private System.Windows.Forms.ComboBox lstRoles;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtMatricule;
         private System.Windows.Forms.TextBox txtTelePoste;
@@ -679,5 +735,9 @@
         private System.Windows.Forms.PictureBox picError4;
         private System.Windows.Forms.PictureBox picValid3;
         private System.Windows.Forms.PictureBox picError3;
+        private System.Windows.Forms.PictureBox picValid11;
+        private System.Windows.Forms.PictureBox picError11;
+        private System.Windows.Forms.TextBox txtCellulaire;
+        private System.Windows.Forms.Label label9;
     }
 }

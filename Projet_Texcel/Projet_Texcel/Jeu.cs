@@ -19,6 +19,50 @@ namespace Projet_Texcel
             InitializeComponent();
             this.form = form;
             btnCreerJeu.Enabled = false;
+            remplirListeGenre();
+            remplirListeClassification();
+            remplirListeTheme();
+            remplirListePlatforme();
+        }
+
+        private void remplirListeGenre()
+        {
+            string[] genre = form.jeuRemplirListeGenre();
+            foreach(string valeur in genre)
+            {
+                lstGenre.Items.Add(valeur);
+            }
+            lstGenre.Text = genre[genre.Count() - 1];
+        }
+
+        private void remplirListeClassification()
+        {
+            string[] classif = form.jeuRemplirListeClassification();
+            foreach (string valeur in classif)
+            {
+                lstClassif.Items.Add(valeur);
+            }
+            lstClassif.Text = classif[classif.Count() - 1];
+        }
+
+        private void remplirListeTheme()
+        {
+            string[] theme = form.jeuRemplirListeTheme();
+            foreach (string valeur in theme)
+            {
+                lstTheme.Items.Add(valeur);
+            }
+            lstTheme.Text = theme[theme.Count() - 1];
+        }
+
+        private void remplirListePlatforme()
+        {
+            string[] platforme = form.jeuRemplirListePlatforme();
+            foreach (string valeur in platforme)
+            {
+                lstPlatforme.Items.Add(valeur);
+            }
+            lstPlatforme.Text = platforme[platforme.Count() - 1];
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -182,6 +182,36 @@ namespace Projet_Texcel
             return control.employeRemplirListeEquipe();
         }
 
+        public string[] employeRemplirListeRole()
+        {
+            return control.employeRemplirListeRole();
+        }
+
+        public string[] equipeRemplirListeEmploye()
+        {
+            return control.equipeRemplirListeEmploye();
+        }
+
+        public string[] jeuRemplirListeGenre()
+        {
+            return control.jeuRemplirListeGenre();
+        }
+
+        public string[] jeuRemplirListeClassification()
+        {
+            return control.jeuRemplirListeClassification();
+        }
+
+        public string[] jeuRemplirListeTheme()
+        {
+            return control.jeuRemplirListeTheme();
+        }
+
+        public string[] jeuRemplirListePlatforme()
+        {
+            return control.jeuRemplirListePlatform();
+        }
+
         public int validate(TextBox textBox)
         {
             Regex regex = new Regex("^[a-zA-Z\\s]+$");

@@ -66,7 +66,6 @@ namespace Projet_Texcel
             return lstEmp;
         }
 
-
         public string[] jeuRemplirListeGenre()
         {
             List<CGenre> genre = BD.DisplayGenre();
