@@ -28,6 +28,7 @@ namespace Projet_Texcel
             btnCreerCatego.Enabled = false;
             picValid1.Visible = false;
             //Code pour insérer la catego dans la BD
+            db.AddTheme(txtCatego.Text, "Desc");
 
 
         }

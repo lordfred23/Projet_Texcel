@@ -12,6 +12,7 @@ namespace Projet_Texcel
 {
     public partial class Jeu : Form
     {
+        DBprovider db = new DBprovider();
         Form1 form;
         int cptValide = 0;
         public Jeu(Form1 form)
@@ -76,6 +77,8 @@ namespace Projet_Texcel
                 image.Visible = false;
             }
             //Code pour inserer le jeu dans la bd
+            db.AddGame(txtDev.Text, txtDesc.Text, txtConfig.Text, db.DisplayClassifID(lstClassif.Text), db.DisplayGenreID(lstGenre.Text), db.DisplayThemeID(lstTheme.Text), db.DisplayPlatformID(lstPlatforme.Text), txtNom.Text);
+
         }
 
         private void Jeu_FormClosing(object sender, FormClosingEventArgs e)
