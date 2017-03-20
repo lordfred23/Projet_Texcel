@@ -43,7 +43,7 @@
             this.btnCreerGenre.Location = new System.Drawing.Point(77, 105);
             this.btnCreerGenre.Name = "btnCreerGenre";
             this.btnCreerGenre.Size = new System.Drawing.Size(134, 38);
-            this.btnCreerGenre.TabIndex = 5;
+            this.btnCreerGenre.TabIndex = 2;
             this.btnCreerGenre.Text = "Créer Genre";
             this.btnCreerGenre.UseVisualStyleBackColor = true;
             this.btnCreerGenre.Click += new System.EventHandler(this.btnCreerGenre_Click);
@@ -53,7 +53,7 @@
             this.txtGenre.Location = new System.Drawing.Point(64, 41);
             this.txtGenre.Name = "txtGenre";
             this.txtGenre.Size = new System.Drawing.Size(159, 22);
-            this.txtGenre.TabIndex = 6;
+            this.txtGenre.TabIndex = 1;
             this.txtGenre.Tag = "1";
             this.txtGenre.TextChanged += new System.EventHandler(this.TextBox_Leave);
             // 

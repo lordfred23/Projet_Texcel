@@ -52,7 +52,7 @@
             this.txtClassif.Location = new System.Drawing.Point(51, 39);
             this.txtClassif.Name = "txtClassif";
             this.txtClassif.Size = new System.Drawing.Size(159, 22);
-            this.txtClassif.TabIndex = 9;
+            this.txtClassif.TabIndex = 1;
             this.txtClassif.Tag = "1";
             this.txtClassif.TextChanged += new System.EventHandler(this.TextBox_Leave);
             // 
@@ -61,7 +61,7 @@
             this.btnCreerClassif.Location = new System.Drawing.Point(64, 103);
             this.btnCreerClassif.Name = "btnCreerClassif";
             this.btnCreerClassif.Size = new System.Drawing.Size(134, 45);
-            this.btnCreerClassif.TabIndex = 8;
+            this.btnCreerClassif.TabIndex = 2;
             this.btnCreerClassif.Text = "Créer Classification";
             this.btnCreerClassif.UseVisualStyleBackColor = true;
             this.btnCreerClassif.Click += new System.EventHandler(this.btnCreerClassif_Click);

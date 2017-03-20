@@ -73,7 +73,7 @@ namespace Projet_Texcel
             btnCreerJeu.Enabled = false;
             for (int i = 1; i <= 7; i++)
             {
-                image = (PictureBox)Controls["picValid" + i];
+                image = (PictureBox)groupBox1.Controls["picValid" + i];
                 image.Visible = false;
             }
             //Code pour inserer le jeu dans la bd

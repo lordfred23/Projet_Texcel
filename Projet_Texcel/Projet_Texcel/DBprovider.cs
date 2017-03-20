@@ -42,8 +42,10 @@ namespace Projet_Texcel
         }
 
         public void Connection()
-        {
-            conn = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=bdTexelFredAlex;Trusted_Connection=True;");   
+
+        {                       //Server=localhost\\SQLEXPRESS;Database=bdTexelFredAlex;Trusted_Connection=True;
+                                
+            conn = new SqlConnection("Data Source=deptinfo420;Initial Catalog=bdTexelFredAlex;User ID=cotfr1530860;Password=19911012");   
         }
         public void Deconnection()
         {
@@ -972,7 +974,7 @@ namespace Projet_Texcel
             return testList;
         }
 
-        public void AddWrok(int idTest, int idEquipe,int idProjet)
+        public void AddWork(int idTest, int idEquipe,int idProjet)
         {
 
             conn.Open();
