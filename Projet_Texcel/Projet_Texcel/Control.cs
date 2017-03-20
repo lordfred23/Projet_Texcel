@@ -40,5 +40,95 @@ namespace Projet_Texcel
             }
             return lstEquipe;
         }
+        public string[] employeRemplirListeRole()
+        {
+            List<CRole> role = BD.DisplayRole();
+            string[] lstRole = new string[role.Count];
+            int i = 0;
+            foreach (CRole valeur in role)
+            {
+                lstRole[i] = valeur.Nom;
+                i++;
+            }
+            return lstRole;
+        }
+
+        public string[] equipeRemplirListeEmploye()
+        {
+            List<CEmploye> emp = BD.DisplayEmploye();
+            string[] lstEmp = new string[emp.Count];
+            int i = 0;
+            foreach (CEmploye valeur in emp)
+            {
+                lstEmp[i] = valeur.Nom;
+                i++;
+            }
+            return lstEmp;
+        }
+
+
+        public string[] jeuRemplirListeGenre()
+        {
+            List<CGenre> genre = BD.DisplayGenre();
+            string[] lstGenre = new string[genre.Count];
+            int i = 0;
+            foreach (CGenre valeur in genre)
+            {
+                lstGenre[i] = valeur.Nom;
+                i++;
+            }
+            return lstGenre;
+        }
+
+        public string[] jeuRemplirListeTheme()
+        {
+            List<CTheme> theme = BD.DisplayTheme();
+            string[] lstTheme = new string[theme.Count];
+            int i = 0;
+            foreach (CTheme valeur in theme)
+            {
+                lstTheme[i] = valeur.Nom;
+                i++;
+            }
+            return lstTheme;
+        }
+
+        public string[] jeuRemplirListePlatform()
+        {
+            List<CPlatform> plat = BD.DisplayPlatform();
+            string[] lstPlat = new string[plat.Count];
+            int i = 0;
+            foreach (CPlatform valeur in plat)
+            {
+                lstPlat[i] = valeur.Nom;
+                i++;
+            }
+            return lstPlat;
+        }
+
+        public string[] jeuRemplirListeClassification()
+        {
+            List<CClassification> classif= BD.DisplayClassif();
+            string[] lstClass = new string[classif.Count];
+            int i = 0;
+            foreach (CClassification valeur in classif)
+            {
+                lstClass[i] = valeur.Nom;
+                i++;
+            }
+            return lstClass;
+        }
+        public string[] platformRemplirListeOS()
+        {
+            List<CSysExp> sys = BD.DisplaySysExp();
+            string[] lstSys = new string[sys.Count];
+            int i = 0;
+            foreach (CSysExp valeur in sys)
+            {
+                lstSys[i] = valeur.Nom;
+                i++;
+            }
+            return lstSys;
+        }
     }
 }

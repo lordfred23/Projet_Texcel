@@ -78,7 +78,7 @@ namespace Projet_Texcel
 
          }
 
-        public void DisplaySysExp()
+        public List<CSysExp> DisplaySysExp()
         {
 
             bool unDouble;
@@ -111,6 +111,7 @@ namespace Projet_Texcel
                     }
                 }
             conn.Close();
+            return sysList;
             
          }
 
@@ -139,7 +140,7 @@ namespace Projet_Texcel
 
         }
 
-        public void DisplayPlatform()
+        public List<CPlatform> DisplayPlatform()
         {
 
             bool unDouble;
@@ -173,6 +174,7 @@ namespace Projet_Texcel
                 }
             }
             conn.Close();
+            return platList;
         }
 
 
@@ -205,7 +207,7 @@ namespace Projet_Texcel
 
         }
 
-        public void DisplayJeu()
+        public List<CJeu> DisplayJeu()
         {
 
             bool unDouble;
@@ -243,6 +245,7 @@ namespace Projet_Texcel
                 }
             }
             conn.Close();
+            return jeuList;
         }
 
         public void AddTheme(string nom,string description)
@@ -267,7 +270,7 @@ namespace Projet_Texcel
 
         }
 
-        public void DisplayTheme()
+        public List<CTheme> DisplayTheme()
         {
 
             bool unDouble;
@@ -300,6 +303,7 @@ namespace Projet_Texcel
                 }
             }
             conn.Close();
+            return themeList;
         }
 
         public void AddGenre(string nom, string description)
@@ -324,7 +328,7 @@ namespace Projet_Texcel
 
         }
 
-        public void DisplayGenre()
+        public List<CGenre> DisplayGenre()
         {
 
             bool unDouble;
@@ -357,6 +361,7 @@ namespace Projet_Texcel
                 }
             }
             conn.Close();
+            return genreList;
         }
 
         public void AddClassification(string nom, string description)
@@ -380,7 +385,7 @@ namespace Projet_Texcel
             conn.Close();
 
         }
-        public void DisplayClassif()
+        public List<CClassification> DisplayClassif()
         {
 
             bool unDouble;
@@ -414,6 +419,7 @@ namespace Projet_Texcel
                 }
             }
             conn.Close();
+            return classifList;
         }
 
         public void AddThemeToGame(int idJeu, int idTheme)
@@ -482,7 +488,7 @@ namespace Projet_Texcel
 
         }
 
-        public void DisplayRole()
+        public List<CRole> DisplayRole()
         {
 
             bool unDouble;
@@ -516,6 +522,7 @@ namespace Projet_Texcel
                 }
             }
             conn.Close();
+            return roleList;
         }
 
         public void AddEmploye(string matricule,string nom,string prenom,string dateNaissance,string adresse,string noTelephone,string posteTelephone,string noTelephoneMaison,int idRole)
@@ -547,7 +554,7 @@ namespace Projet_Texcel
 
         }
 
-        public void DisplayEmploye()
+        public List<CEmploye> DisplayEmploye()
         {
 
             bool unDouble;
@@ -587,6 +594,7 @@ namespace Projet_Texcel
                 }
             }
             conn.Close();
+            return employeList;
         }
 
         public void AddEmployeToTeam(string matricule, int idEquipe)
@@ -629,8 +637,30 @@ namespace Projet_Texcel
             {
                 //Console.WriteLine("Count not insert.");
             }
-            conn.Close();
 
+            conn.Close();
+            
+
+        }
+
+        public int DisplayEquipeID(string nom)
+        {
+            int idEquipe=0;
+
+
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT idEquipe FROM tblEquipe where nom=@nom", conn))
+            {
+                command.Parameters.Add(new SqlParameter("nom", nom));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                     idEquipe = reader.GetInt32(0);
+                    }
+            }
+            conn.Close();
+            return idEquipe;
         }
 
         public List<CEquipe> DisplayEquipe()
@@ -691,7 +721,7 @@ namespace Projet_Texcel
             conn.Close();
 
         }
-        public void DisplayCategTest()
+        public List<CCategorieTest> DisplayCategTest()
         {
 
             bool unDouble;
@@ -725,6 +755,7 @@ namespace Projet_Texcel
                 }
             }
             conn.Close();
+            return categTestList;
         }
 
         public void AddProjet(string nom,string description,int idJeu)
@@ -751,7 +782,7 @@ namespace Projet_Texcel
 
         }
 
-        public void DisplayProjet()
+        public List<CProjet> DisplayProjet()
         {
 
             bool unDouble;
@@ -786,6 +817,7 @@ namespace Projet_Texcel
                 }
             }
             conn.Close();
+            return projetList;
         }
         public void AddTest(int resutlat,string nom, string description,int idCategorieTest)
         {
@@ -811,7 +843,7 @@ namespace Projet_Texcel
             conn.Close();
 
         }
-        public void DisplayTest()
+        public List<CTest> DisplayTest()
         {
 
             bool unDouble;
@@ -846,6 +878,7 @@ namespace Projet_Texcel
                 }
             }
             conn.Close();
+            return testList;
         }
 
         public void AddWrok(int idTest, int idEquipe,int idProjet)

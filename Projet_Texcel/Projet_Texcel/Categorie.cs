@@ -12,6 +12,7 @@ namespace Projet_Texcel
 {
     public partial class Categorie : Form
     {
+        DBprovider db = new DBprovider();
         Form1 form;
         int cptValide = 0;
         public Categorie(Form1 form)
@@ -27,6 +28,8 @@ namespace Projet_Texcel
             btnCreerCatego.Enabled = false;
             picValid1.Visible = false;
             //Code pour insérer la catego dans la BD
+
+
         }
 
         private void Categorie_FormClosing(object sender, FormClosingEventArgs e)
