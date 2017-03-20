@@ -289,7 +289,7 @@ namespace Projet_Texcel
 
         public int validateMatricule(TextBox textBox)
         {
-            Regex regex = new Regex("^[aA-zZ0-9]{4,8}");
+            Regex regex = new Regex("^[aA-zZ0-9]{7}");
             Match match = regex.Match(textBox.Text);
             if (match.Success)
             {

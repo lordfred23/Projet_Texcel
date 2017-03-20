@@ -45,7 +45,11 @@ namespace Projet_Texcel
         {
             TextBox textBox = (TextBox)sender;
             PictureBox image;
-            int erreur = form.validate(textBox);//Envoie le textbox a valider
+            int erreur = 0;
+            if (Convert.ToInt32(textBox.Tag) == 4)
+                erreur = form.validateTel(textBox);
+            else
+                erreur = form.validate(textBox);//Envoie le textbox a valider
             if (erreur > 0)
             {
                 image = (PictureBox)groupBox1.Controls["picError" + erreur];

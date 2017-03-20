@@ -140,6 +140,7 @@
             this.txtDev.Size = new System.Drawing.Size(147, 22);
             this.txtDev.TabIndex = 10;
             this.txtDev.Tag = "2";
+            this.txtDev.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // txtNom
             // 
@@ -148,6 +149,7 @@
             this.txtNom.Size = new System.Drawing.Size(147, 22);
             this.txtNom.TabIndex = 9;
             this.txtNom.Tag = "1";
+            this.txtNom.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // txtConfig
             // 

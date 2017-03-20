@@ -75,7 +75,7 @@ namespace Projet_Texcel
                     erreur = form.validateDate(textBox);//Envoie le textbox pour valider la date
                     break;
                 case 6:
-                    erreur = form.validateAddresse(textBox);//Envoie le textbox pour valider l'addresse
+                    //erreur = form.validateAddresse(textBox);//Envoie le textbox pour valider l'addresse
                     break;
                 case 7:
                     erreur = form.validateTel(textBox);//Envoie le textbox pour valider le # de telephone
@@ -92,6 +92,11 @@ namespace Projet_Texcel
                 case 11:
                     erreur = form.validateTel(textBox);//Envoie le textbox pour valider le # de cellulaire
                     break;
+            }
+            if(Convert.ToInt32(textBox.Tag) == 6)
+            {
+                image = (PictureBox)groupBox1.Controls["picValid6"];
+                image.Visible = true;
             }
 
             if (erreur > 0)
