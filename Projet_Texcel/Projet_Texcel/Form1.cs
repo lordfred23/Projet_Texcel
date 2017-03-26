@@ -24,11 +24,13 @@ namespace Projet_Texcel
         Employes employes;
         OS os;
         Equipe equipe;
+        modifierEmployer modEmploye;
+        formModifierEmploye formModEmployer;
         affichageEmploye afEmploye;
         affichagePlatforme afPlatforme;
         affichageGenre afGenre;
 
-        public bool afEmployeConn = false, afGenreConn = false, afPlatformeConn = false, conConn = false, equipeConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false;
+        public bool formModEmployeConn = false, modEmployeConn = false , afEmployeConn = false, afGenreConn = false, afPlatformeConn = false, conConn = false, equipeConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false;
                 
         public Form1()
         {
@@ -246,6 +248,37 @@ namespace Projet_Texcel
                 afGenre.StartPosition = FormStartPosition.CenterScreen;
                 afGenre.Show();
                 afGenreConn = true;
+            }
+        }
+
+        public void formModifierEmployer(string employe, int index)
+        {
+            if (!formModEmployeConn)
+            {
+                formModEmployer = new formModifierEmploye(this, employe, index);
+                formModEmployer.Text = "Modifier Employer";
+                formModEmployer.MdiParent = this;
+                formModEmployer.StartPosition = FormStartPosition.CenterScreen;
+                formModEmployer.Show();
+                formModEmployeConn = true;
+            }
+        }
+
+        private void classificationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (!modEmployeConn)
+            {
+                modEmploye = new modifierEmployer(this);
+                modEmploye.Text = "Modifier Employe";
+                modEmploye.MdiParent = this;
+                modEmploye.StartPosition = FormStartPosition.CenterScreen;
+                modEmploye.Show();
+                modEmployeConn = true;
             }
         }
 

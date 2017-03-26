@@ -48,6 +48,8 @@
             this.platformesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thèmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +63,7 @@
             this.oSToolStripMenuItem,
             this.platformeToolStripMenuItem,
             this.afficherToolStripMenuItem,
+            this.modifierToolStripMenuItem,
             this.connexionToolStripMenuItem,
             this.déconnexionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -210,12 +213,29 @@
             this.classificationToolStripMenuItem.Name = "classificationToolStripMenuItem";
             this.classificationToolStripMenuItem.Size = new System.Drawing.Size(184, 28);
             this.classificationToolStripMenuItem.Text = "Classification";
+            this.classificationToolStripMenuItem.Click += new System.EventHandler(this.classificationToolStripMenuItem_Click);
             // 
             // thèmeToolStripMenuItem
             // 
             this.thèmeToolStripMenuItem.Name = "thèmeToolStripMenuItem";
             this.thèmeToolStripMenuItem.Size = new System.Drawing.Size(184, 28);
             this.thèmeToolStripMenuItem.Text = "Thème";
+            // 
+            // modifierToolStripMenuItem
+            // 
+            this.modifierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employeToolStripMenuItem});
+            this.modifierToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(85, 27);
+            this.modifierToolStripMenuItem.Text = "Modifier";
+            // 
+            // employeToolStripMenuItem
+            // 
+            this.employeToolStripMenuItem.Name = "employeToolStripMenuItem";
+            this.employeToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.employeToolStripMenuItem.Text = "Employe";
+            this.employeToolStripMenuItem.Click += new System.EventHandler(this.employeToolStripMenuItem_Click_1);
             // 
             // Form1
             // 
@@ -255,6 +275,8 @@
         private System.Windows.Forms.ToolStripMenuItem platformesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem classificationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thèmeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employeToolStripMenuItem;
     }
 }
 

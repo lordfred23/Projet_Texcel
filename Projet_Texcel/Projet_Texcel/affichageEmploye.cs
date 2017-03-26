@@ -32,7 +32,7 @@ namespace Projet_Texcel
             List<CEmploye> lstEmploye = form.getListeEmployes();
             foreach(CEmploye valeur in lstEmploye)
             {
-                msg += valeur.Prenom + " " + valeur.Nom + "\n" + valeur.DateNaissance + "\n" + valeur.Adresse + "\n" + valeur.NoTelephone + "\n" + valeur.NoTelephone + "\n" + valeur.PosteTelephone + "\n" + valeur.Matricule + "\n\n";
+                msg += valeur.Prenom + " " + valeur.Nom + "\n" + valeur.DateNaissance + "\n" + valeur.Adresse + "\n" + valeur.NoTelephone + "\n" + valeur.NoTelephoneMaison + "\n" + valeur.PosteTelephone + "\n" + valeur.Matricule + "\n\n";
             }
             txtEmploye.Text = msg;
         }
