@@ -269,7 +269,7 @@ namespace Projet_Texcel
         {
             if (!afEquipeConn)
             {
-                afEquipe= new affichageEquipe(this);
+                afEquipe= new afficherEquipe(this);
                 afEquipe.Text = "Affichage Equipe";
                 afEquipe.MdiParent = this;
                 afEquipe.StartPosition = FormStartPosition.CenterScreen;

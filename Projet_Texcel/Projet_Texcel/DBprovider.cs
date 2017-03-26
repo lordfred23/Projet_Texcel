@@ -23,6 +23,7 @@ namespace Projet_Texcel
         static ClasseObjBd.CCategorieTest categTest;
         static ClasseObjBd.CProjet projet;
         static ClasseObjBd.CTest test;
+        static ClasseObjBd.matricule mat;
 
         static List<CSysExp> sysList = new List<CSysExp>();
         static List<CPlatform> platList = new List<CPlatform>();
@@ -36,6 +37,7 @@ namespace Projet_Texcel
         static List<CCategorieTest> categTestList = new List<CCategorieTest>();
         static List<CProjet> projetList = new List<CProjet>();
         static List<CTest> testList = new List<CTest>();
+        static List<matricule> matriculeList;
 
         public DBprovider() {
             Connection();
@@ -811,6 +813,27 @@ namespace Projet_Texcel
             }
             conn.Close();
             return equipeList;
+        }
+        public List<matricule> displayMembreEquipe(string nomEquipe)
+        {
+            matriculeList = null;
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT emp.matricule FROM tblEmploye as emp JOIN tblEmployeEquipe as eq ON emp.matricule = eq.matricule JOIN tblEquipe as equ ON eq.idEquipe=equ.idEquipe WHERE equ.nom=" + nomEquipe, conn))
+            {
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    mat = new matricule(reader.GetString(0));
+
+                    matriculeList.Add(mat);
+
+
+
+                }
+                conn.Close();
+                return matriculeList;
+            }
         }
 
         public void AddCategorieTest(string nom, string description)

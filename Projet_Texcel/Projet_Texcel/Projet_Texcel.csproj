@@ -105,6 +105,7 @@
     <Compile Include="Categorie.Designer.cs">
       <DependentUpon>Categorie.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClasseObjBd\matricule.cs" />
     <Compile Include="Classification.cs">
       <SubType>Form</SubType>
     </Compile>
