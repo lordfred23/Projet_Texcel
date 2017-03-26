@@ -40,6 +40,14 @@
             this.platformeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.afficherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.équipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jeuxToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.oSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.platformesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.classificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thèmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +60,7 @@
             this.équipeToolStripMenuItem,
             this.oSToolStripMenuItem,
             this.platformeToolStripMenuItem,
+            this.afficherToolStripMenuItem,
             this.connexionToolStripMenuItem,
             this.déconnexionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -148,6 +157,66 @@
             this.déconnexionToolStripMenuItem.Text = "Déconnexion";
             this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.deconnexionToolStripMenuItem_Click);
             // 
+            // afficherToolStripMenuItem
+            // 
+            this.afficherToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employésToolStripMenuItem,
+            this.équipesToolStripMenuItem,
+            this.jeuxToolStripMenuItem1,
+            this.oSToolStripMenuItem1,
+            this.platformesToolStripMenuItem,
+            this.classificationToolStripMenuItem,
+            this.thèmeToolStripMenuItem});
+            this.afficherToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.afficherToolStripMenuItem.Name = "afficherToolStripMenuItem";
+            this.afficherToolStripMenuItem.Size = new System.Drawing.Size(80, 27);
+            this.afficherToolStripMenuItem.Text = "Afficher";
+            // 
+            // employésToolStripMenuItem
+            // 
+            this.employésToolStripMenuItem.Name = "employésToolStripMenuItem";
+            this.employésToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.employésToolStripMenuItem.Text = "Employés";
+            this.employésToolStripMenuItem.Click += new System.EventHandler(this.employésToolStripMenuItem_Click);
+            // 
+            // équipesToolStripMenuItem
+            // 
+            this.équipesToolStripMenuItem.Name = "équipesToolStripMenuItem";
+            this.équipesToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.équipesToolStripMenuItem.Text = "Équipes";
+            // 
+            // jeuxToolStripMenuItem1
+            // 
+            this.jeuxToolStripMenuItem1.Name = "jeuxToolStripMenuItem1";
+            this.jeuxToolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
+            this.jeuxToolStripMenuItem1.Text = "Jeux";
+            // 
+            // oSToolStripMenuItem1
+            // 
+            this.oSToolStripMenuItem1.Name = "oSToolStripMenuItem1";
+            this.oSToolStripMenuItem1.Size = new System.Drawing.Size(184, 28);
+            this.oSToolStripMenuItem1.Text = "Genre";
+            this.oSToolStripMenuItem1.Click += new System.EventHandler(this.oSToolStripMenuItem1_Click);
+            // 
+            // platformesToolStripMenuItem
+            // 
+            this.platformesToolStripMenuItem.Name = "platformesToolStripMenuItem";
+            this.platformesToolStripMenuItem.Size = new System.Drawing.Size(184, 28);
+            this.platformesToolStripMenuItem.Text = "Platformes";
+            this.platformesToolStripMenuItem.Click += new System.EventHandler(this.platformesToolStripMenuItem_Click);
+            // 
+            // classificationToolStripMenuItem
+            // 
+            this.classificationToolStripMenuItem.Name = "classificationToolStripMenuItem";
+            this.classificationToolStripMenuItem.Size = new System.Drawing.Size(184, 28);
+            this.classificationToolStripMenuItem.Text = "Classification";
+            // 
+            // thèmeToolStripMenuItem
+            // 
+            this.thèmeToolStripMenuItem.Name = "thèmeToolStripMenuItem";
+            this.thèmeToolStripMenuItem.Size = new System.Drawing.Size(184, 28);
+            this.thèmeToolStripMenuItem.Text = "Thème";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -178,6 +247,14 @@
         private System.Windows.Forms.ToolStripMenuItem platformeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connexionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem déconnexionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem afficherToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employésToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem équipesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jeuxToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem oSToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem platformesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem classificationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thèmeToolStripMenuItem;
     }
 }
 

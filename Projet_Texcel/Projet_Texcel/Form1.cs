@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using Projet_Texcel.ClasseObjBd;
 
 namespace Projet_Texcel
 {
@@ -23,8 +24,11 @@ namespace Projet_Texcel
         Employes employes;
         OS os;
         Equipe equipe;
+        affichageEmploye afEmploye;
+        affichagePlatforme afPlatforme;
+        affichageGenre afGenre;
 
-        public bool conConn = false, equipeConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false;
+        public bool afEmployeConn = false, afGenreConn = false, afPlatformeConn = false, conConn = false, equipeConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false;
                 
         public Form1()
         {
@@ -232,9 +236,53 @@ namespace Projet_Texcel
             return control.jeuRemplirListeTheme();
         }
 
+        private void oSToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (!afGenreConn)
+            {
+                afGenre = new affichageGenre(this);
+                afGenre.Text = "Affichage Genre";
+                afGenre.MdiParent = this;
+                afGenre.StartPosition = FormStartPosition.CenterScreen;
+                afGenre.Show();
+                afGenreConn = true;
+            }
+        }
+
+        private void platformesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!afPlatformeConn)
+            {
+                afPlatforme = new affichagePlatforme(this);
+                afPlatforme.Text = "Affichage Platforme";
+                afPlatforme.MdiParent = this;
+                afPlatforme.StartPosition = FormStartPosition.CenterScreen;
+                afPlatforme.Show();
+                afPlatformeConn = true;
+            }
+        }
+
+        private void employésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!afEmployeConn)
+            {
+                afEmploye = new affichageEmploye(this);
+                afEmploye.Text = "Affichage Employe";
+                afEmploye.MdiParent = this;
+                afEmploye.StartPosition = FormStartPosition.CenterScreen;
+                afEmploye.Show();
+                afEmployeConn = true;
+            }
+        }
+
         public string[] jeuRemplirListePlatforme()
         {
             return control.jeuRemplirListePlatform();
+        }
+
+        public List<CEmploye> getListeEmployes()
+        {
+            return control.getListeEmploye();
         }
 
         public int validate(TextBox textBox)

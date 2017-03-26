@@ -53,6 +53,11 @@ namespace Projet_Texcel
             BD.AddGenre(genre, desc);
         }
 
+        public List<CEmploye> getListeEmploye()
+        {
+            return BD.DisplayEmploye();
+        }
+
         public string[] employeRemplirListeEquipe()
         {
             List<CEquipe> equipe = BD.DisplayEquipe();

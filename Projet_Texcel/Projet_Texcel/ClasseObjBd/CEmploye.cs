@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projet_Texcel.ClasseObjBd
 {
-    class CEmploye
+    public class CEmploye
     {
         int idRole;
         string matricule, nom, prenom, dateNaissance, adresse, noTelephone, posteTelephone, noTelephoneMaison, tag;

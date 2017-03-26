@@ -44,8 +44,9 @@ namespace Projet_Texcel
         public void Connection()
 
         {                       //Server=localhost\\SQLEXPRESS;Database=bdTexelFredAlex;Trusted_Connection=True;
-                                
-            conn = new SqlConnection("Data Source=deptinfo420;Initial Catalog=bdTexelFredAlex;User ID=cotfr1530860;Password=19911012");   
+                                //Data Source=deptinfo420;Initial Catalog=bdTexelFredAlex;User ID=cotfr1530860;Password=19911012
+
+            conn = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=bdTexelFredAlex;Trusted_Connection=True");   
         }
         public void Deconnection()
         {
