@@ -52,7 +52,7 @@
             this.btnCreerOs.Location = new System.Drawing.Point(183, 220);
             this.btnCreerOs.Name = "btnCreerOs";
             this.btnCreerOs.Size = new System.Drawing.Size(134, 38);
-            this.btnCreerOs.TabIndex = 2;
+            this.btnCreerOs.TabIndex = 6;
             this.btnCreerOs.Text = "Créer OS";
             this.btnCreerOs.UseVisualStyleBackColor = true;
             this.btnCreerOs.Click += new System.EventHandler(this.btnCreerOs_Click);
@@ -62,7 +62,7 @@
             this.btnCreerPlat.Location = new System.Drawing.Point(43, 220);
             this.btnCreerPlat.Name = "btnCreerPlat";
             this.btnCreerPlat.Size = new System.Drawing.Size(134, 38);
-            this.btnCreerPlat.TabIndex = 3;
+            this.btnCreerPlat.TabIndex = 5;
             this.btnCreerPlat.Text = "Créer Platforme";
             this.btnCreerPlat.UseVisualStyleBackColor = true;
             this.btnCreerPlat.Click += new System.EventHandler(this.btnCreerPlat_Click);
@@ -114,7 +114,7 @@
             this.lstOS.Location = new System.Drawing.Point(153, 116);
             this.lstOS.Name = "lstOS";
             this.lstOS.Size = new System.Drawing.Size(121, 24);
-            this.lstOS.TabIndex = 7;
+            this.lstOS.TabIndex = 4;
             // 
             // lstPlatform
             // 
@@ -122,21 +122,21 @@
             this.lstPlatform.Location = new System.Drawing.Point(153, 84);
             this.lstPlatform.Name = "lstPlatform";
             this.lstPlatform.Size = new System.Drawing.Size(121, 24);
-            this.lstPlatform.TabIndex = 6;
+            this.lstPlatform.TabIndex = 3;
             // 
             // lstConfig
             // 
             this.lstConfig.Location = new System.Drawing.Point(153, 51);
             this.lstConfig.Name = "lstConfig";
             this.lstConfig.Size = new System.Drawing.Size(121, 24);
-            this.lstConfig.TabIndex = 5;
+            this.lstConfig.TabIndex = 2;
             // 
             // txtNom
             // 
             this.txtNom.Location = new System.Drawing.Point(153, 22);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(140, 22);
-            this.txtNom.TabIndex = 4;
+            this.txtNom.TabIndex = 1;
             this.txtNom.Tag = "1";
             this.txtNom.Leave += new System.EventHandler(this.TextBox_Leave);
             // 

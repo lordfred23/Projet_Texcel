@@ -52,7 +52,7 @@
             this.txtCatego.Location = new System.Drawing.Point(50, 43);
             this.txtCatego.Name = "txtCatego";
             this.txtCatego.Size = new System.Drawing.Size(159, 22);
-            this.txtCatego.TabIndex = 9;
+            this.txtCatego.TabIndex = 1;
             this.txtCatego.Tag = "1";
             this.txtCatego.TextChanged += new System.EventHandler(this.TextBox_Leave);
             // 
@@ -61,7 +61,7 @@
             this.btnCreerCatego.Location = new System.Drawing.Point(63, 107);
             this.btnCreerCatego.Name = "btnCreerCatego";
             this.btnCreerCatego.Size = new System.Drawing.Size(134, 38);
-            this.btnCreerCatego.TabIndex = 8;
+            this.btnCreerCatego.TabIndex = 2;
             this.btnCreerCatego.Text = "Créer Catégorie";
             this.btnCreerCatego.UseVisualStyleBackColor = true;
             this.btnCreerCatego.Click += new System.EventHandler(this.btnCreerCatego_Click);

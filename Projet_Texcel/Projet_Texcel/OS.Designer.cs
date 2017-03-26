@@ -57,7 +57,7 @@
             this.btnCreerOS.Location = new System.Drawing.Point(111, 150);
             this.btnCreerOS.Name = "btnCreerOS";
             this.btnCreerOS.Size = new System.Drawing.Size(134, 38);
-            this.btnCreerOS.TabIndex = 1;
+            this.btnCreerOS.TabIndex = 4;
             this.btnCreerOS.Text = "Créer OS";
             this.btnCreerOS.UseVisualStyleBackColor = true;
             this.btnCreerOS.Click += new System.EventHandler(this.button_Click);
@@ -132,7 +132,7 @@
             this.txtVersion.Location = new System.Drawing.Point(115, 79);
             this.txtVersion.Name = "txtVersion";
             this.txtVersion.Size = new System.Drawing.Size(178, 22);
-            this.txtVersion.TabIndex = 18;
+            this.txtVersion.TabIndex = 3;
             this.txtVersion.Tag = "4";
             this.txtVersion.Text = "###-###-####";
             this.txtVersion.TextChanged += new System.EventHandler(this.TextBox_Leave);
@@ -142,7 +142,7 @@
             this.txtEdition.Location = new System.Drawing.Point(115, 52);
             this.txtEdition.Name = "txtEdition";
             this.txtEdition.Size = new System.Drawing.Size(178, 22);
-            this.txtEdition.TabIndex = 17;
+            this.txtEdition.TabIndex = 2;
             this.txtEdition.Tag = "3";
             this.txtEdition.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
@@ -173,7 +173,7 @@
             this.txtNom.Location = new System.Drawing.Point(115, 26);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(178, 22);
-            this.txtNom.TabIndex = 7;
+            this.txtNom.TabIndex = 1;
             this.txtNom.Tag = "1";
             this.txtNom.Leave += new System.EventHandler(this.TextBox_Leave);
             // 

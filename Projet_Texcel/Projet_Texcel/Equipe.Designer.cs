@@ -45,7 +45,7 @@
             this.btnCreerEquipe.Location = new System.Drawing.Point(133, 140);
             this.btnCreerEquipe.Name = "btnCreerEquipe";
             this.btnCreerEquipe.Size = new System.Drawing.Size(134, 38);
-            this.btnCreerEquipe.TabIndex = 6;
+            this.btnCreerEquipe.TabIndex = 3;
             this.btnCreerEquipe.Text = "Créer Équipe";
             this.btnCreerEquipe.UseVisualStyleBackColor = true;
             this.btnCreerEquipe.Click += new System.EventHandler(this.btnCreerEquipe_Click);
@@ -55,7 +55,7 @@
             this.txtNomEquipe.Location = new System.Drawing.Point(191, 32);
             this.txtNomEquipe.Name = "txtNomEquipe";
             this.txtNomEquipe.Size = new System.Drawing.Size(173, 22);
-            this.txtNomEquipe.TabIndex = 7;
+            this.txtNomEquipe.TabIndex = 1;
             this.txtNomEquipe.Tag = "1";
             this.txtNomEquipe.TextChanged += new System.EventHandler(this.TextBox_Leave);
             // 
@@ -86,7 +86,7 @@
             this.lstEmploye1.Location = new System.Drawing.Point(191, 68);
             this.lstEmploye1.Name = "lstEmploye1";
             this.lstEmploye1.Size = new System.Drawing.Size(173, 24);
-            this.lstEmploye1.TabIndex = 10;
+            this.lstEmploye1.TabIndex = 2;
             this.lstEmploye1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
             // picValid1

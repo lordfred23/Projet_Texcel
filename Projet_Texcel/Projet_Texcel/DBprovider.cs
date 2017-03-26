@@ -42,8 +42,10 @@ namespace Projet_Texcel
         }
 
         public void Connection()
-        {
-            conn = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=bdTexelFredAlex;Trusted_Connection=True;");   
+
+        {                       //Server=localhost\\SQLEXPRESS;Database=bdTexelFredAlex;Trusted_Connection=True;
+                                
+            conn = new SqlConnection("Data Source=deptinfo420;Initial Catalog=bdTexelFredAlex;User ID=cotfr1530860;Password=19911012");   
         }
         public void Deconnection()
         {
@@ -537,6 +539,7 @@ namespace Projet_Texcel
 
         }
 
+
         public void AddRole(string nom, string description)
         {
 
@@ -972,7 +975,7 @@ namespace Projet_Texcel
             return testList;
         }
 
-        public void AddWrok(int idTest, int idEquipe,int idProjet)
+        public void AddWork(int idTest, int idEquipe,int idProjet)
         {
 
             conn.Open();
@@ -993,6 +996,52 @@ namespace Projet_Texcel
             }
             conn.Close();
 
+        }
+
+        // SQL UPDATE pour tout les tables
+        public void UpdateSql(string nomTable,string nomColonne,string nomColonneID,int id,object update)
+        {
+            conn.Open();
+            try
+            {
+                using (SqlCommand command = new SqlCommand(
+                    "UPDATE @nomTable SET @nomColonne = @update WHERE @nomColonneID = @id ", conn))
+                {
+                    command.Parameters.Add(new SqlParameter("nomTable", nomTable));
+                    command.Parameters.Add(new SqlParameter("nomColonne", nomColonne));
+                    command.Parameters.Add(new SqlParameter("update", update));
+                    command.Parameters.Add(new SqlParameter("nomColonneID", nomColonneID));
+                    command.Parameters.Add(new SqlParameter("id", id));
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                //Console.WriteLine("Count not insert.");
+            }
+            conn.Close();
+        }
+        // delete pour les table sans répercussion  --de toute facon comme tu sait on delete jamais on as oublier de faire un champs pour si yer actif ou pas
+        //
+        public void DeleteSql(string nomTable,string nomColonneID, int id)
+        {
+            conn.Open();
+            try
+            {
+                using (SqlCommand command = new SqlCommand(
+                    "DELETE FROM @nomTable WHERE @nomColonneID = @id", conn))
+                {
+                    command.Parameters.Add(new SqlParameter("nomTable", nomTable));
+                    command.Parameters.Add(new SqlParameter("nomColonneID", nomColonneID));
+                    command.Parameters.Add(new SqlParameter("id", id));
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                //Console.WriteLine("Count not insert.");
+            }
+            conn.Close();
         }
 
 
