@@ -177,6 +177,31 @@ namespace Projet_Texcel
             Init(false);
         }
 
+        public void AddSystemExploitation(string nom, string version, string edition)
+        {
+            control.AddSystemExploitation(nom, version, edition);
+        }
+
+        public void AddEmploye(string matricule, string nom, string prenom, string annee, string mois, string jour, string addresse, string cellulaire, string telePoste, string teleResid, string role)
+        {
+            control.AddEmploye(matricule, nom, prenom, annee , mois , jour, addresse, cellulaire, telePoste, teleResid, role);
+        }
+
+        public void AddClassification(string classif, string desc)
+        {
+            control.AddClassification(classif, desc);
+        }
+
+        public void AddGenre(string genre, string desc)
+        {
+            control.AddGenre(genre, desc);
+        }
+
+        public void AddTheme(string theme, string desc)
+        {
+            control.AddTheme(desc, desc);
+        }
+
         public string[] employeRemplirListeEquipe()
         {
             return control.employeRemplirListeEquipe();

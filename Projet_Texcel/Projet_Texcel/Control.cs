@@ -28,6 +28,31 @@ namespace Projet_Texcel
             MessageBox.Show(erreur);
         }
 
+        public void AddSystemExploitation(string nom, string version, string edition)
+        {
+            BD.AddSystemExploitation(nom, version, edition);
+        }
+
+        public void AddTheme(string theme, string desc)
+        {
+            BD.AddTheme(desc, desc);
+        }
+
+        public void AddClassification(string classif, string desc)
+        {
+            BD.AddClassification(classif, desc);
+        }
+
+        public void AddEmploye(string matricule, string nom, string prenom, string annee, string mois, string jour, string addresse, string cellulaire, string telePoste, string teleResid, string role)
+        {
+            BD.AddEmploye(matricule, nom, prenom, annee + mois + jour, addresse, cellulaire, telePoste, teleResid, BD.DisplayRoleID(role));
+        }
+
+        public void AddGenre(string genre, string desc)
+        {
+            BD.AddGenre(genre, desc);
+        }
+
         public string[] employeRemplirListeEquipe()
         {
             List<CEquipe> equipe = BD.DisplayEquipe();
@@ -40,6 +65,7 @@ namespace Projet_Texcel
             }
             return lstEquipe;
         }
+
         public string[] employeRemplirListeRole()
         {
             List<CRole> role = BD.DisplayRole();
@@ -117,6 +143,7 @@ namespace Projet_Texcel
             }
             return lstClass;
         }
+
         public string[] platformRemplirListeOS()
         {
             List<CSysExp> sys = BD.DisplaySysExp();

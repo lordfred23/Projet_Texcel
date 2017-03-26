@@ -12,7 +12,6 @@ namespace Projet_Texcel
 {
     public partial class Classification : Form
     {
-        DBprovider db = new DBprovider();
         Form1 form;
         int cptValide = 0;
         public Classification(Form1 form)
@@ -24,7 +23,7 @@ namespace Projet_Texcel
 
         private void btnCreerClassif_Click(object sender, EventArgs e)
         {
-            db.AddClassification(txtClassif.Text, "Description");
+            form.AddClassification(txtClassif.Text, "Description");
             cptValide = 0;
             picValid1.Visible = false;
             btnCreerClassif.Enabled = false;
