@@ -76,7 +76,6 @@ namespace Projet_Texcel
                 image = (PictureBox)groupBox1.Controls["picValid" + i];
                 image.Visible = false;
             }
-            //Code pour inserer le jeu dans la bd
             db.AddGame(txtDev.Text, txtDesc.Text, txtConfig.Text, db.DisplayClassifID(lstClassif.Text), db.DisplayGenreID(lstGenre.Text), db.DisplayThemeID(lstTheme.Text), db.DisplayPlatformID(lstPlatforme.Text), txtNom.Text);
 
         }

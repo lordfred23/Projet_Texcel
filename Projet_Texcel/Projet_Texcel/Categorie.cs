@@ -12,7 +12,6 @@ namespace Projet_Texcel
 {
     public partial class Categorie : Form
     {
-        DBprovider db = new DBprovider();
         Form1 form;
         int cptValide = 0;
         public Categorie(Form1 form)
@@ -27,7 +26,7 @@ namespace Projet_Texcel
             cptValide = 0;
             btnCreerCatego.Enabled = false;
             picValid1.Visible = false;
-            db.AddTheme(txtCatego.Text, "Desc");
+            form.AddTheme(txtCatego.Text, "Desc");
         }
 
         private void Categorie_FormClosing(object sender, FormClosingEventArgs e)

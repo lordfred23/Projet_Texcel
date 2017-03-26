@@ -14,7 +14,6 @@ namespace Projet_Texcel
     public partial class OS : Form
     {
         Form1 form;
-        DBprovider db = new DBprovider();
         int cptValide = 0;
         public OS(Form1 form)
         {
@@ -33,7 +32,7 @@ namespace Projet_Texcel
                 image.Visible = false;
             }
             btnCreerOS.Enabled = false;
-            db.AddSystemExploitation(txtNom.Text,txtVersion.Text,txtEdition.Text);
+            form.AddSystemExploitation(txtNom.Text,txtVersion.Text,txtEdition.Text);
         }
 
         private void OS_FormClosing(object sender, FormClosingEventArgs e)

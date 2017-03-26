@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="affichageEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="affichageEmploye.Designer.cs">
+      <DependentUpon>affichageEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="affichageGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="affichageGenre.Designer.cs">
+      <DependentUpon>affichageGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="affichagePlatforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="affichagePlatforme.Designer.cs">
+      <DependentUpon>affichagePlatforme.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClasseObjBd\CCategorieTest.cs" />
     <Compile Include="ClasseObjBd\CClassification.cs" />
     <Compile Include="ClasseObjBd\CEmploye.cs" />
@@ -127,6 +145,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="affichageEmploye.resx">
+      <DependentUpon>affichageEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="affichageGenre.resx">
+      <DependentUpon>affichageGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="affichagePlatforme.resx">
+      <DependentUpon>affichagePlatforme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Categorie.resx">
       <DependentUpon>Categorie.cs</DependentUpon>
     </EmbeddedResource>

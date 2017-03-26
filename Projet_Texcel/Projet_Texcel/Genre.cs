@@ -12,7 +12,6 @@ namespace Projet_Texcel
 {
     public partial class Genre : Form
     {
-        DBprovider db = new DBprovider();
         Form1 form;
         int cptValide = 0;
         public Genre(Form1 form)
@@ -27,9 +26,7 @@ namespace Projet_Texcel
             cptValide = 0;
             picValid1.Visible = false;
             btnCreerGenre.Enabled = false;
-            //Code pour ajouter le genre a la bd
-            db.AddGenre(txtGenre.Text, "desc");
-
+            form.AddGenre(txtGenre.Text, "desc");
         }
 
         private void Genre_FormClosing(object sender, FormClosingEventArgs e)

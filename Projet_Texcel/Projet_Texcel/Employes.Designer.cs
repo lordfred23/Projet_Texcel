@@ -166,10 +166,15 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employé";
+<<<<<<< HEAD
             // 
 
             // picValid11
 
+=======
+            //
+            // picValid11
+>>>>>>> dbcab8956f5f06ee6769b42dfa824f00460781a8
             // lstRoles
             // 
             this.lstRoles.FormattingEnabled = true;
@@ -353,7 +358,10 @@
             this.label3.Text = "Télé Résidence :";
             // 
             // label2
+<<<<<<< HEAD
 
+=======
+>>>>>>> dbcab8956f5f06ee6769b42dfa824f00460781a8
             // 
             this.picValid11.Image = global::Projet_Texcel.Properties.Resources.images__1_;
             this.picValid11.Location = new System.Drawing.Point(384, 177);
