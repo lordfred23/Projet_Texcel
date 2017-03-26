@@ -693,7 +693,7 @@ namespace Projet_Texcel
         }
         public string DisplayEmployeID(string noTel)
         {
-            string idEquipe = 0;
+            string idEquipe = "0";
 
 
             conn.Open();

@@ -27,8 +27,11 @@ namespace Projet_Texcel
         affichageEmploye afEmploye;
         affichagePlatforme afPlatforme;
         affichageGenre afGenre;
+        affichageClassification afClassif;
+        affichageTheme afTheme;
+        afficherEquipe afEquipe;
 
-        public bool afEmployeConn = false, afGenreConn = false, afPlatformeConn = false, conConn = false, equipeConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false;
+        public bool afEmployeConn = false, afGenreConn = false, afPlatformeConn = false, conConn = false, equipeConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false, afClassifConn=false,afThemeConn=false,afEquipeConn;
                 
         public Form1()
         {
@@ -246,6 +249,45 @@ namespace Projet_Texcel
                 afGenre.StartPosition = FormStartPosition.CenterScreen;
                 afGenre.Show();
                 afGenreConn = true;
+            }
+        }
+
+        private void équipesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!afThemeConn)
+            {
+                afTheme = new affichageTheme(this);
+                afTheme.Text = "Affichage Theme";
+                afTheme.MdiParent = this;
+                afTheme.StartPosition = FormStartPosition.CenterScreen;
+                afTheme.Show();
+                afThemeConn = true;
+            }
+        }
+
+        private void thèmeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!afEquipeConn)
+            {
+                afEquipe= new affichageEquipe(this);
+                afEquipe.Text = "Affichage Equipe";
+                afEquipe.MdiParent = this;
+                afEquipe.StartPosition = FormStartPosition.CenterScreen;
+                afEquipe.Show();
+                afEquipeConn = true;
+            }
+        }
+
+        private void classificationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!afClassifConn)
+            {
+                afClassif = new affichageClassification(this);
+                afClassif.Text = "Affichage Classification";
+                afClassif.MdiParent = this;
+                afClassif.StartPosition = FormStartPosition.CenterScreen;
+                afClassif.Show();
+                afClassifConn = true;
             }
         }
 

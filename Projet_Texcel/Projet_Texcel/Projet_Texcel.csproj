@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="affichageClassification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="affichageClassification.Designer.cs">
+      <DependentUpon>affichageClassification.cs</DependentUpon>
+    </Compile>
     <Compile Include="affichageEmploye.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,18 @@
     </Compile>
     <Compile Include="affichagePlatforme.Designer.cs">
       <DependentUpon>affichagePlatforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="affichageTheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="affichageTheme.Designer.cs">
+      <DependentUpon>affichageTheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="afficherEquipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="afficherEquipe.Designer.cs">
+      <DependentUpon>afficherEquipe.cs</DependentUpon>
     </Compile>
     <Compile Include="ClasseObjBd\CCategorieTest.cs" />
     <Compile Include="ClasseObjBd\CClassification.cs" />
@@ -145,6 +163,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="affichageClassification.resx">
+      <DependentUpon>affichageClassification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="affichageEmploye.resx">
       <DependentUpon>affichageEmploye.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +174,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="affichagePlatforme.resx">
       <DependentUpon>affichagePlatforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="affichageTheme.resx">
+      <DependentUpon>affichageTheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="afficherEquipe.resx">
+      <DependentUpon>afficherEquipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Categorie.resx">
       <DependentUpon>Categorie.cs</DependentUpon>
