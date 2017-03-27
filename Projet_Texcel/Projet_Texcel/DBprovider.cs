@@ -1131,7 +1131,28 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-
+        public void UpdateSqlEmploye(string nomTable, string nomColonne, string nomColonneID, string id, object update)
+        {
+            conn.Open();
+            try
+            {
+                using (SqlCommand command = new SqlCommand(
+                    "UPDATE @nomTable SET @nomColonne = @update WHERE @nomColonneID = @id ", conn))
+                {
+                    command.Parameters.Add(new SqlParameter("nomTable", nomTable));
+                    command.Parameters.Add(new SqlParameter("nomColonne", nomColonne));
+                    command.Parameters.Add(new SqlParameter("update", update));
+                    command.Parameters.Add(new SqlParameter("nomColonneID", nomColonneID));
+                    command.Parameters.Add(new SqlParameter("id", id));
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                //Console.WriteLine("Count not insert.");
+            }
+            conn.Close();
+        }
 
 
 
