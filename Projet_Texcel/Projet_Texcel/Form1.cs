@@ -49,7 +49,9 @@ namespace Projet_Texcel
             employéToolStripMenuItem.Enabled = value;
             équipeToolStripMenuItem.Enabled = value;
             oSToolStripMenuItem.Enabled = value;
-            platformeToolStripMenuItem.Enabled = value; 
+            platformeToolStripMenuItem.Enabled = value;
+            modifierToolStripMenuItem.Enabled = value;
+            afficherToolStripMenuItem.Enabled = value;
             connexionToolStripMenuItem.Enabled = !value;
             déconnexionToolStripMenuItem.Enabled = value;
         }
