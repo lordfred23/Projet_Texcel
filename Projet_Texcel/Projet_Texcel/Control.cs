@@ -10,7 +10,8 @@ namespace Projet_Texcel
 {
     class Control
     {
-        DBprovider BD = new DBprovider();       
+        DBprovider BD = new DBprovider();
+        Affichage affichage = new Affichage();     
         
         public Control() { }
 
@@ -21,6 +22,11 @@ namespace Projet_Texcel
                 connexion = true;
             return connexion;
             //return BD.connexion(uti,pass); retour d'un tableau bool[] ( [0] = uti ok? [1] directeur ou admin )
+        }
+
+        public void affichageCreerEquipe()
+        {
+            affichage.affichageCreerEquipe();
         }
 
         public void erreur(string erreur)

@@ -62,6 +62,7 @@ namespace Projet_Texcel
             picValid1.Visible = false;
             cptValide = 0;
             btnCreerEquipe.Enabled = false;
+            form.affichageCreerEquipe();
             //Code pour ajouter l'equipe a la bd
         }
 
