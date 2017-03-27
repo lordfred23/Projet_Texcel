@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Affichage.cs" />
     <Compile Include="affichageClassification.cs">
       <SubType>Form</SubType>
     </Compile>

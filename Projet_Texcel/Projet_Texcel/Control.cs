@@ -168,9 +168,9 @@ namespace Projet_Texcel
             return lstSys;
         }
 
-        public void updateInfo(string nomTable, string nomColonne,string nomColonneID,int id, object info)
+        public void updateInfo(string nomTable, string nomColonne,string nomColonneID,string id, string info)
         {
-            BD.UpdateSql(nomTable, nomColonne, nomColonneID, id, info);
+            BD.UpdateSqlEmploye(nomTable, nomColonne, nomColonneID,id, info);
         }
     }
 }

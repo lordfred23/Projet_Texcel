@@ -48,7 +48,7 @@ namespace Projet_Texcel
         {                       //Server=localhost\\SQLEXPRESS;Database=bdTexelFredAlex;Trusted_Connection=True;
                                 //Data Source=deptinfo420;Initial Catalog=bdTexelFredAlex;User ID=cotfr1530860;Password=19911012
 
-            conn = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=bdTexelFredAlex;Trusted_Connection=True");   
+            conn = new SqlConnection("Data Source=deptinfo420;Initial Catalog=bdTexelFredAlex;User ID=cotfr1530860;Password=19911012");   
         }
         public void Deconnection()
         {
@@ -1131,7 +1131,7 @@ namespace Projet_Texcel
             conn.Close();
         }
 
-        public void UpdateSqlEmploye(string nomTable, string nomColonne, string nomColonneID, string id, object update)
+        public void UpdateSqlEmploye(string nomTable, string nomColonne, string nomColonneID, string id, string update)
         {
             conn.Open();
             try

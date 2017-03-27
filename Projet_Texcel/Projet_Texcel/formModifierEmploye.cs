@@ -15,6 +15,7 @@ namespace Projet_Texcel
     {
         Form1 form;
         List<CEmploye> lstEmploye;
+        CEmploye employe;
         int index;
         public formModifierEmploye(Form1 form, string employe, int index)
         {
@@ -27,7 +28,7 @@ namespace Projet_Texcel
         private void remplirChamps()
         {
             lstEmploye = form.getListeEmployes();
-            CEmploye employe = lstEmploye[index];
+            employe = lstEmploye[index];
             string dateNaissance = employe.DateNaissance;
             string[] date = dateNaissance.Split(new char(), ' ');
 
@@ -77,7 +78,8 @@ namespace Projet_Texcel
         }
         private void btnModifierEmploye_Click(object sender, EventArgs e)
         {
-            //form.updateInfo("tblEmploye", "prenom", index,,txtPrenom.Text);
+            form.updateInfo("tblEmploye", "prenom", "matricule",employe.Matricule,txtPrenom.Text);
+            this.Close();
         }
 
         private void formModifierEmploye_FormClosing(object sender, FormClosingEventArgs e)

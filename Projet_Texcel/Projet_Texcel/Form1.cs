@@ -352,7 +352,7 @@ namespace Projet_Texcel
             return control.jeuRemplirListePlatform();
         }
 
-        public void updateInfo(string nomTable, string nomColonne, string nomColonneID, int id, object info)
+        public void updateInfo(string nomTable, string nomColonne, string nomColonneID, string id, string info)
         {
             control.updateInfo(nomTable, nomColonne, nomColonneID, id, info);
         }
@@ -471,6 +471,11 @@ namespace Projet_Texcel
             }
             else
                 return Convert.ToInt32(textBox.Tag);
+        }
+
+        public void affichageCreerEquipe()
+        {
+            control.affichageCreerEquipe();
         }
     }
 }
