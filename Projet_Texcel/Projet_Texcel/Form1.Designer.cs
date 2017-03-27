@@ -38,8 +38,6 @@
             this.équipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.platformeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afficherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.équipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +48,10 @@
             this.thèmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.équipeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.jeuxToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +70,7 @@
             this.déconnexionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(857, 31);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
@@ -144,22 +147,6 @@
             this.platformeToolStripMenuItem.Text = "Platforme";
             this.platformeToolStripMenuItem.Click += new System.EventHandler(this.platformeToolStripMenuItem_Click);
             // 
-            // connexionToolStripMenuItem
-            // 
-            this.connexionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.connexionToolStripMenuItem.Name = "connexionToolStripMenuItem";
-            this.connexionToolStripMenuItem.Size = new System.Drawing.Size(104, 27);
-            this.connexionToolStripMenuItem.Text = "Connexion";
-            this.connexionToolStripMenuItem.Click += new System.EventHandler(this.connexionToolStripMenuItem_Click);
-            // 
-            // déconnexionToolStripMenuItem
-            // 
-            this.déconnexionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.déconnexionToolStripMenuItem.Name = "déconnexionToolStripMenuItem";
-            this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(122, 27);
-            this.déconnexionToolStripMenuItem.Text = "Déconnexion";
-            this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.deconnexionToolStripMenuItem_Click);
-            // 
             // afficherToolStripMenuItem
             // 
             this.afficherToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -178,20 +165,21 @@
             // employésToolStripMenuItem
             // 
             this.employésToolStripMenuItem.Name = "employésToolStripMenuItem";
-            this.employésToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.employésToolStripMenuItem.Size = new System.Drawing.Size(184, 28);
             this.employésToolStripMenuItem.Text = "Employés";
             this.employésToolStripMenuItem.Click += new System.EventHandler(this.employésToolStripMenuItem_Click);
             // 
             // équipesToolStripMenuItem
             // 
             this.équipesToolStripMenuItem.Name = "équipesToolStripMenuItem";
-            this.équipesToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.équipesToolStripMenuItem.Size = new System.Drawing.Size(184, 28);
             this.équipesToolStripMenuItem.Text = "Équipes";
+            this.équipesToolStripMenuItem.Click += new System.EventHandler(this.équipesToolStripMenuItem_Click);
             // 
             // jeuxToolStripMenuItem1
             // 
             this.jeuxToolStripMenuItem1.Name = "jeuxToolStripMenuItem1";
-            this.jeuxToolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
+            this.jeuxToolStripMenuItem1.Size = new System.Drawing.Size(184, 28);
             this.jeuxToolStripMenuItem1.Text = "Jeux";
             // 
             // oSToolStripMenuItem1
@@ -213,18 +201,21 @@
             this.classificationToolStripMenuItem.Name = "classificationToolStripMenuItem";
             this.classificationToolStripMenuItem.Size = new System.Drawing.Size(184, 28);
             this.classificationToolStripMenuItem.Text = "Classification";
-            this.classificationToolStripMenuItem.Click += new System.EventHandler(this.classificationToolStripMenuItem_Click);
+            this.classificationToolStripMenuItem.Click += new System.EventHandler(this.afClassificationToolStripMenuItem_Click);
             // 
             // thèmeToolStripMenuItem
             // 
             this.thèmeToolStripMenuItem.Name = "thèmeToolStripMenuItem";
             this.thèmeToolStripMenuItem.Size = new System.Drawing.Size(184, 28);
             this.thèmeToolStripMenuItem.Text = "Thème";
+            this.thèmeToolStripMenuItem.Click += new System.EventHandler(this.thèmeToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.employeToolStripMenuItem});
+            this.employeToolStripMenuItem,
+            this.équipeToolStripMenuItem1,
+            this.jeuxToolStripMenuItem2});
             this.modifierToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
             this.modifierToolStripMenuItem.Size = new System.Drawing.Size(85, 27);
@@ -237,6 +228,34 @@
             this.employeToolStripMenuItem.Text = "Employe";
             this.employeToolStripMenuItem.Click += new System.EventHandler(this.employeToolStripMenuItem_Click_1);
             // 
+            // connexionToolStripMenuItem
+            // 
+            this.connexionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.connexionToolStripMenuItem.Name = "connexionToolStripMenuItem";
+            this.connexionToolStripMenuItem.Size = new System.Drawing.Size(104, 27);
+            this.connexionToolStripMenuItem.Text = "Connexion";
+            this.connexionToolStripMenuItem.Click += new System.EventHandler(this.connexionToolStripMenuItem_Click);
+            // 
+            // déconnexionToolStripMenuItem
+            // 
+            this.déconnexionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.déconnexionToolStripMenuItem.Name = "déconnexionToolStripMenuItem";
+            this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(122, 27);
+            this.déconnexionToolStripMenuItem.Text = "Déconnexion";
+            this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.deconnexionToolStripMenuItem_Click);
+            // 
+            // équipeToolStripMenuItem1
+            // 
+            this.équipeToolStripMenuItem1.Name = "équipeToolStripMenuItem1";
+            this.équipeToolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
+            this.équipeToolStripMenuItem1.Text = "Équipe";
+            // 
+            // jeuxToolStripMenuItem2
+            // 
+            this.jeuxToolStripMenuItem2.Name = "jeuxToolStripMenuItem2";
+            this.jeuxToolStripMenuItem2.Size = new System.Drawing.Size(181, 28);
+            this.jeuxToolStripMenuItem2.Text = "Jeux";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -245,6 +264,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Texcel";
             this.menuStrip1.ResumeLayout(false);
@@ -277,6 +297,8 @@
         private System.Windows.Forms.ToolStripMenuItem thèmeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem équipeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem jeuxToolStripMenuItem2;
     }
 }
 

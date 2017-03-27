@@ -23,6 +23,7 @@ namespace Projet_Texcel
         static ClasseObjBd.CCategorieTest categTest;
         static ClasseObjBd.CProjet projet;
         static ClasseObjBd.CTest test;
+        static ClasseObjBd.matricule mat;
 
         static List<CSysExp> sysList = new List<CSysExp>();
         static List<CPlatform> platList = new List<CPlatform>();
@@ -36,6 +37,7 @@ namespace Projet_Texcel
         static List<CCategorieTest> categTestList = new List<CCategorieTest>();
         static List<CProjet> projetList = new List<CProjet>();
         static List<CTest> testList = new List<CTest>();
+        static List<matricule> matriculeList;
 
         public DBprovider() {
             Connection();
@@ -112,6 +114,25 @@ namespace Projet_Texcel
             return sysList;
             
          }
+        public int DisplaySysExpID(string nom)
+        {
+            int idEquipe = 0;
+
+
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT idSysExp FROM tblSystemExploitation where nom=@nom", conn))
+            {
+                command.Parameters.Add(new SqlParameter("nom", nom));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    idEquipe = reader.GetInt32(0);
+                }
+            }
+            conn.Close();
+            return idEquipe;
+        }
 
 
         public void AddPlatform(string nom, string config, string typePlatform,int idSysExp)
@@ -264,6 +285,27 @@ namespace Projet_Texcel
             conn.Close();
             return jeuList;
         }
+        public int DisplayJeuID(string nom)
+        {
+            int idEquipe = 0;
+
+
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT idJeu FROM tblJeu where nom=@nom", conn))
+            {
+                command.Parameters.Add(new SqlParameter("nom", nom));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    idEquipe = reader.GetInt32(0);
+                }
+            }
+            conn.Close();
+            return idEquipe;
+        }
+
+
 
         public void AddTheme(string nom,string description)
         {
@@ -496,49 +538,9 @@ namespace Projet_Texcel
             return idEquipe;
         }
 
-        public void AddThemeToGame(int idJeu, int idTheme)
-        {
+        
 
-            conn.Open();
-            try
-            {
-                using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblJeuTheme(idJeu,idTheme) VALUES(@idJeu, @idTheme)", conn))
-                {
-                    command.Parameters.Add(new SqlParameter("idJeu", idJeu));
-                    command.Parameters.Add(new SqlParameter("idTheme", idTheme));
-                    command.ExecuteNonQuery();
-                }
-            }
-            catch
-            {
-                //Console.WriteLine("Count not insert.");
-            }
-            conn.Close();
-
-        }
-
-        public void AddGenreToGame(int idJeu, int idGenre)
-        {
-
-            conn.Open();
-            try
-            {
-                using (SqlCommand command = new SqlCommand(
-                    "INSERT INTO tblGenreJeu(idJeu,IdGenre) VALUES(@idJeu, @idGenre)", conn))
-                {
-                    command.Parameters.Add(new SqlParameter("idJeu", idJeu));
-                    command.Parameters.Add(new SqlParameter("idGenre", idGenre));
-                    command.ExecuteNonQuery();
-                }
-            }
-            catch
-            {
-                //Console.WriteLine("Count not insert.");
-            }
-            conn.Close();
-
-        }
+        
 
 
         public void AddRole(string nom, string description)
@@ -691,6 +693,25 @@ namespace Projet_Texcel
             conn.Close();
             return employeList;
         }
+        public string DisplayEmployeID(string noTel)
+        {
+            string idEquipe = "0";
+
+
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT matricule FROM tblEmploye where noTel=@noTel", conn))
+            {
+                command.Parameters.Add(new SqlParameter("noTel", noTel));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    idEquipe = reader.GetString(0);
+                }
+            }
+            conn.Close();
+            return idEquipe;
+        }
 
         public void AddEmployeToTeam(string matricule, int idEquipe)
         {
@@ -793,6 +814,27 @@ namespace Projet_Texcel
             conn.Close();
             return equipeList;
         }
+        public List<matricule> displayMembreEquipe(string nomEquipe)
+        {
+            matriculeList = null;
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT emp.matricule FROM tblEmploye as emp JOIN tblEmployeEquipe as eq ON emp.matricule = eq.matricule JOIN tblEquipe as equ ON eq.idEquipe=equ.idEquipe WHERE equ.nom=" + nomEquipe, conn))
+            {
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    mat = new matricule(reader.GetString(0));
+
+                    matriculeList.Add(mat);
+
+
+
+                }
+                conn.Close();
+                return matriculeList;
+            }
+        }
 
         public void AddCategorieTest(string nom, string description)
         {
@@ -852,6 +894,28 @@ namespace Projet_Texcel
             conn.Close();
             return categTestList;
         }
+
+        public int DisplayCategTestID(string nom)
+        {
+            int idEquipe = 0;
+
+
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT idCategorieTest FROM tblCategorieTest where nom=@nom", conn))
+            {
+                command.Parameters.Add(new SqlParameter("nom", nom));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    idEquipe = reader.GetInt32(0);
+                }
+            }
+            conn.Close();
+            return idEquipe;
+        }
+
+
 
         public void AddProjet(string nom,string description,int idJeu)
         {
@@ -914,6 +978,27 @@ namespace Projet_Texcel
             conn.Close();
             return projetList;
         }
+        public int DisplayProjetID(string nom)
+        {
+            int idEquipe = 0;
+
+
+            conn.Open();
+
+            using (SqlCommand command = new SqlCommand("SELECT idProjet FROM tblProjet where nom=@nom", conn))
+            {
+                command.Parameters.Add(new SqlParameter("nom", nom));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    idEquipe = reader.GetInt32(0);
+                }
+            }
+            conn.Close();
+            return idEquipe;
+        }
+
+
         public void AddTest(int resutlat,string nom, string description,int idCategorieTest)
         {
 
@@ -975,6 +1060,7 @@ namespace Projet_Texcel
             conn.Close();
             return testList;
         }
+       
 
         public void AddWork(int idTest, int idEquipe,int idProjet)
         {

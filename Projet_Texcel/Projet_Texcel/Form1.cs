@@ -29,8 +29,12 @@ namespace Projet_Texcel
         affichageEmploye afEmploye;
         affichagePlatforme afPlatforme;
         affichageGenre afGenre;
+        affichageClassification afClassif;
+        affichageTheme afTheme;
+        afficherEquipe afEquipe;
+        
 
-        public bool formModEmployeConn = false, modEmployeConn = false , afEmployeConn = false, afGenreConn = false, afPlatformeConn = false, conConn = false, equipeConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false;
+        public bool modEmployeConn = false, formModEmployeConn = false, afEmployeConn = false, afGenreConn = false, afPlatformeConn = false, conConn = false, equipeConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false, afClassifConn=false,afThemeConn=false,afEquipeConn;
                 
         public Form1()
         {
@@ -264,11 +268,6 @@ namespace Projet_Texcel
             }
         }
 
-        private void classificationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void employeToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             if (!modEmployeConn)
@@ -279,6 +278,44 @@ namespace Projet_Texcel
                 modEmploye.StartPosition = FormStartPosition.CenterScreen;
                 modEmploye.Show();
                 modEmployeConn = true;
+            }
+        }
+        private void équipesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!afThemeConn)
+            {
+                afTheme = new affichageTheme(this);
+                afTheme.Text = "Affichage Theme";
+                afTheme.MdiParent = this;
+                afTheme.StartPosition = FormStartPosition.CenterScreen;
+                afTheme.Show();
+                afThemeConn = true;
+            }
+        }
+
+        private void thèmeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!afEquipeConn)
+            {
+                afEquipe= new afficherEquipe(this);
+                afEquipe.Text = "Affichage Equipe";
+                afEquipe.MdiParent = this;
+                afEquipe.StartPosition = FormStartPosition.CenterScreen;
+                afEquipe.Show();
+                afEquipeConn = true;
+            }
+        }
+
+        private void afClassificationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!afClassifConn)
+            {
+                afClassif = new affichageClassification(this);
+                afClassif.Text = "Affichage Classification";
+                afClassif.MdiParent = this;
+                afClassif.StartPosition = FormStartPosition.CenterScreen;
+                afClassif.Show();
+                afClassifConn = true;
             }
         }
 
@@ -311,6 +348,11 @@ namespace Projet_Texcel
         public string[] jeuRemplirListePlatforme()
         {
             return control.jeuRemplirListePlatform();
+        }
+
+        public void updateInfo(string nomTable, string nomColonne, string nomColonneID, int id, object info)
+        {
+            control.updateInfo(nomTable, nomColonne, nomColonneID, id, info);
         }
 
         public List<CEmploye> getListeEmployes()

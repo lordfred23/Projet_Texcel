@@ -166,8 +166,15 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employé";
+
+            // 
+
+            // picValid11
+
+
             //
             // picValid11
+
             // lstRoles
             // 
             this.lstRoles.FormattingEnabled = true;

@@ -15,14 +15,16 @@ namespace Projet_Texcel
     {
         Form1 form;
         List<CEmploye> lstEmploye;
+        int index;
         public formModifierEmploye(Form1 form, string employe, int index)
         {
             InitializeComponent();
             this.form = form;
-            remplirChamps(index);
+            this.index = index;
+            remplirChamps();
         }
 
-        private void remplirChamps(int index)
+        private void remplirChamps()
         {
             lstEmploye = form.getListeEmployes();
             CEmploye employe = lstEmploye[index];
@@ -75,7 +77,7 @@ namespace Projet_Texcel
         }
         private void btnModifierEmploye_Click(object sender, EventArgs e)
         {
-            
+            //form.updateInfo("tblEmploye", "prenom", index,,txtPrenom.Text);
         }
 
         private void formModifierEmploye_FormClosing(object sender, FormClosingEventArgs e)

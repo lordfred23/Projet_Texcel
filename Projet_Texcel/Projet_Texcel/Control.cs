@@ -161,5 +161,10 @@ namespace Projet_Texcel
             }
             return lstSys;
         }
+
+        public void updateInfo(string nomTable, string nomColonne,string nomColonneID,int id, object info)
+        {
+            BD.UpdateSql(nomTable, nomColonne, nomColonneID, id, info);
+        }
     }
 }
