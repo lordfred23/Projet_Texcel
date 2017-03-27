@@ -27,6 +27,7 @@ namespace Projet_Texcel
             btnCreerCatego.Enabled = false;
             picValid1.Visible = false;
             form.AddTheme(txtCatego.Text, "Desc");
+            this.Close();
         }
 
         private void Categorie_FormClosing(object sender, FormClosingEventArgs e)
