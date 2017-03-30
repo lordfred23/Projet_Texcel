@@ -1133,17 +1133,30 @@ namespace Projet_Texcel
 
         public void UpdateSqlEmploye(string nomTable, string nomColonne, string nomColonneID, string id, string update)
         {
+            string table = nomTable, colonne = nomColonne, colonneID = nomColonneID, identifiant = id, info = update;
             conn.Open();
             try
             {
-                using (SqlCommand command = new SqlCommand(
-                    "UPDATE @nomTable SET @nomColonne = @update WHERE @nomColonneID = @id ", conn))
+                using (SqlCommand command = new SqlCommand("UPDATE @nomTable SET @nomColonne = @update Where @nomColonneID = @id",conn))
                 {
-                    command.Parameters.Add(new SqlParameter("nomTable", nomTable));
-                    command.Parameters.Add(new SqlParameter("nomColonne", nomColonne));
-                    command.Parameters.Add(new SqlParameter("update", update));
-                    command.Parameters.Add(new SqlParameter("nomColonneID", nomColonneID));
-                    command.Parameters.Add(new SqlParameter("id", id));
+                    /*command.Parameters.AddWithValue("@nomTable", nomTable);
+                    command.Parameters.AddWithValue("@nomColonne", nomColonne);
+                    command.Parameters.AddWithValue("@update", update);
+                    command.Parameters.AddWithValue("@nomColonneID", nomColonneID);
+                    command.Parameters.AddWithValue("@id", id);
+                    */
+                    //command.Parameters.Add("@ID", SqlDbType.Int);
+                    //command.Parameters["@ID"].Value = customerID;
+                    command.Parameters.Add("@nomTable", System.Data.SqlDbType.NVarChar);
+                    command.Parameters.Add("@nomColonne", System.Data.SqlDbType.NVarChar);
+                    command.Parameters.Add("@update", System.Data.SqlDbType.NVarChar);
+                    command.Parameters.Add("@nomColonneID", System.Data.SqlDbType.NVarChar);
+                    command.Parameters.Add("@id", System.Data.SqlDbType.NVarChar);
+                    command.Parameters["@nomTable"].Value = table;
+                    command.Parameters["@nomColonne"].Value = colonne;
+                    command.Parameters["@nomColonneID"].Value = colonneID;
+                    command.Parameters["@id"].Value = identifiant;
+                    command.Parameters["@update"].Value = info;
                     command.ExecuteNonQuery();
                 }
             }

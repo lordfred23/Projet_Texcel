@@ -64,6 +64,11 @@ namespace Projet_Texcel
             return BD.DisplayEmploye();
         }
 
+        public List<CJeu> getListJeu()
+        {
+            return BD.DisplayJeu();
+        }
+
         public string[] employeRemplirListeEquipe()
         {
             List<CEquipe> equipe = BD.DisplayEquipe();

@@ -48,10 +48,10 @@
             this.thèmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.équipeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.jeuxToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -181,6 +181,7 @@
             this.jeuxToolStripMenuItem1.Name = "jeuxToolStripMenuItem1";
             this.jeuxToolStripMenuItem1.Size = new System.Drawing.Size(184, 28);
             this.jeuxToolStripMenuItem1.Text = "Jeux";
+            this.jeuxToolStripMenuItem1.Click += new System.EventHandler(this.jeuxToolStripMenuItem1_Click);
             // 
             // oSToolStripMenuItem1
             // 
@@ -224,9 +225,21 @@
             // employeToolStripMenuItem
             // 
             this.employeToolStripMenuItem.Name = "employeToolStripMenuItem";
-            this.employeToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.employeToolStripMenuItem.Size = new System.Drawing.Size(151, 28);
             this.employeToolStripMenuItem.Text = "Employe";
             this.employeToolStripMenuItem.Click += new System.EventHandler(this.employeToolStripMenuItem_Click_1);
+            // 
+            // équipeToolStripMenuItem1
+            // 
+            this.équipeToolStripMenuItem1.Name = "équipeToolStripMenuItem1";
+            this.équipeToolStripMenuItem1.Size = new System.Drawing.Size(151, 28);
+            this.équipeToolStripMenuItem1.Text = "Équipe";
+            // 
+            // jeuxToolStripMenuItem2
+            // 
+            this.jeuxToolStripMenuItem2.Name = "jeuxToolStripMenuItem2";
+            this.jeuxToolStripMenuItem2.Size = new System.Drawing.Size(151, 28);
+            this.jeuxToolStripMenuItem2.Text = "Jeux";
             // 
             // connexionToolStripMenuItem
             // 
@@ -243,18 +256,6 @@
             this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(122, 27);
             this.déconnexionToolStripMenuItem.Text = "Déconnexion";
             this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.deconnexionToolStripMenuItem_Click);
-            // 
-            // équipeToolStripMenuItem1
-            // 
-            this.équipeToolStripMenuItem1.Name = "équipeToolStripMenuItem1";
-            this.équipeToolStripMenuItem1.Size = new System.Drawing.Size(181, 28);
-            this.équipeToolStripMenuItem1.Text = "Équipe";
-            // 
-            // jeuxToolStripMenuItem2
-            // 
-            this.jeuxToolStripMenuItem2.Name = "jeuxToolStripMenuItem2";
-            this.jeuxToolStripMenuItem2.Size = new System.Drawing.Size(181, 28);
-            this.jeuxToolStripMenuItem2.Text = "Jeux";
             // 
             // Form1
             // 

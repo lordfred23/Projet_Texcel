@@ -27,6 +27,7 @@ namespace Projet_Texcel
             cptValide = 0;
             picValid1.Visible = false;
             btnCreerClassif.Enabled = false;
+
         }
 
         private void Classification_FormClosing(object sender, FormClosingEventArgs e)

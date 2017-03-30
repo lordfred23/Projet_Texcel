@@ -26,13 +26,14 @@ namespace Projet_Texcel
         {
             PictureBox image;
             cptValide = 0;
-            for (int i = 1; i <= 4; i++)
+            for (int i = 1; i <= 3; i++)
             {
-                image = (PictureBox)groupBox1.Controls["picValid" + i];
-                image.Visible = false;
+                //image = (PictureBox)Controls["picValid" + i];
+                //image.Visible = false;
             }
             btnCreerOS.Enabled = false;
             form.AddSystemExploitation(txtNom.Text,txtVersion.Text,txtEdition.Text);
+            this.Close();
         }
 
         private void OS_FormClosing(object sender, FormClosingEventArgs e)
@@ -62,7 +63,7 @@ namespace Projet_Texcel
                 image = (PictureBox)groupBox1.Controls["picValid" + textBox.Tag];
                 image.Visible = true;
             }
-            if (cptValide == 4)//Nombre de textbox a valider
+            if (cptValide == 3)//Nombre de textbox a valider
                 btnCreerOS.Enabled = true;
         }
     }

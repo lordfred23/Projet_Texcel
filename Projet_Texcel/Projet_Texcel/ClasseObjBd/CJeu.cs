@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projet_Texcel.ClasseObjBd
 {
-    class CJeu
+    public class CJeu
     {
         int idJeu, idClassification,idGenre,idTheme,idPlatform;
         string developpeur, description, minimalConfig,tag;

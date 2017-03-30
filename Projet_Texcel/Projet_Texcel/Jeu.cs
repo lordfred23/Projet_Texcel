@@ -77,7 +77,7 @@ namespace Projet_Texcel
                 image.Visible = false;
             }
             db.AddGame(txtDev.Text, txtDesc.Text, txtConfig.Text, db.DisplayClassifID(lstClassif.Text), db.DisplayGenreID(lstGenre.Text), db.DisplayThemeID(lstTheme.Text), db.DisplayPlatformID(lstPlatforme.Text), txtNom.Text);
-
+            this.Close();
         }
 
         private void Jeu_FormClosing(object sender, FormClosingEventArgs e)
@@ -111,7 +111,7 @@ namespace Projet_Texcel
                 image = (PictureBox)groupBox1.Controls["picValid" + textBox.Tag];
                 image.Visible = true;
             }
-            if (cptValide >= 3)//Nombre de textbox a valider
+            if (cptValide <= 3)//Nombre de textbox a valider
                 btnCreerJeu.Enabled = true;
         }
     }

@@ -32,9 +32,10 @@ namespace Projet_Texcel
         affichageClassification afClassif;
         affichageTheme afTheme;
         afficherEquipe afEquipe;
+        affichageJeux afJeu;
         
 
-        public bool modEmployeConn = false, formModEmployeConn = false, afEmployeConn = false, afGenreConn = false, afPlatformeConn = false, conConn = false, equipeConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false, afClassifConn=false,afThemeConn=false,afEquipeConn;
+        public bool modEmployeConn = false, formModEmployeConn = false, afJeuConn = false, afEmployeConn = false, afGenreConn = false, afPlatformeConn = false, conConn = false, equipeConn = false, osConn = false, platConn = false, empConn = false, jeuConn = false, genreConn = false, clasConn = false, cateConn = false, afClassifConn=false,afThemeConn=false,afEquipeConn;
                 
         public Form1()
         {
@@ -282,6 +283,20 @@ namespace Projet_Texcel
                 modEmployeConn = true;
             }
         }
+
+        private void jeuxToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (!afJeuConn)
+            {
+                afJeu = new affichageJeux(this);
+                afJeu.Text = "Modifier Employe";
+                afJeu.MdiParent = this;
+                afJeu.StartPosition = FormStartPosition.CenterScreen;
+                afJeu.Show();
+                afJeuConn = true;
+            }
+        }
+
         private void équipesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!afThemeConn)
@@ -360,6 +375,11 @@ namespace Projet_Texcel
         public List<CEmploye> getListeEmployes()
         {
             return control.getListeEmploye();
+        }
+
+        public List<CJeu> getListJeu()
+        {
+            return control.getListJeu();
         }
 
         public int validate(TextBox textBox)
