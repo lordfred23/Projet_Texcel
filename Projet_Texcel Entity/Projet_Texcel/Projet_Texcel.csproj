@@ -100,7 +100,7 @@
     <Compile Include="afficherEquipe.Designer.cs">
       <DependentUpon>afficherEquipe.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
+
     <Compile Include="bdTexelFredAlexDSGenre.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -116,11 +116,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdTexelFredAlexDSJeu.xsd</DependentUpon>
     </Compile>
-    <Compile Include="bdTexelFredAlexDSTheme.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bdTexelFredAlexDSTheme.xsd</DependentUpon>
-=======
+  <Compile Include="bdTexelFredAlexDSTheme.Designer.cs">
+    <AutoGen>True</AutoGen>
+    <DesignTime>True</DesignTime>
+    <DependentUpon>bdTexelFredAlexDSTheme.xsd</DependentUpon>
+  </Compile>
     <Compile Include="bdTexelFredAlexDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -140,7 +140,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>bdTexelFredAlexDataSet3.xsd</DependentUpon>
->>>>>>> 6273ad5fe09488b3b8dd134a63b16de4e054431d
+
     </Compile>
     <Compile Include="ClasseObjBd\CCategorieTest.cs" />
     <Compile Include="ClasseObjBd\CClassification.cs" />
@@ -394,7 +394,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>modelEntityBD.Designer.cs</LastGenOutput>
     </EntityDeploy>
-<<<<<<< HEAD
+
     <None Include="bdTexelFredAlexDSGenre.xsc">
       <DependentUpon>bdTexelFredAlexDSGenre.xsd</DependentUpon>
     </None>
@@ -438,7 +438,7 @@
     </None>
     <None Include="bdTexelFredAlexDSTheme.xss">
       <DependentUpon>bdTexelFredAlexDSTheme.xsd</DependentUpon>
-=======
+    </None>
     <None Include="bdTexelFredAlexDataSet.xsc">
       <DependentUpon>bdTexelFredAlexDataSet.xsd</DependentUpon>
     </None>
@@ -482,7 +482,7 @@
     </None>
     <None Include="bdTexelFredAlexDataSet3.xss">
       <DependentUpon>bdTexelFredAlexDataSet3.xsd</DependentUpon>
->>>>>>> 6273ad5fe09488b3b8dd134a63b16de4e054431d
+
     </None>
     <None Include="modelEntityBD.edmx.diagram">
       <DependentUpon>modelEntityBD.edmx</DependentUpon>
