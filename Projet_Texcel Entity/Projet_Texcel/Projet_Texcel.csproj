@@ -100,6 +100,26 @@
     <Compile Include="afficherEquipe.Designer.cs">
       <DependentUpon>afficherEquipe.cs</DependentUpon>
     </Compile>
+    <Compile Include="bdTexelFredAlexDSGenre.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdTexelFredAlexDSGenre.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdTexelFredAlexDSgenre1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdTexelFredAlexDSgenre1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdTexelFredAlexDSJeu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdTexelFredAlexDSJeu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdTexelFredAlexDSTheme.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdTexelFredAlexDSTheme.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClasseObjBd\CCategorieTest.cs" />
     <Compile Include="ClasseObjBd\CClassification.cs" />
     <Compile Include="ClasseObjBd\CEmploye.cs" />
@@ -352,6 +372,50 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>modelEntityBD.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="bdTexelFredAlexDSGenre.xsc">
+      <DependentUpon>bdTexelFredAlexDSGenre.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDSGenre.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdTexelFredAlexDSGenre.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdTexelFredAlexDSGenre.xss">
+      <DependentUpon>bdTexelFredAlexDSGenre.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDSgenre1.xsc">
+      <DependentUpon>bdTexelFredAlexDSgenre1.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDSgenre1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdTexelFredAlexDSgenre1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdTexelFredAlexDSgenre1.xss">
+      <DependentUpon>bdTexelFredAlexDSgenre1.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDSJeu.xsc">
+      <DependentUpon>bdTexelFredAlexDSJeu.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDSJeu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdTexelFredAlexDSJeu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdTexelFredAlexDSJeu.xss">
+      <DependentUpon>bdTexelFredAlexDSJeu.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDSTheme.xsc">
+      <DependentUpon>bdTexelFredAlexDSTheme.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDSTheme.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdTexelFredAlexDSTheme.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdTexelFredAlexDSTheme.xss">
+      <DependentUpon>bdTexelFredAlexDSTheme.xsd</DependentUpon>
+    </None>
     <None Include="modelEntityBD.edmx.diagram">
       <DependentUpon>modelEntityBD.edmx</DependentUpon>
     </None>

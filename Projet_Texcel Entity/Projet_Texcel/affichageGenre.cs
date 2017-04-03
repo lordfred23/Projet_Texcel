@@ -17,23 +17,23 @@ namespace Projet_Texcel
         {
             InitializeComponent();
             this.form = form;
-            afficher();
+            
         }
 
-        private void afficher()
-        {
-            string msg = "";
-            string[] lstGenre = form.jeuRemplirListeGenre();
-            foreach (string valeur in lstGenre)
-            {
-                msg += valeur + "\n";
-            }
-            txtGenre.Text = msg;
-        }
+        
 
         private void affichageGenre_FormClosing(object sender, FormClosingEventArgs e)
         {
             form.afGenreConn = false;
+        }
+
+        private void affichageGenre_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'bdTexelFredAlexDSgenre1.tblGenre'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+            
+            // TODO: cette ligne de code charge les données dans la table 'bdTexelFredAlexDataSet.tblGenre'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+            
+
         }
     }
 }

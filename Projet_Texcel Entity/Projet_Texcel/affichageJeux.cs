@@ -18,23 +18,28 @@ namespace Projet_Texcel
         {
             InitializeComponent();
             this.form = form;
-            afficher();
+            
         }
 
-        private void afficher()
-        {
-            string msg = "";
-            List<CJeu> lstJeu = form.getListJeu();
-            foreach(CJeu jeu in lstJeu)
-            {
-                msg += jeu.Developpeur + "\n" + jeu.Description + "\n\n";
-            }
-            txtJeux.Text = msg;
-        }
+        
 
         private void affichageJeux_FormClosing(object sender, FormClosingEventArgs e)
         {
             form.afJeuConn = false;
+        }
+
+        private void affichageJeux_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'bdTexelFredAlexDSJeu.tblJeu'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+            this.tblJeuTableAdapter.Fill(this.bdTexelFredAlexDSJeu.tblJeu);
+            // TODO: cette ligne de code charge les données dans la table 'bdTexelFredAlexDataSet1.tblJeu'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+           
+
+        }
+
+        private void bindingJeu_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
