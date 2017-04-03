@@ -100,6 +100,7 @@
     <Compile Include="afficherEquipe.Designer.cs">
       <DependentUpon>afficherEquipe.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="bdTexelFredAlexDSGenre.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,6 +120,27 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>bdTexelFredAlexDSTheme.xsd</DependentUpon>
+=======
+    <Compile Include="bdTexelFredAlexDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdTexelFredAlexDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdTexelFredAlexDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdTexelFredAlexDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdTexelFredAlexDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdTexelFredAlexDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdTexelFredAlexDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdTexelFredAlexDataSet3.xsd</DependentUpon>
+>>>>>>> 6273ad5fe09488b3b8dd134a63b16de4e054431d
     </Compile>
     <Compile Include="ClasseObjBd\CCategorieTest.cs" />
     <Compile Include="ClasseObjBd\CClassification.cs" />
@@ -372,6 +394,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>modelEntityBD.Designer.cs</LastGenOutput>
     </EntityDeploy>
+<<<<<<< HEAD
     <None Include="bdTexelFredAlexDSGenre.xsc">
       <DependentUpon>bdTexelFredAlexDSGenre.xsd</DependentUpon>
     </None>
@@ -415,6 +438,51 @@
     </None>
     <None Include="bdTexelFredAlexDSTheme.xss">
       <DependentUpon>bdTexelFredAlexDSTheme.xsd</DependentUpon>
+=======
+    <None Include="bdTexelFredAlexDataSet.xsc">
+      <DependentUpon>bdTexelFredAlexDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdTexelFredAlexDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdTexelFredAlexDataSet.xss">
+      <DependentUpon>bdTexelFredAlexDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDataSet1.xsc">
+      <DependentUpon>bdTexelFredAlexDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdTexelFredAlexDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdTexelFredAlexDataSet1.xss">
+      <DependentUpon>bdTexelFredAlexDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDataSet2.xsc">
+      <DependentUpon>bdTexelFredAlexDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdTexelFredAlexDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdTexelFredAlexDataSet2.xss">
+      <DependentUpon>bdTexelFredAlexDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDataSet3.xsc">
+      <DependentUpon>bdTexelFredAlexDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdTexelFredAlexDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdTexelFredAlexDataSet3.xss">
+      <DependentUpon>bdTexelFredAlexDataSet3.xsd</DependentUpon>
+>>>>>>> 6273ad5fe09488b3b8dd134a63b16de4e054431d
     </None>
     <None Include="modelEntityBD.edmx.diagram">
       <DependentUpon>modelEntityBD.edmx</DependentUpon>

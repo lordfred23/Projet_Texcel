@@ -17,23 +17,18 @@ namespace Projet_Texcel
         {
             InitializeComponent();
             this.form = form;
-            afficher();
-        }
-
-        private void afficher()
-        {
-            string msg = "";
-            string[] lstEquipe = form.employeRemplirListeEquipe();
-            foreach (string valeur in lstEquipe)
-            {
-                msg += valeur + "\n";
-            }
-            txtEquipe.Text = msg;
         }
 
         private void affichageGenre_FormClosing(object sender, FormClosingEventArgs e)
         {
             form.afEquipeConn = false;
+        }
+
+        private void afficherEquipe_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'bdTexelFredAlexDataSet3.tblEquipe'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+            this.tblEquipeTableAdapter.Fill(this.bdTexelFredAlexDataSet3.tblEquipe);
+
         }
     }
 }
