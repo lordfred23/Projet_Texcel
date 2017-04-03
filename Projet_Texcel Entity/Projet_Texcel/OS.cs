@@ -24,7 +24,6 @@ namespace Projet_Texcel
 
         private void button_Click(object sender, EventArgs e)
         {
-            PictureBox image;
             cptValide = 0;
             for (int i = 1; i <= 3; i++)
             {

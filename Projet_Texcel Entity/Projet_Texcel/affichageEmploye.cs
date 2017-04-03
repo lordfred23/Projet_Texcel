@@ -18,7 +18,6 @@ namespace Projet_Texcel
         {
             InitializeComponent();
             this.form = form;
-            afficher();
         }
 
         private void affichageEmploye_FormClosing(object sender, FormClosingEventArgs e)
@@ -26,15 +25,11 @@ namespace Projet_Texcel
             form.afEmployeConn = false;
         }
 
-        private void afficher()
+        private void affichageEmploye_Load(object sender, EventArgs e)
         {
-            string msg = "";
-            List<CEmploye> lstEmploye = form.getListeEmployes();
-            foreach(CEmploye valeur in lstEmploye)
-            {
-                msg += valeur.Prenom + " " + valeur.Nom + "\n" + valeur.DateNaissance + "\n" + valeur.Adresse + "\n" + valeur.NoTelephone + "\n" + valeur.NoTelephoneMaison + "\n" + valeur.PosteTelephone + "\n" + valeur.Matricule + "\n\n";
-            }
-            txtEmploye.Text = msg;
+            // TODO: cette ligne de code charge les données dans la table 'bdTexelFredAlexDataSet1.tblEmploye'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+            this.tblEmployeTableAdapter.Fill(this.bdTexelFredAlexDataSet1.tblEmploye);
+
         }
     }
 }

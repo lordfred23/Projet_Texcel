@@ -17,23 +17,18 @@ namespace Projet_Texcel
         {
             InitializeComponent();
             this.form = form;
-            afficher();
-        }
-
-        private void afficher()
-        {
-            string msg = "";
-            string[] lstPlatforme = form.jeuRemplirListePlatforme();
-            foreach(string valeur in lstPlatforme)
-            {
-                msg += valeur + "\n";
-            }
-            txtPlatforme.Text = msg;
         }
 
         private void affichagePlatforme_FormClosing(object sender, FormClosingEventArgs e)
         {
             form.afPlatformeConn = false;
+        }
+
+        private void affichagePlatforme_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'bdTexelFredAlexDataSet2.tblPlatform'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+            this.tblPlatformTableAdapter.Fill(this.bdTexelFredAlexDataSet2.tblPlatform);
+
         }
     }
 }
