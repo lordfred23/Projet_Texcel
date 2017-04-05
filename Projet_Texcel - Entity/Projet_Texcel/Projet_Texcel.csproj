@@ -33,8 +33,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -133,6 +144,21 @@
     <Compile Include="Employes.Designer.cs">
       <DependentUpon>Employes.cs</DependentUpon>
     </Compile>
+    <Compile Include="EntityBD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityBD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityBD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityBD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityBD.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Equipe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +215,45 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tblCategorieTest.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblClassification.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblEmploye.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblEquipe.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblGenre.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblJeu.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblPlatform.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblProjet.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblRole.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblSystemExploitation.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTest.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTheme.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTravail.cs">
+      <DependentUpon>EntityBD.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="affichageClassification.resx">
       <DependentUpon>affichageClassification.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +348,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="EntityBD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityBD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityBD.edmx.diagram">
+      <DependentUpon>EntityBD.edmx</DependentUpon>
+    </None>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\Projet_Texcel.csproj.GenerateResource.Cache" />
@@ -291,6 +363,7 @@
     <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Release\Projet_Texcel.csproj.GenerateResource.Cache" />
     <None Include="obj\Release\Projet_Texcel.csprojResolveAssemblyReference.cache" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -311,6 +384,16 @@
     <None Include="bin\Debug\images.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EntityBD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityBD.edmx</DependentUpon>
+      <LastGenOutput>EntityBD.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityBD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityBD.edmx</DependentUpon>
+      <LastGenOutput>EntityBD.cs</LastGenOutput>
+    </Content>
     <Content Include="obj\Debug\Projet_Texcel.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Projet_Texcel.exe" />
     <Content Include="obj\Debug\Projet_Texcel.pdb" />
@@ -319,6 +402,9 @@
     <Content Include="obj\Release\Projet_Texcel.exe" />
     <Content Include="obj\Release\Projet_Texcel.pdb" />
     <Content Include="obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
