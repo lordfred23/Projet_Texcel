@@ -29,7 +29,6 @@ namespace Projet_Texcel
             {
                 msg += valeur + "\n";
             }
-            txtClassif.Text = msg;
 
         }
 
