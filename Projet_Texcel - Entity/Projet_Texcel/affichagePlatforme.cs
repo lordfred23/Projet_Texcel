@@ -17,18 +17,6 @@ namespace Projet_Texcel
         {
             InitializeComponent();
             this.form = form;
-            afficher();
-        }
-
-        private void afficher()
-        {
-            string msg = "";
-            string[] lstPlatforme = form.jeuRemplirListePlatforme();
-            foreach(string valeur in lstPlatforme)
-            {
-                msg += valeur + "\n";
-            }
-            txtPlatforme.Text = msg;
         }
 
         private void affichagePlatforme_FormClosing(object sender, FormClosingEventArgs e)

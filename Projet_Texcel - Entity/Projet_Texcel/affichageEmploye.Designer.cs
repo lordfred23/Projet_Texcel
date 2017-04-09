@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewEmploye = new System.Windows.Forms.DataGridView();
             this.tblEmployeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.matriculeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,17 +41,19 @@
             this.noTelephoneMaisonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idRoleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblRoleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblEquipeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmploye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewEmploye
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewEmploye.AllowUserToAddRows = false;
+            this.dataGridViewEmploye.AllowUserToDeleteRows = false;
+            this.dataGridViewEmploye.AllowUserToResizeColumns = false;
+            this.dataGridViewEmploye.AllowUserToResizeRows = false;
+            this.dataGridViewEmploye.AutoGenerateColumns = false;
+            this.dataGridViewEmploye.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEmploye.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.matriculeDataGridViewTextBoxColumn,
             this.nomDataGridViewTextBoxColumn,
             this.prenomDataGridViewTextBoxColumn,
@@ -61,15 +63,13 @@
             this.posteTelephoneDataGridViewTextBoxColumn,
             this.noTelephoneMaisonDataGridViewTextBoxColumn,
             this.idRoleDataGridViewTextBoxColumn,
-            this.tagDataGridViewTextBoxColumn,
-            this.tblRoleDataGridViewTextBoxColumn,
-            this.tblEquipeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblEmployeBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(193, 85);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.tagDataGridViewTextBoxColumn});
+            this.dataGridViewEmploye.DataSource = this.tblEmployeBindingSource;
+            this.dataGridViewEmploye.Location = new System.Drawing.Point(1, 2);
+            this.dataGridViewEmploye.Name = "dataGridViewEmploye";
+            this.dataGridViewEmploye.RowTemplate.Height = 24;
+            this.dataGridViewEmploye.Size = new System.Drawing.Size(1044, 384);
+            this.dataGridViewEmploye.TabIndex = 0;
             // 
             // tblEmployeBindingSource
             // 
@@ -135,31 +135,19 @@
             this.tagDataGridViewTextBoxColumn.HeaderText = "tag";
             this.tagDataGridViewTextBoxColumn.Name = "tagDataGridViewTextBoxColumn";
             // 
-            // tblRoleDataGridViewTextBoxColumn
-            // 
-            this.tblRoleDataGridViewTextBoxColumn.DataPropertyName = "tblRole";
-            this.tblRoleDataGridViewTextBoxColumn.HeaderText = "tblRole";
-            this.tblRoleDataGridViewTextBoxColumn.Name = "tblRoleDataGridViewTextBoxColumn";
-            // 
-            // tblEquipeDataGridViewTextBoxColumn
-            // 
-            this.tblEquipeDataGridViewTextBoxColumn.DataPropertyName = "tblEquipe";
-            this.tblEquipeDataGridViewTextBoxColumn.HeaderText = "tblEquipe";
-            this.tblEquipeDataGridViewTextBoxColumn.Name = "tblEquipeDataGridViewTextBoxColumn";
-            // 
             // affichageEmploye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 444);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1047, 387);
+            this.Controls.Add(this.dataGridViewEmploye);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "affichageEmploye";
             this.Text = "Affichage Employe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.affichageEmploye_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmploye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -167,7 +155,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewEmploye;
+        private System.Windows.Forms.BindingSource tblEmployeBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn matriculeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenomDataGridViewTextBoxColumn;
@@ -178,8 +167,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn noTelephoneMaisonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idRoleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tagDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tblRoleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tblEquipeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource tblEmployeBindingSource;
     }
 }
