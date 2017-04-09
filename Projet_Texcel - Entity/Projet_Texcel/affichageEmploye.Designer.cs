@@ -66,9 +66,10 @@
             this.tagDataGridViewTextBoxColumn});
             this.dataGridViewEmploye.DataSource = this.tblEmployeBindingSource;
             this.dataGridViewEmploye.Location = new System.Drawing.Point(1, 2);
+            this.dataGridViewEmploye.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewEmploye.Name = "dataGridViewEmploye";
             this.dataGridViewEmploye.RowTemplate.Height = 24;
-            this.dataGridViewEmploye.Size = new System.Drawing.Size(1044, 384);
+            this.dataGridViewEmploye.Size = new System.Drawing.Size(783, 312);
             this.dataGridViewEmploye.TabIndex = 0;
             // 
             // tblEmployeBindingSource
@@ -137,11 +138,12 @@
             // 
             // affichageEmploye
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 387);
+            this.ClientSize = new System.Drawing.Size(785, 314);
             this.Controls.Add(this.dataGridViewEmploye);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "affichageEmploye";

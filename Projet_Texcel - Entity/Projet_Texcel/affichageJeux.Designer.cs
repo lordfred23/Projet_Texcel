@@ -54,6 +54,10 @@
             // 
             // dataGridViewJeu
             // 
+            this.dataGridViewJeu.AllowUserToAddRows = false;
+            this.dataGridViewJeu.AllowUserToDeleteRows = false;
+            this.dataGridViewJeu.AllowUserToResizeColumns = false;
+            this.dataGridViewJeu.AllowUserToResizeRows = false;
             this.dataGridViewJeu.AutoGenerateColumns = false;
             this.dataGridViewJeu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewJeu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

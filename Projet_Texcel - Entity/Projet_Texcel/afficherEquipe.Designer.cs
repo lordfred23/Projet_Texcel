@@ -30,18 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridViewEquipe = new System.Windows.Forms.DataGridView();
-            this.tblEquipeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idEquipeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblTravailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblEmployeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblEquipeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEquipeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewEquipe
             // 
+            this.dataGridViewEquipe.AllowUserToAddRows = false;
+            this.dataGridViewEquipe.AllowUserToDeleteRows = false;
+            this.dataGridViewEquipe.AllowUserToResizeColumns = false;
+            this.dataGridViewEquipe.AllowUserToResizeRows = false;
             this.dataGridViewEquipe.AutoGenerateColumns = false;
             this.dataGridViewEquipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEquipe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -55,10 +59,6 @@
             this.dataGridViewEquipe.Name = "dataGridViewEquipe";
             this.dataGridViewEquipe.Size = new System.Drawing.Size(344, 281);
             this.dataGridViewEquipe.TabIndex = 0;
-            // 
-            // tblEquipeBindingSource
-            // 
-            this.tblEquipeBindingSource.DataSource = typeof(Projet_Texcel.tblEquipe);
             // 
             // idEquipeDataGridViewTextBoxColumn
             // 
@@ -91,6 +91,10 @@
             this.tblEmployeDataGridViewTextBoxColumn.HeaderText = "tblEmploye";
             this.tblEmployeDataGridViewTextBoxColumn.Name = "tblEmployeDataGridViewTextBoxColumn";
             this.tblEmployeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tblEquipeBindingSource
+            // 
+            this.tblEquipeBindingSource.DataSource = typeof(Projet_Texcel.tblEquipe);
             // 
             // afficherEquipe
             // 
