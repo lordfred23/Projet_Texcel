@@ -100,6 +100,11 @@
     <Compile Include="afficherEquipe.Designer.cs">
       <DependentUpon>afficherEquipe.cs</DependentUpon>
     </Compile>
+    <Compile Include="bdTexelFredAlexDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdTexelFredAlexDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClasseObjBd\CCategorieTest.cs" />
     <Compile Include="ClasseObjBd\CClassification.cs" />
     <Compile Include="ClasseObjBd\CEmploye.cs" />
@@ -215,6 +220,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="tblCategorieTest.cs">
       <DependentUpon>modelEntityTexcel.tt</DependentUpon>
     </Compile>
@@ -352,6 +362,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>modelEntityTexcel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="bdTexelFredAlexDataSet.xsc">
+      <DependentUpon>bdTexelFredAlexDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdTexelFredAlexDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdTexelFredAlexDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdTexelFredAlexDataSet.xss">
+      <DependentUpon>bdTexelFredAlexDataSet.xsd</DependentUpon>
+    </None>
     <None Include="modelEntityTexcel.edmx.diagram">
       <DependentUpon>modelEntityTexcel.edmx</DependentUpon>
     </None>
@@ -364,15 +385,11 @@
     <None Include="obj\Release\Projet_Texcel.csproj.GenerateResource.Cache" />
     <None Include="obj\Release\Projet_Texcel.csprojResolveAssemblyReference.cache" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\bdTexelFredAlexEntities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

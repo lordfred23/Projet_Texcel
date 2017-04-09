@@ -18,23 +18,11 @@ namespace Projet_Texcel
         {
             InitializeComponent();
             this.form = form;
-            afficher();
         }
 
         private void affichageEmploye_FormClosing(object sender, FormClosingEventArgs e)
         {
             form.afEmployeConn = false;
-        }
-
-        private void afficher()
-        {
-            string msg = "";
-            List<CEmploye> lstEmploye = form.getListeEmployes();
-            foreach(CEmploye valeur in lstEmploye)
-            {
-                msg += valeur.Prenom + " " + valeur.Nom + "\n" + valeur.DateNaissance + "\n" + valeur.Adresse + "\n" + valeur.NoTelephone + "\n" + valeur.NoTelephoneMaison + "\n" + valeur.PosteTelephone + "\n" + valeur.Matricule + "\n\n";
-            }
-            txtEmploye.Text = msg;
         }
     }
 }
