@@ -29,83 +29,102 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bdTexelFredAlexDataSet = new Projet_Texcel.bdTexelFredAlexDataSet();
-            this.tblClassificationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblClassificationTableAdapter = new Projet_Texcel.bdTexelFredAlexDataSetTableAdapters.tblClassificationTableAdapter();
-            this.tableAdapterManager = new Projet_Texcel.bdTexelFredAlexDataSetTableAdapters.TableAdapterManager();
             this.bdTexelFredAlexEntitiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bdTexelFredAlexEntitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bdTexelFredAlexDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblClassificationBindingSource)).BeginInit();
+            this.dataGridViewClassif = new System.Windows.Forms.DataGridView();
+            this.tblClassificationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idClassificationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblJeuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bdTexelFredAlexEntitiesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdTexelFredAlexEntitiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClassif)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClassificationBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bdTexelFredAlexDataSet
-            // 
-            this.bdTexelFredAlexDataSet.DataSetName = "bdTexelFredAlexDataSet";
-            this.bdTexelFredAlexDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblClassificationBindingSource
-            // 
-            this.tblClassificationBindingSource.DataMember = "tblClassification";
-            this.tblClassificationBindingSource.DataSource = this.bdTexelFredAlexDataSet;
-            // 
-            // tblClassificationTableAdapter
-            // 
-            this.tblClassificationTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.tblCategorieTestTableAdapter = null;
-            this.tableAdapterManager.tblClassificationTableAdapter = this.tblClassificationTableAdapter;
-            this.tableAdapterManager.tblEmployeEquipeTableAdapter = null;
-            this.tableAdapterManager.tblEmployeTableAdapter = null;
-            this.tableAdapterManager.tblEquipeTableAdapter = null;
-            this.tableAdapterManager.tblGenreTableAdapter = null;
-            this.tableAdapterManager.tblJeuTableAdapter = null;
-            this.tableAdapterManager.tblPlatformTableAdapter = null;
-            this.tableAdapterManager.tblProjetTableAdapter = null;
-            this.tableAdapterManager.tblRoleTableAdapter = null;
-            this.tableAdapterManager.tblSystemExploitationTableAdapter = null;
-            this.tableAdapterManager.tblTestTableAdapter = null;
-            this.tableAdapterManager.tblThemeTableAdapter = null;
-            this.tableAdapterManager.tblTravailTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projet_Texcel.bdTexelFredAlexDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // bdTexelFredAlexEntitiesBindingSource1
             // 
             this.bdTexelFredAlexEntitiesBindingSource1.DataSource = typeof(Projet_Texcel.bdTexelFredAlexEntities);
             // 
-            // bdTexelFredAlexEntitiesBindingSource
+            // dataGridViewClassif
             // 
-            this.bdTexelFredAlexEntitiesBindingSource.DataSource = typeof(Projet_Texcel.bdTexelFredAlexEntities);
+            this.dataGridViewClassif.AllowUserToAddRows = false;
+            this.dataGridViewClassif.AllowUserToDeleteRows = false;
+            this.dataGridViewClassif.AllowUserToResizeColumns = false;
+            this.dataGridViewClassif.AllowUserToResizeRows = false;
+            this.dataGridViewClassif.AutoGenerateColumns = false;
+            this.dataGridViewClassif.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewClassif.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idClassificationDataGridViewTextBoxColumn,
+            this.nomDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.tagDataGridViewTextBoxColumn,
+            this.tblJeuDataGridViewTextBoxColumn});
+            this.dataGridViewClassif.DataSource = this.tblClassificationBindingSource;
+            this.dataGridViewClassif.Location = new System.Drawing.Point(1, -1);
+            this.dataGridViewClassif.Name = "dataGridViewClassif";
+            this.dataGridViewClassif.Size = new System.Drawing.Size(445, 288);
+            this.dataGridViewClassif.TabIndex = 0;
+            // 
+            // tblClassificationBindingSource
+            // 
+            this.tblClassificationBindingSource.DataSource = typeof(Projet_Texcel.tblClassification);
+            // 
+            // idClassificationDataGridViewTextBoxColumn
+            // 
+            this.idClassificationDataGridViewTextBoxColumn.DataPropertyName = "idClassification";
+            this.idClassificationDataGridViewTextBoxColumn.HeaderText = "idClassification";
+            this.idClassificationDataGridViewTextBoxColumn.Name = "idClassificationDataGridViewTextBoxColumn";
+            // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            // 
+            // tagDataGridViewTextBoxColumn
+            // 
+            this.tagDataGridViewTextBoxColumn.DataPropertyName = "tag";
+            this.tagDataGridViewTextBoxColumn.HeaderText = "tag";
+            this.tagDataGridViewTextBoxColumn.Name = "tagDataGridViewTextBoxColumn";
+            // 
+            // tblJeuDataGridViewTextBoxColumn
+            // 
+            this.tblJeuDataGridViewTextBoxColumn.DataPropertyName = "tblJeu";
+            this.tblJeuDataGridViewTextBoxColumn.HeaderText = "tblJeu";
+            this.tblJeuDataGridViewTextBoxColumn.Name = "tblJeuDataGridViewTextBoxColumn";
+            this.tblJeuDataGridViewTextBoxColumn.Visible = false;
             // 
             // affichageClassification
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 354);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.ClientSize = new System.Drawing.Size(446, 288);
+            this.Controls.Add(this.dataGridViewClassif);
             this.Name = "affichageClassification";
             this.Text = "affichageClassification";
             this.Load += new System.EventHandler(this.affichageClassification_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bdTexelFredAlexDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblClassificationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdTexelFredAlexEntitiesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdTexelFredAlexEntitiesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClassif)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClassificationBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private bdTexelFredAlexDataSet bdTexelFredAlexDataSet;
-        private System.Windows.Forms.BindingSource tblClassificationBindingSource;
-        private bdTexelFredAlexDataSetTableAdapters.tblClassificationTableAdapter tblClassificationTableAdapter;
-        private bdTexelFredAlexDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource bdTexelFredAlexEntitiesBindingSource1;
-        private System.Windows.Forms.BindingSource bdTexelFredAlexEntitiesBindingSource;
+        private System.Windows.Forms.DataGridView dataGridViewClassif;
+        private System.Windows.Forms.BindingSource tblClassificationBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idClassificationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tagDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tblJeuDataGridViewTextBoxColumn;
     }
 }

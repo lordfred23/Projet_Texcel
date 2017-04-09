@@ -386,6 +386,19 @@
     <None Include="obj\Release\Projet_Texcel.csprojResolveAssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\bdTexelFredAlexEntities.datasource" />
+    <None Include="Properties\DataSources\tblCategorieTest.datasource" />
+    <None Include="Properties\DataSources\tblClassification1.datasource" />
+    <None Include="Properties\DataSources\tblEmploye1.datasource" />
+    <None Include="Properties\DataSources\tblEquipe1.datasource" />
+    <None Include="Properties\DataSources\tblGenre1.datasource" />
+    <None Include="Properties\DataSources\tblJeu1.datasource" />
+    <None Include="Properties\DataSources\tblPlatform1.datasource" />
+    <None Include="Properties\DataSources\tblProjet1.datasource" />
+    <None Include="Properties\DataSources\tblRole1.datasource" />
+    <None Include="Properties\DataSources\tblSystemExploitation1.datasource" />
+    <None Include="Properties\DataSources\tblTest.datasource" />
+    <None Include="Properties\DataSources\tblTheme1.datasource" />
+    <None Include="Properties\DataSources\tblTravail.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

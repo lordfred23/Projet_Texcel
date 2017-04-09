@@ -17,19 +17,10 @@ namespace Projet_Texcel
         {
             InitializeComponent();
             this.form = form;
-            afficher();
+            
         }
 
-        private void afficher()
-        {
-            string msg = "";
-            string[] lstEquipe = form.employeRemplirListeEquipe();
-            foreach (string valeur in lstEquipe)
-            {
-                msg += valeur + "\n";
-            }
-            txtEquipe.Text = msg;
-        }
+        
 
         private void affichageGenre_FormClosing(object sender, FormClosingEventArgs e)
         {
