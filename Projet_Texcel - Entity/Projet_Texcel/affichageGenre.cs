@@ -17,18 +17,6 @@ namespace Projet_Texcel
         {
             InitializeComponent();
             this.form = form;
-            afficher();
-        }
-
-        private void afficher()
-        {
-            string msg = "";
-            string[] lstGenre = form.jeuRemplirListeGenre();
-            foreach (string valeur in lstGenre)
-            {
-                msg += valeur + "\n";
-            }
-            txtGenre.Text = msg;
         }
 
         private void affichageGenre_FormClosing(object sender, FormClosingEventArgs e)
