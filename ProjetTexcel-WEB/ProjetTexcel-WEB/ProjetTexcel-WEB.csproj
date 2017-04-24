@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -198,14 +200,72 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\tblEmployesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="modelTexcel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelTexcel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="modelTexcel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="modelTexcel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelTexcel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="tblCategorieTest.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblClassification.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblEmploye.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblEquipe.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblGenre.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblJeu.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblPlatform.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblProjet.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblRole.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblSystemExploitation.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTest.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTheme.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTravail.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblUser.cs">
+      <DependentUpon>modelTexcel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -214,10 +274,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="modelTexcel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>modelTexcel.edmx</DependentUpon>
+      <LastGenOutput>modelTexcel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="modelTexcel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>modelTexcel.edmx</DependentUpon>
+      <LastGenOutput>modelTexcel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="modelTexcel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>modelTexcel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="modelTexcel.edmx.diagram">
+      <DependentUpon>modelTexcel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -265,6 +342,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\tblEmployes\Create.cshtml" />
+    <Content Include="Views\tblEmployes\Delete.cshtml" />
+    <Content Include="Views\tblEmployes\Details.cshtml" />
+    <Content Include="Views\tblEmployes\Edit.cshtml" />
+    <Content Include="Views\tblEmployes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -276,6 +358,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

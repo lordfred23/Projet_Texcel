@@ -1,0 +1,90 @@
+﻿@model ProjetTexcel_WEB.tblEmploye
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblEmploye</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prenom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prenom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateNaissance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateNaissance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.noTelephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noTelephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.posteTelephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.posteTelephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.noTelephoneMaison)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noTelephoneMaison)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblRole.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblRole.nom)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.matricule }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

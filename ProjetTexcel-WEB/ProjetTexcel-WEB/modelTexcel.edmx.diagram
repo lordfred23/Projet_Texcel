@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9fc20b40e5e7485f9e8e45315b8ba6f9" Name="Diagram1">
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblCategorieTest" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblClassification" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblEmploye" Width="1.5" PointX="9.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblEquipe" Width="1.5" PointX="7.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblGenre" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblJeu" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblPlatform" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblProjet" Width="1.5" PointX="7.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblRole" Width="1.5" PointX="7.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblSystemExploitation" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblTest" Width="1.5" PointX="7.5" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblTheme" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblTravail" Width="1.5" PointX="9.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdTexelFredAlexModel.tblUser" Width="1.5" PointX="12" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblTest__idCateg__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblJeu__idClassi__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblEmploy__idRol__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblUser__matricu__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblTravai__idEqu__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblJeu__idGenre__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblJeu__idPlatfo__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblJeu__idTheme__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblProjet__idJeu__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblPlatfo__idSys__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblTravai__idPro__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.FK__tblTravai__idTes__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="bdTexelFredAlexModel.tblEmployeEquipe" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
