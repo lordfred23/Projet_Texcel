@@ -1,0 +1,90 @@
+﻿@model ProjetTexcel_WEB.tblJeu
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblJeu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.developpeur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.developpeur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.minimalConfig)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.minimalConfig)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblClassification.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblClassification.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblGenre.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblGenre.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPlatform.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPlatform.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblTheme.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblTheme.nom)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idJeu }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

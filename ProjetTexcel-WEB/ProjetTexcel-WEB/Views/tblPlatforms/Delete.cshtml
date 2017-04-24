@@ -1,0 +1,64 @@
+﻿@model ProjetTexcel_WEB.tblPlatform
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblPlatform</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.config)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.config)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.typePlatform)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.typePlatform)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSystemExploitation.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSystemExploitation.nom)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

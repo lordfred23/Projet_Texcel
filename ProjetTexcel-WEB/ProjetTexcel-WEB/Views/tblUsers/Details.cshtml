@@ -1,0 +1,42 @@
+﻿@model ProjetTexcel_WEB.tblUser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.administre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.administre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblEmploye.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblEmploye.nom)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.username }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

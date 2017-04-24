@@ -200,7 +200,14 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\tblClassificationsController.cs" />
     <Compile Include="Controllers\tblEmployesController.cs" />
+    <Compile Include="Controllers\tblGenresController.cs" />
+    <Compile Include="Controllers\tblJeusController.cs" />
+    <Compile Include="Controllers\tblPlatformsController.cs" />
+    <Compile Include="Controllers\tblSystemExploitationsController.cs" />
+    <Compile Include="Controllers\tblThemesController.cs" />
+    <Compile Include="Controllers\tblUsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -347,6 +354,41 @@
     <Content Include="Views\tblEmployes\Details.cshtml" />
     <Content Include="Views\tblEmployes\Edit.cshtml" />
     <Content Include="Views\tblEmployes\Index.cshtml" />
+    <Content Include="Views\tblClassifications\Create.cshtml" />
+    <Content Include="Views\tblClassifications\Delete.cshtml" />
+    <Content Include="Views\tblClassifications\Details.cshtml" />
+    <Content Include="Views\tblClassifications\Edit.cshtml" />
+    <Content Include="Views\tblClassifications\Index.cshtml" />
+    <Content Include="Views\tblGenres\Create.cshtml" />
+    <Content Include="Views\tblGenres\Delete.cshtml" />
+    <Content Include="Views\tblGenres\Details.cshtml" />
+    <Content Include="Views\tblGenres\Edit.cshtml" />
+    <Content Include="Views\tblGenres\Index.cshtml" />
+    <Content Include="Views\tblPlatforms\Create.cshtml" />
+    <Content Include="Views\tblPlatforms\Delete.cshtml" />
+    <Content Include="Views\tblPlatforms\Details.cshtml" />
+    <Content Include="Views\tblPlatforms\Edit.cshtml" />
+    <Content Include="Views\tblPlatforms\Index.cshtml" />
+    <Content Include="Views\tblJeus\Create.cshtml" />
+    <Content Include="Views\tblJeus\Delete.cshtml" />
+    <Content Include="Views\tblJeus\Details.cshtml" />
+    <Content Include="Views\tblJeus\Edit.cshtml" />
+    <Content Include="Views\tblJeus\Index.cshtml" />
+    <Content Include="Views\tblSystemExploitations\Create.cshtml" />
+    <Content Include="Views\tblSystemExploitations\Delete.cshtml" />
+    <Content Include="Views\tblSystemExploitations\Details.cshtml" />
+    <Content Include="Views\tblSystemExploitations\Edit.cshtml" />
+    <Content Include="Views\tblSystemExploitations\Index.cshtml" />
+    <Content Include="Views\tblThemes\Create.cshtml" />
+    <Content Include="Views\tblThemes\Delete.cshtml" />
+    <Content Include="Views\tblThemes\Details.cshtml" />
+    <Content Include="Views\tblThemes\Edit.cshtml" />
+    <Content Include="Views\tblThemes\Index.cshtml" />
+    <Content Include="Views\tblUsers\Create.cshtml" />
+    <Content Include="Views\tblUsers\Delete.cshtml" />
+    <Content Include="Views\tblUsers\Details.cshtml" />
+    <Content Include="Views\tblUsers\Edit.cshtml" />
+    <Content Include="Views\tblUsers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

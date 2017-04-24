@@ -1,0 +1,58 @@
+﻿@model ProjetTexcel_WEB.tblPlatform
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblPlatform</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.config)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.config)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.typePlatform)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.typePlatform)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSystemExploitation.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSystemExploitation.nom)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idPlatform }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

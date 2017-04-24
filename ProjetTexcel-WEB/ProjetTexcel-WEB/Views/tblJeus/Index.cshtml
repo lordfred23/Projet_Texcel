@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ProjetTexcel_WEB.tblJeu>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.developpeur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.minimalConfig)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblClassification.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblGenre.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblPlatform.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblTheme.nom)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.developpeur)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.minimalConfig)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblClassification.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblGenre.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblPlatform.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblTheme.nom)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idJeu }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idJeu }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idJeu })
+        </td>
+    </tr>
+}
+
+</table>
