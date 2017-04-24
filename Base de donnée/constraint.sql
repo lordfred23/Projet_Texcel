@@ -30,3 +30,6 @@ alter table tblTest add foreign key(idCategorieTest)references tblCategorieTest(
 alter table tblTravail add foreign key(idTest)references tblTest(idTest);
 alter table tblTravail add foreign key(idEquipe)references tblEquipe(idEquipe);
 alter table tblTravail add foreign key(idProjet)references tblProjet(idProjet);
+
+-- --tblUser
+alter table tblUser add foreign key(matricule)references tblEmploye(matricule);

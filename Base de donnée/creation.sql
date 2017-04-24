@@ -3,23 +3,16 @@ PRINT('Debut du script de création de la bd')
 GO
 SET nocount    ON;
 SET DATEFORMAT ymd;
-USE master
+
 GO
 PRINT('Création de la base de donnée bdTexelFredAlex')
 -- -------------------------------------------------------
 IF EXISTS (SELECT * FROM sysdatabases WHERE name = 'bdTexelFredAlex')
 DROP DATABASE bdTexelFredAlex
 GO
-
-CREATE DATABASE bdTexelFredAlex ON PRIMARY
-(NAME = 'bdTexelFredAlex',
-FILENAME='C:\BD\bdTexelFredAlex.mdf',
-SIZE =10MB , MAXSIZE = UNLIMITED,FILEGROWTH = 1MB )
-LOG ON
-( NAME ='bdTexelFredAlex_log',
-FILENAME='C:\BD\bdTexelFredAlex_log.ldf',
-SIZE =5MB ,MAXSIZE =25MB ,FILEGROWTH =10% )
-GO
+go
+CREATE DATABASE bdTexelFredAlex
+go
 
 
 USE bdTexelFredAlex
@@ -274,6 +267,24 @@ CREATE TABLE tblTest
 );
 
 go
+PRINT('Création tblUser')
+-- -------------------------------------------------------
+go
+
+IF OBJECT_ID('bdTexelFredAlex.dbo.tblUser') IS NOT NULL
+DROP TABLE bdTexelFredAlex.dbo.tblUser
+CREATE TABLE tblUser
+(	
+	username			varchar(20)				not null,
+	pass				varchar(15)				not null,
+	matricule			char(7),
+	administre			tinyint					not null default(0),
+	
+	constraint PK_tblUser_username PRIMARY KEY(username)
+);
+
+
+go
 PRINT('Création tblTravail')
 -- -------------------------------------------------------
 go
@@ -288,6 +299,7 @@ CREATE TABLE tblTravail
 	
 	primary key (idTest,idEquipe,idProjet)
 );
+
 
 
 

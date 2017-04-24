@@ -51,7 +51,6 @@ SET IDENTITY_INSERT tblClassification off
 
 
 
-
 SET IDENTITY_INSERT tblJeu ON
 insert into tblJeu(idJeu,developpeur,description,minimalConfig,idClassification,idGenre,idTheme,idPlatform,nom)
 values
@@ -72,8 +71,8 @@ SET IDENTITY_INSERT tblRole off
 insert into tblEmploye(matricule,nom,prenom,dateNaissance,adresse,noTelephone,posteTelephone,noTelephoneMaison,idRole)
 values
 ('A153857','Côté','Frédéric',' 12 octobre 1991','3826 st-germaine jonquière','4185478589','456','4189994584',1),
-('A153578','Tremblay','Alexandre',' 29 octobre 1992','3826 st-stanisla jonquière','4185474189','430','4189894574',1);
-
+('A153578','Tremblay','Alexandre',' 29 octobre 1992','3826 st-stanisla jonquière','4185474189','430','4189894574',1),
+('B153578','Tremblay','Alexae',' 29 octobre 1995','3826 st-stanisla jonquière','4185474189','425','4189894575',2);
 SET IDENTITY_INSERT tblEquipe ON
 insert into tblEquipe(idEquipe,nom)
 values
@@ -105,6 +104,11 @@ SET IDENTITY_INSERT tblProjet Off
 insert into tblTravail(idTest,idEquipe,idProjet)
 values
 (1,1,1);
+
+insert into tblUser(username,pass,matricule,administre)
+values
+('SauceBrune','alex','A153578',1),
+('lordfred23','fred','A153857',1);
 
 
 
