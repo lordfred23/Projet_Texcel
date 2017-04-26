@@ -37,6 +37,10 @@ textarea {
     background-color:#baf1ff;
 }
 
-.table tr:nth-child(even) {
+.table tr th{
+    background-color:#00c7f7;
+}
+
+.table tr:nth-child(odd) {
     background-color: #8ee8ff;
 }
