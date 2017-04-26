@@ -12,14 +12,12 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nom)
+            Nom
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.description)
+            Description
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.tag)
-        </th>
+        
         <th></th>
     </tr>
 
@@ -31,9 +29,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.description)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tag)
-        </td>
+        
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.idTheme }) |
             @Html.ActionLink("Details", "Details", new { id=item.idTheme }) |
