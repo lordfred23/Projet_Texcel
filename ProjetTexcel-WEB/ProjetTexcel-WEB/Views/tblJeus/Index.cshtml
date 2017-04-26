@@ -12,31 +12,29 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.developpeur)
+            Développeur
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.description)
+            Description
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.minimalConfig)
+            Configuration Minimal
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.nom)
+            Nom
+        </th>
+        
+        <th>
+            Classification
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tag)
+            Genre
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblClassification.nom)
+            Platforme
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblGenre.nom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.tblPlatform.nom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.tblTheme.nom)
+            Thème
         </th>
         <th></th>
     </tr>
@@ -55,9 +53,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.nom)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tag)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.tblClassification.nom)
         </td>
