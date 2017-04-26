@@ -25,18 +25,18 @@ textarea {
 
 .navColor{
     background-color:#00ccff;
-    border-color:transparent;
-    
-    
+    border-color:transparent;   
 }
 .navTextColor{
-    color:white !important;
-    
-
-    
+    color:white !important;   
 }
 .dropdown{
     color:white !important;
 }
+.table tr{
+    background-color:#baf1ff;
+}
 
-
+.table tr:nth-child(even) {
+    background-color: #8ee8ff;
+}
