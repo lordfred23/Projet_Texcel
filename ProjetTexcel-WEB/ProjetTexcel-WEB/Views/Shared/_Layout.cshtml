@@ -7,10 +7,11 @@
     <title>@ViewBag.Title - Mon application ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top navColor">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -18,14 +19,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Nom d'application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Texel", "Index", "Home", new { area = "" }, new { @class = "navbar-brand navTextColor" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
-                    <li>@Html.ActionLink("À propos de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Accueil", "Index", "Home",null, new { @class = "navTextColor" })</li>
+                    <li>@Html.ActionLink("À propos de", "About", "Home", null, new { @class = "navTextColor" })</li>
+                   
+                    <li class="dropdown">
+                        <a class="dropdown-toggle anav" data-toggle="dropdown" href="#">
+                            <span class="navTextColor">Table</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu navColor">
+                            <li>@Html.ActionLink("Classifications","Index","tblClassifications", null, new { @class = "navTextColor" })</li>
+                            <li>@Html.ActionLink("Employés","Index","tblEmployes", null, new { @class = "navTextColor" })</li>
+                            <li>@Html.ActionLink("Genres","Index","tblGenres", null, new { @class = "navTextColor" })</li>
+                            <li>@Html.ActionLink("Jeux","Index","tblJeus", null, new { @class = "navTextColor" })</li>
+                            <li>@Html.ActionLink("Platformes", "Index", "tblPlatforms", null, new { @class = "navTextColor" })</li>
+                            <li>@Html.ActionLink("Systèmes d'exploitations", "Index", "tblSystemExploitations", null, new { @class = "navTextColor" })</li>
+                            <li>@Html.ActionLink("Thèmes", "Index", "tblThemes", null, new { @class = "navTextColor" })</li>
+                            @*<li>@Html.ActionLink("Utilisateurs", "Index", "tblUsers")</li>*@
+                        </ul>
+                    </li>
                 </ul>
+                
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
@@ -34,7 +52,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Frédéric Côté et Alexandre Tremblay</p>
         </footer>
     </div>
 

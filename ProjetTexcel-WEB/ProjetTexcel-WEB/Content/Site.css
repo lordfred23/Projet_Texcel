@@ -22,3 +22,21 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.navColor{
+    background-color:#00ccff;
+    border-color:transparent;
+    
+    
+}
+.navTextColor{
+    color:white !important;
+    
+
+    
+}
+.dropdown{
+    color:white !important;
+}
+
+
