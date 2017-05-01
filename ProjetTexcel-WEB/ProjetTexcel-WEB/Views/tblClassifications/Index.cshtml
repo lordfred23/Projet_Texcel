@@ -5,10 +5,15 @@
 }
 
 <h2>@ViewBag.Title</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div>
+    <p class="floatP">
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <form class="searchBar">
+        <input type="text" placeholder="Search..." required>
+        <input type="button" value="Search">
+    </form>
+</div>
 <table class="table">
     <tr>
         <th>
