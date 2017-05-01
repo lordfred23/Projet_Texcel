@@ -3,12 +3,16 @@
 @{
     ViewBag.Title = "Employés";
 }
-
+<div class="formContainer">
 <h2>@ViewBag.Title</h2>
 
 <p>
     @Html.ActionLink("Ajouter", "Create")
 </p>
+<form>
+    <input type="text" placeholder="Search..." required>
+    <input type="button" value="Search">
+</form>
 <table class="table">
     <tr>
         <th>
@@ -73,3 +77,4 @@
 }
 
 </table>
+</div>

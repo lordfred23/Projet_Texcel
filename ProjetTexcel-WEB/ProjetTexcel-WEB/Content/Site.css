@@ -44,13 +44,14 @@ textarea {
 .table tr:nth-child(odd) {
     background-color: #8ee8ff;
 }
-.search{
-    float:right;
-    display:inline-block;
-    margin-left:300px;
-    position:relative;
+
+.formContainer{
+    width:100%;
 }
-.floatP{
-    display:block;
-    float:left;
+
+.formContainer form{
+    margin-left:75%;
+    align:right;
 }
+
+
