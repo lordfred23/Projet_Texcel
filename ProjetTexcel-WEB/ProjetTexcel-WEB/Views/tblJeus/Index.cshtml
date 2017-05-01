@@ -3,12 +3,16 @@
 @{
     ViewBag.Title = "Jeux";
 }
-
+<div class="formContainer">
 <h2>@ViewBag.Title</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+    <form>
+        <input type="text" placeholder="Search..." required>
+        <input type="button" value="Search">
+    </form>
 <table class="table">
     <tr>
         <th>
@@ -75,3 +79,4 @@
 }
 
 </table>
+</div>

@@ -4,43 +4,43 @@
     ViewBag.Title = "Classifications";
 }
 
-<h2>@ViewBag.Title</h2>
-<div>
-    <p class="floatP">
+<div class="formContainer">
+    <h2>@ViewBag.Title</h2>
+    <p>
         @Html.ActionLink("Create New", "Create")
     </p>
-    <form class="searchBar">
+    <form>
         <input type="text" placeholder="Search..." required>
         <input type="button" value="Search">
     </form>
+    <table class="table">
+        <tr>
+            <th>
+                Nom
+            </th>
+            <th>
+                Description
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.idClassification }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.idClassification }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.idClassification })
+                </td>
+            </tr>
+        }
+    </table>
 </div>
-<table class="table">
-    <tr>
-        <th>
-           Nom
-        </th>
-        <th>
-            Description
-        </th>
-       
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idClassification }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idClassification }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idClassification })
-        </td>
-    </tr>
-}
-
-</table>
