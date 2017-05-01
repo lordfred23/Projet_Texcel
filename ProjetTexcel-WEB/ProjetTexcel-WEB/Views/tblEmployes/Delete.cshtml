@@ -1,18 +1,18 @@
 ﻿@model ProjetTexcel_WEB.tblEmploye
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Supprimer";
 }
 
-<h2>Delete</h2>
+<h2>Supprimer</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Êtes-vous sur de vouloir supprimer cette Employer</h3>
 <div>
-    <h4>tblEmploye</h4>
+    <h4>Employe</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.nom)
+           Nom
         </dt>
 
         <dd>
@@ -20,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.prenom)
+            Prénom
         </dt>
 
         <dd>
@@ -28,7 +28,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.dateNaissance)
+            Date de Naissance
         </dt>
 
         <dd>
@@ -36,7 +36,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.adresse)
+            Adresse
         </dt>
 
         <dd>
@@ -44,7 +44,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.noTelephone)
+            Numéros de Téléphone
         </dt>
 
         <dd>
@@ -52,7 +52,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.posteTelephone)
+            Poste de Téléphone
         </dt>
 
         <dd>
@@ -60,23 +60,14 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.noTelephoneMaison)
+            Numéros de Téléphone(Maison)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.noTelephoneMaison)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.tag)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tag)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tblRole.nom)
+            Rôle
         </dt>
 
         <dd>
@@ -89,8 +80,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Supprimer" class="btn btn-default" /> |
+            @Html.ActionLink("Retour", "Index")
         </div>
     }
 </div>

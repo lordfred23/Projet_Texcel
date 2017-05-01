@@ -7,7 +7,7 @@
 <h2>@ViewBag.Title</h2>
 <div>
     <p class="floatP">
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Ajouter", "Create")
     </p>
     <form class="searchBar">
         <input type="text" placeholder="Search..." required>
@@ -36,9 +36,9 @@
         </td>
         
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idClassification }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idClassification }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idClassification })
+            @Html.ActionLink("Éditer", "Edit", new { id=item.idClassification }) |
+            @Html.ActionLink("Détails", "Details", new { id=item.idClassification }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.idClassification })
         </td>
     </tr>
 }

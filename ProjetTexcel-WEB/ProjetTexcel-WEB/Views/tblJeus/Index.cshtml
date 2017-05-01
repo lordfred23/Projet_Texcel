@@ -7,7 +7,7 @@
 <h2>@ViewBag.Title</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ajouter", "Create")
 </p>
 <table class="table">
     <tr>
@@ -18,7 +18,7 @@
             Description
         </th>
         <th>
-            Configuration Minimal
+            Configuration Matérielle Minimum
         </th>
         <th>
             Nom
@@ -67,9 +67,9 @@
             @Html.DisplayFor(modelItem => item.tblTheme.nom)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idJeu }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idJeu }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idJeu })
+            @Html.ActionLink("Édit", "Edit", new { id=item.idJeu }) |
+            @Html.ActionLink("Détails", "Details", new { id=item.idJeu }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.idJeu })
         </td>
     </tr>
 }

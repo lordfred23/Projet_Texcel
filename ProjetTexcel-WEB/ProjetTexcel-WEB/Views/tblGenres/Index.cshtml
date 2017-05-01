@@ -7,7 +7,7 @@
 <h2>@ViewBag.Title</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ajouter", "Create")
 </p>
 <table class="table">
     <tr>
@@ -31,9 +31,9 @@
         </td>
         
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idGenre }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idGenre }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idGenre })
+            @Html.ActionLink("Édit", "Edit", new { id=item.idGenre }) |
+            @Html.ActionLink("Détails", "Details", new { id=item.idGenre }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.idGenre })
         </td>
     </tr>
 }

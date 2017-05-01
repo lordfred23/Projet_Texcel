@@ -1,18 +1,18 @@
 ﻿@model ProjetTexcel_WEB.tblJeu
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Supprimer";
 }
 
-<h2>Delete</h2>
+<h2>Supprimer</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Êtes-vous sur de vouloir Suprrimer ce Jeu ?</h3>
 <div>
-    <h4>tblJeu</h4>
+    <h4>Jeu</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.developpeur)
+            Développeur
         </dt>
 
         <dd>
@@ -20,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.description)
+            Description
         </dt>
 
         <dd>
@@ -28,7 +28,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.minimalConfig)
+            Configuration Matérielle Minimum
         </dt>
 
         <dd>
@@ -36,7 +36,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.nom)
+            Nom
         </dt>
 
         <dd>
@@ -44,15 +44,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.tag)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tag)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tblClassification.nom)
+            Classification
         </dt>
 
         <dd>
@@ -60,7 +52,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.tblGenre.nom)
+            Genre
         </dt>
 
         <dd>
@@ -68,7 +60,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.tblPlatform.nom)
+            Platoforme
         </dt>
 
         <dd>
@@ -76,7 +68,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.tblTheme.nom)
+            Thème
         </dt>
 
         <dd>
@@ -89,8 +81,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Supprimer" class="btn btn-default" /> |
+            @Html.ActionLink("Retour", "Index")
         </div>
     }
 </div>
