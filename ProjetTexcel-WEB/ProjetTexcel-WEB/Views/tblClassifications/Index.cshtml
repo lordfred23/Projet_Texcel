@@ -4,10 +4,17 @@
     ViewBag.Title = "Classifications";
 }
 
+<<<<<<< HEAD
+<h2>@ViewBag.Title</h2>
+<div>
+    <p class="floatP">
+        @Html.ActionLink("Ajouter", "Create")
+=======
 <div class="formContainer">
     <h2>@ViewBag.Title</h2>
     <p>
         @Html.ActionLink("Create New", "Create")
+>>>>>>> ffd872533f8795519b471922aa647ed4bd29c5b5
     </p>
     <form>
         <input type="text" placeholder="Search..." required>
@@ -22,8 +29,27 @@
                 Description
             </th>
 
+<<<<<<< HEAD
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Éditer", "Edit", new { id=item.idClassification }) |
+            @Html.ActionLink("Détails", "Details", new { id=item.idClassification }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.idClassification })
+        </td>
+    </tr>
+}
+=======
             <th></th>
         </tr>
+>>>>>>> ffd872533f8795519b471922aa647ed4bd29c5b5
 
         @foreach (var item in Model)
         {

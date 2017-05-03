@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<ProjetTexcel_WEB.tblEmploye>
 
 @{
-    ViewBag.Title = "Employes";
+    ViewBag.Title = "Employés";
 }
 <div class="formContainer">
 <h2>@ViewBag.Title</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ajouter", "Create")
 </p>
 <form>
     <input type="text" placeholder="Search..." required>
@@ -69,9 +69,9 @@
             @Html.DisplayFor(modelItem => item.tblRole.nom)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.matricule }) |
-            @Html.ActionLink("Details", "Details", new { id=item.matricule }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.matricule })
+            @Html.ActionLink("Édit", "Edit", new { id=item.matricule }) |
+            @Html.ActionLink("Détails", "Details", new { id=item.matricule }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id=item.matricule })
         </td>
     </tr>
 }

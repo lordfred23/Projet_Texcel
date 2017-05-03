@@ -1,17 +1,17 @@
 ﻿@model ProjetTexcel_WEB.tblJeu
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Détails";
 }
 
-<h2>Details</h2>
+<h2>Détails</h2>
 
 <div>
-    <h4>tblJeu</h4>
+    <h4>Jeu</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.developpeur)
+            Développeur
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.description)
+            Description
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.minimalConfig)
+            @Configuration Matérielle minimum
         </dt>
 
         <dd>
@@ -35,23 +35,17 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.nom)
+            Nom
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.nom)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.tag)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tag)
-        </dd>
+        
 
         <dt>
-            @Html.DisplayNameFor(model => model.tblClassification.nom)
+            Classification
         </dt>
 
         <dd>
@@ -59,7 +53,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.tblGenre.nom)
+            Genre
         </dt>
 
         <dd>
@@ -67,7 +61,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.tblPlatform.nom)
+            Platforme
         </dt>
 
         <dd>
@@ -75,7 +69,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.tblTheme.nom)
+            Thème
         </dt>
 
         <dd>
@@ -85,6 +79,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idJeu }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Édit", "Edit", new { id = Model.idJeu }) |
+    @Html.ActionLink("Retour", "Index")
 </p>

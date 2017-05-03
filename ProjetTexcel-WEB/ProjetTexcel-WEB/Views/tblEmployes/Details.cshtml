@@ -1,17 +1,17 @@
 ﻿@model ProjetTexcel_WEB.tblEmploye
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Détails";
 }
 
-<h2>Details</h2>
+<h2>Détails</h2>
 
 <div>
-    <h4>tblEmploye</h4>
+    <h4>Employé</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.nom)
+            Nom
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.prenom)
+            Prénom
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.dateNaissance)
+            Date de Naissance
         </dt>
 
         <dd>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.adresse)
+            Adresse
         </dt>
 
         <dd>
@@ -43,7 +43,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.noTelephone)
+            Numéros de Téléphone
         </dt>
 
         <dd>
@@ -51,7 +51,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.posteTelephone)
+            Poste de Téléphone
         </dt>
 
         <dd>
@@ -59,23 +59,14 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.noTelephoneMaison)
+            Numéros de Téléphone(Maison)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.noTelephoneMaison)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.tag)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tag)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tblRole.nom)
+            Rôle
         </dt>
 
         <dd>
@@ -85,6 +76,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.matricule }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Édit", "Edit", new { id = Model.matricule }) |
+    @Html.ActionLink("Retour", "Index")
 </p>
