@@ -15,10 +15,7 @@ namespace ProjetTexcel_WEB.Controllers
         private bdTexelFredAlexEntities db = new bdTexelFredAlexEntities();
 
         // GET: tblClassifications
-        public ActionResult Index()
-        {
-            return View(db.tblClassification.ToList());
-        }
+        
         public ActionResult Index(string search)
         {
             var classif = from s in db.tblClassification

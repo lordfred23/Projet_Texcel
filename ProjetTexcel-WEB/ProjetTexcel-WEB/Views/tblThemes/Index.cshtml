@@ -3,44 +3,50 @@
 @{
     ViewBag.Title = "Thèmes";
 }
-<div class="formContainer">
 <h2>@ViewBag.Title</h2>
 
+
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ajouter", "Create")
 </p>
-    <form>
-        <input type="text" placeholder="Search..." required>
-        <input type="button" value="Search">
-    </form>
-<table class="table">
-    <tr>
-        <th>
-            Nom
-        </th>
-        <th>
-            Description
-        </th>
-        
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idTheme }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idTheme }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idTheme })
-        </td>
-    </tr>
-}
+<div class="formContainer">
 
-</table>
-    </div>
+
+    @using (Html.BeginForm("Index", "tblThemes", FormMethod.Post))
+    {
+        @Html.TextBox("search")
+        <input type="submit" value="Search" />
+    }
+    <table class="table">
+        <tr>
+            <th>
+                Nom
+            </th>
+            <th>
+                Description
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.idTheme }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.idTheme }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.idTheme })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

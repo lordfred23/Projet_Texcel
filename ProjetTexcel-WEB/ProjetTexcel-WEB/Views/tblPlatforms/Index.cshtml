@@ -3,54 +3,60 @@
 @{
     ViewBag.Title = "Platformes";
 }
-<div class="formContainer">
 <h2>@ViewBag.Title</h2>
 
+
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ajouter", "Create")
 </p>
-    <form>
-        <input type="text" placeholder="Search..." required>
-        <input type="button" value="Search">
-    </form>
-<table class="table">
-    <tr>
-        <th>
-            Nom
-        </th>
-        <th>
-            Configuration Matériel
-        </th>
-        <th>
-            Type de Platforme
-        </th>
-        <th>
-            Système d'exploitation
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.config)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.typePlatform)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tblSystemExploitation.nom)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idPlatform }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idPlatform }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idPlatform })
-        </td>
-    </tr>
-}
+<div class="formContainer">
 
-</table>
-    </div>
+
+    @using (Html.BeginForm("Index", "tblPlatforms", FormMethod.Post))
+    {
+        @Html.TextBox("search")
+        <input type="submit" value="Search" />
+    }
+    <table class="table">
+        <tr>
+            <th>
+                Nom
+            </th>
+            <th>
+                Configuration Matériel
+            </th>
+            <th>
+                Type de Platforme
+            </th>
+            <th>
+                Système d'exploitation
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.config)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.typePlatform)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblSystemExploitation.nom)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.idPlatform }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.idPlatform }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.idPlatform })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

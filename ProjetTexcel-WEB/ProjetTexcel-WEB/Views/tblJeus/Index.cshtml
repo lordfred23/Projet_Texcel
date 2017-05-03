@@ -3,80 +3,86 @@
 @{
     ViewBag.Title = "Jeux";
 }
-<div class="formContainer">
 <h2>@ViewBag.Title</h2>
+
 
 <p>
     @Html.ActionLink("Ajouter", "Create")
 </p>
-    <form>
-        <input type="text" placeholder="Search..." required>
-        <input type="button" value="Search">
-    </form>
-<table class="table">
-    <tr>
-        <th>
-            Développeur
-        </th>
-        <th>
-            Description
-        </th>
-        <th>
-            Configuration Matérielle Minimum
-        </th>
-        <th>
-            Nom
-        </th>
-        
-        <th>
-            Classification
-        </th>
-        <th>
-            Genre
-        </th>
-        <th>
-            Platforme
-        </th>
-        <th>
-            Thème
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.developpeur)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.minimalConfig)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nom)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.tblClassification.nom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tblGenre.nom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tblPlatform.nom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tblTheme.nom)
-        </td>
-        <td>
-            @Html.ActionLink("Édit", "Edit", new { id=item.idJeu }) |
-            @Html.ActionLink("Détails", "Details", new { id=item.idJeu }) |
-            @Html.ActionLink("Supprimer", "Delete", new { id=item.idJeu })
-        </td>
-    </tr>
-}
+<div class="formContainer">
 
-</table>
+
+    @using (Html.BeginForm("Index", "tblJeus", FormMethod.Post))
+    {
+        @Html.TextBox("search")
+        <input type="submit" value="Search" />
+    }
+    <table class="table">
+        <tr>
+            <th>
+                Développeur
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Configuration Matérielle Minimum
+            </th>
+            <th>
+                Nom
+            </th>
+
+            <th>
+                Classification
+            </th>
+            <th>
+                Genre
+            </th>
+            <th>
+                Platforme
+            </th>
+            <th>
+                Thème
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.developpeur)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.minimalConfig)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nom)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblClassification.nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblGenre.nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblPlatform.nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tblTheme.nom)
+                </td>
+                <td>
+                    @Html.ActionLink("Édit", "Edit", new { id = item.idJeu }) |
+                    @Html.ActionLink("Détails", "Details", new { id = item.idJeu }) |
+                    @Html.ActionLink("Supprimer", "Delete", new { id = item.idJeu })
+                </td>
+            </tr>
+        }
+
+    </table>
 </div>

@@ -15,9 +15,14 @@ namespace ProjetTexcel_WEB.Controllers
         private bdTexelFredAlexEntities db = new bdTexelFredAlexEntities();
 
         // GET: tblPlatforms
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
-            var tblPlatform = db.tblPlatform.Include(t => t.tblSystemExploitation);
+            var tblPlatform = from s in db.tblPlatform.Include(t => t.tblSystemExploitation)
+                              select s;
+            if(!String.IsNullOrEmpty(search))
+            {
+                tblPlatform = tblPlatform.Where(s => s.tag.Contains(search));
+            }
             return View(tblPlatform.ToList());
         }
 

@@ -15,9 +15,14 @@ namespace ProjetTexcel_WEB.Controllers
         private bdTexelFredAlexEntities db = new bdTexelFredAlexEntities();
 
         // GET: tblEmployes
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
-            var tblEmploye = db.tblEmploye.Include(t => t.tblRole);
+            var tblEmploye = from s in db.tblEmploye.Include(t => t.tblRole)
+                             select s;
+            if(!String.IsNullOrEmpty(search))
+            {
+                tblEmploye = tblEmploye.Where(s => s.tag.Contains(search));
+            }
             return View(tblEmploye.ToList());
         }
 

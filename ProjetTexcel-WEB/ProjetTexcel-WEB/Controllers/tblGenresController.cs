@@ -15,9 +15,15 @@ namespace ProjetTexcel_WEB.Controllers
         private bdTexelFredAlexEntities db = new bdTexelFredAlexEntities();
 
         // GET: tblGenres
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
-            return View(db.tblGenre.ToList());
+            var genre = from s in db.tblGenre
+                        select s;
+            if(!String.IsNullOrEmpty(search))
+            {
+                genre = genre.Where(s => s.tag.Contains(search));
+            }
+            return View(genre.ToList());
         }
 
         // GET: tblGenres/Details/5

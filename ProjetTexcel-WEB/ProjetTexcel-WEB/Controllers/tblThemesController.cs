@@ -15,9 +15,16 @@ namespace ProjetTexcel_WEB.Controllers
         private bdTexelFredAlexEntities db = new bdTexelFredAlexEntities();
 
         // GET: tblThemes
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
-            return View(db.tblTheme.ToList());
+            var tblTheme = from s in db.tblTheme
+                           select s;
+            if(!String.IsNullOrEmpty(search))
+            {
+                tblTheme = tblTheme.Where(s => s.tag.Contains(search));
+
+            }
+            return View(tblTheme.ToList());
         }
 
         // GET: tblThemes/Details/5

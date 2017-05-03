@@ -3,16 +3,21 @@
 @{
     ViewBag.Title = "Genres";
 }
-<div class="formContainer">
-<h2>@ViewBag.Title</h2>
+<<h2>@ViewBag.Title</h2>
 
-<p>
+
+ <p>
     @Html.ActionLink("Ajouter", "Create")
 </p>
-    <form>
-        <input type="text" placeholder="Search..." required>
-        <input type="button" value="Search">
-    </form>
+
+<div class="formContainer">
+    
+   
+ @using (Html.BeginForm("Index", "tblGenres", FormMethod.Post))
+ {
+     @Html.TextBox("search")
+    <input type="submit" value="Search" />
+ }
 <table class="table">
     <tr>
         <th>
