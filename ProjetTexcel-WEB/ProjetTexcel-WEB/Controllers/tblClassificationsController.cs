@@ -19,6 +19,17 @@ namespace ProjetTexcel_WEB.Controllers
         {
             return View(db.tblClassification.ToList());
         }
+        public ActionResult Index(string search)
+        {
+            var classif = from s in db.tblClassification
+                          select s;
+            if(!String.IsNullOrEmpty(search))
+            {
+                classif = classif.Where(s => s.tag.Contains(search));
+
+            }
+            return View(classif.ToList());
+        }
 
         // GET: tblClassifications/Details/5
         public ActionResult Details(int? id)
