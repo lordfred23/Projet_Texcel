@@ -1,10 +1,10 @@
 ﻿@model ProjetTexcel_WEB.tblTheme
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Ajouté";
 }
 
-<h2>Create</h2>
+<h2>Ajouté</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,11 +12,11 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>tblTheme</h4>
+        <h4>Thème</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            <p>Nom</p>
+            <p class="control-label col-md-2">Nom</p>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.nom, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.nom, "", new { @class = "text-danger" })
@@ -24,7 +24,7 @@
         </div>
 
         <div class="form-group">
-            <p>Description</p>
+            <p class="control-label col-md-2">Description</p>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
@@ -35,7 +35,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Ajouté" class="btn btn-default" />
             </div>
         </div>
     </div>

@@ -1,13 +1,13 @@
 ﻿@model ProjetTexcel_WEB.tblTheme
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Détails";
 }
 
-<h2>Details</h2>
+<h2>Détails</h2>
 
 <div>
-    <h4>tblTheme</h4>
+    <h4>Thème</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -28,6 +28,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idTheme }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Éditer", "Edit", new { id = Model.idTheme }) |
+    @Html.ActionLink("Retour", "Index")
 </p>

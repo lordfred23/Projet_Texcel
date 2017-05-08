@@ -16,7 +16,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            <p>Nom</p>
+            <p class="control-label col-md-2">Nom</p>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.nom, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.nom, "", new { @class = "text-danger" })
@@ -24,7 +24,7 @@
         </div>
 
         <div class="form-group">
-            <p>Configuration minimal</p>
+            <p class="control-label col-md-2">Configuration minimal</p>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.config, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.config, "", new { @class = "text-danger" })
@@ -32,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            <p>Type de Platforme</p>
+            <p class="control-label col-md-2">Type de Platforme</p>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.typePlatform, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.typePlatform, "", new { @class = "text-danger" })
@@ -40,7 +40,7 @@
         </div>
 
         <div class="form-group">
-            <p>Système d'exploitation</p>
+            <p class="control-label col-md-2">Système d'exploitation</p>
             <div class="col-md-10">
                 @Html.DropDownList("idSysExp", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.idSysExp, "", new { @class = "text-danger" })
