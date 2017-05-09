@@ -18,8 +18,8 @@ namespace ProjetTexcel_WEB.Controllers
 
         public ActionResult Index()
         {
-            var roles = context.Roles.ToList();
-            return View(roles);
+            var Roles = context.Roles.ToList();
+            return View(Roles);
         }
 
         public ActionResult Create()
