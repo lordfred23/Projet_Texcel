@@ -1,18 +1,26 @@
-﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Création de roles";
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>ViewBag.Title</title>
 </head>
 <body>
     <div>
-    
+        <h2>ViewBag.Title</h2>
+        @using (Html.BeginForm())
+        {
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <td class="c">Entré le nom du role a créer : </td>
+                    <td class="c">@Html.EditorFor(m => m.Name)</td>
+                </tr>
+            </table>
+            <input type="submit" value="Créer Role" />
+        }
     </div>
 </body>
 </html>

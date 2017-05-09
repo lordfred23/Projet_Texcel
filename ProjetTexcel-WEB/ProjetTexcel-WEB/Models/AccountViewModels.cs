@@ -64,6 +64,7 @@ namespace ProjetTexcel_WEB.Models
 
     public class RegisterViewModel
     {
+        public string Name { get; set; }
         [Required]
         [EmailAddress]
         [Display(Name = "Courrier électronique")]
@@ -71,7 +72,7 @@ namespace ProjetTexcel_WEB.Models
 
         [Required]
         [StringLength(100, ErrorMessage = "La chaîne {0} doit comporter au moins {2} caractères.", MinimumLength = 6)]
-        [DataType(DataType.Password)]
+        [DataType(DataType.Password)] 
         [Display(Name = "Mot de passe")]
         public string Password { get; set; }
 
