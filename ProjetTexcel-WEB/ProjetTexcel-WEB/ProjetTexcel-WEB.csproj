@@ -200,6 +200,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\tblClassificationsController.cs" />
     <Compile Include="Controllers\tblEmployesController.cs" />
     <Compile Include="Controllers\tblGenresController.cs" />
@@ -389,6 +390,8 @@
     <Content Include="Views\tblUsers\Details.cshtml" />
     <Content Include="Views\tblUsers\Edit.cshtml" />
     <Content Include="Views\tblUsers\Index.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Role\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

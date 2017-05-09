@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+@{
+    ViewBag.Title = "Role disponible pour l'application";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2>ViewBag.Title</h2>
+        <section class="col-sm-6">
+            <table class="table-bordered">
+                @Html.ActionLink("Créer un role", "Create", "Role");
+            </table>
+        </section>
+
+        <section class="col-sm-6">
+            <table class="table-bordered">
+                @Html.ActionLink("Assigné un role", "RegisterRole", "Account");
+            </table>
+        </section>
+
+        <br />
+
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th class="c">
+                    Nom des Roles
+                </th>
+            </tr>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
