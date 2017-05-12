@@ -208,7 +208,6 @@
     <Compile Include="Controllers\tblSystemExploitationsController.cs" />
     <Compile Include="Controllers\tblThemesController.cs" />
     <Compile Include="Controllers\tblUsersController.cs" />
-    <Compile Include="Controllers\UserManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -404,6 +403,7 @@
     <Content Include="Views\tblUsers\Details.cshtml" />
     <Content Include="Views\tblUsers\Edit.cshtml" />
     <Content Include="Views\tblUsers\Index.cshtml" />
+    <Content Include="Views\Home\Welcome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -26,8 +26,8 @@ namespace ProjetTexcel_WEB.Models
                 SU.RowModifiedSYSUserID = user.SYSUserID > 0 ? user.SYSUserID : 1; ;
                 SU.RowCreatedDateTime = DateTime.Now;
                 SU.RowMOdifiedDateTime = DateTime.Now;
-
-                db.SYSUsers.Add(SU);
+                
+                db.SYSUser.Add(SU);
                 db.SaveChanges();
 
                 SYSUserProfile SUP = new SYSUserProfile();
@@ -40,7 +40,7 @@ namespace ProjetTexcel_WEB.Models
                 SUP.RowCreatedDateTime = DateTime.Now;
                 SUP.RowModifiedDateTime = DateTime.Now;
 
-                db.SYSUserProfiles.Add(SUP);
+                db.SYSUserProfile.Add(SUP);
                 db.SaveChanges();
 
 
@@ -55,7 +55,7 @@ namespace ProjetTexcel_WEB.Models
                     SUR.RowCreatedDateTime = DateTime.Now;
                     SUR.RowModifiedDateTime = DateTime.Now;
 
-                    db.SYSUserRoles.Add(SUR);
+                    db.SYSUserRole.Add(SUR);
                     db.SaveChanges();
                 }
             }
@@ -65,7 +65,7 @@ namespace ProjetTexcel_WEB.Models
         {
             using (bdTexelFredAlexEntities db = new bdTexelFredAlexEntities())
             {
-                return db.SYSUsers.Where(o => o.LoginName.Equals(loginName)).Any();
+                return db.SYSUser.Where(o => o.LoginName.Equals(loginName)).Any();
             }
         }
     }

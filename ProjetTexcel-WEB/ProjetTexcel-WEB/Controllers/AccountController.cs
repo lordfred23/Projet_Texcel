@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ProjetTexcel_WEB.Models;
+using System.Web.Security;
 
 namespace ProjetTexcel_WEB.Controllers
 {
@@ -132,6 +133,30 @@ namespace ProjetTexcel_WEB.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            return View();
+        }
+
+        public ActionResult SignUp()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SignUp(UserSignUpView USV)
+        {
+            if (ModelState.IsValid)
+            {
+                UserManager UM = new UserManager();
+                if (!UM.IsLoginNameExist(USV.LoginName))
+                {
+                    UM.AddUserAccount(USV);
+                    FormsAuthentication.SetAuthCookie(USV.FirstName, false);
+                    return RedirectToAction("Welcome", "Home");
+
+                }
+                else
+                    ModelState.AddModelError("", "Login Name already taken.");
+            }
             return View();
         }
 
