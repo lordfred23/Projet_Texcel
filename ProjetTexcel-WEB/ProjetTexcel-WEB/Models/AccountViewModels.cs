@@ -49,8 +49,9 @@ namespace ProjetTexcel_WEB.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Nom d'utilisateur")]
-        public string UserName { get; set; }
+        [Display(Name = "Courrier électronique")]
+        [EmailAddress]
+        public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

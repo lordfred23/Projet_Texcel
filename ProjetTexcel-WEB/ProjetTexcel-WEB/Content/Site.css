@@ -24,7 +24,7 @@ textarea {
 }
 
 .navColor{
-    background-color:#00ccff;
+    
     border-color:transparent;   
 }
 .navTextColor{
@@ -53,5 +53,25 @@ textarea {
     margin-left:75%;
     align:right;
 }
+
+.indexBox{
+    
+    margin:5px;
+    box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.8);
+}
+.btnIndex{
+    box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.8);
+}
+.marginLeft{
+    
+}
+.dark-primary-color    { background: #0288D1; }
+.default-primary-color { background: #03A9F4; }
+.light-primary-color   { background: #B3E5FC; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #FF5252; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
 
 

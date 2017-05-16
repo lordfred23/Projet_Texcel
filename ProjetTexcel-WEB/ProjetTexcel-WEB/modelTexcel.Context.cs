@@ -39,9 +39,5 @@ namespace ProjetTexcel_WEB
         public virtual DbSet<tblTheme> tblTheme { get; set; }
         public virtual DbSet<tblTravail> tblTravail { get; set; }
         public virtual DbSet<tblUser> tblUser { get; set; }
-        public virtual DbSet<LOOKUPRole> LOOKUPRole { get; set; }
-        public virtual DbSet<SYSUser> SYSUser { get; set; }
-        public virtual DbSet<SYSUserProfile> SYSUserProfile { get; set; }
-        public virtual DbSet<SYSUserRole> SYSUserRole { get; set; }
     }
 }

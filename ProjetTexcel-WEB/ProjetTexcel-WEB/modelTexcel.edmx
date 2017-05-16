@@ -4,58 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="bdTexelFredAlexModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="LOOKUPRole">
-          <Key>
-            <PropertyRef Name="LOOKUPRoleID" />
-          </Key>
-          <Property Name="LOOKUPRoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RoleName" Type="varchar" MaxLength="100" />
-          <Property Name="RoleDescription" Type="varchar" MaxLength="500" />
-          <Property Name="RowCreatedSYSUserID" Type="int" Nullable="false" />
-          <Property Name="RowCreatedDateTime" Type="datetime" />
-          <Property Name="RowModifiedSYSUserID" Type="int" Nullable="false" />
-          <Property Name="RowModifiedDateTime" Type="datetime" />
-        </EntityType>
-        <EntityType Name="SYSUser">
-          <Key>
-            <PropertyRef Name="SYSUserID" />
-          </Key>
-          <Property Name="SYSUserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LoginName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="PasswordEncryptedText" Type="varchar" MaxLength="200" Nullable="false" />
-          <Property Name="RowCreatedSYSUserID" Type="int" Nullable="false" />
-          <Property Name="RowCreatedDateTime" Type="datetime" />
-          <Property Name="RowModifiedSYSUserID" Type="int" Nullable="false" />
-          <Property Name="RowMOdifiedDateTime" Type="datetime" />
-        </EntityType>
-        <EntityType Name="SYSUserProfile">
-          <Key>
-            <PropertyRef Name="SYSUserProfileID" />
-          </Key>
-          <Property Name="SYSUserProfileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SYSUserID" Type="int" Nullable="false" />
-          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Gender" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="RowCreatedSYSUserID" Type="int" Nullable="false" />
-          <Property Name="RowCreatedDateTime" Type="datetime" />
-          <Property Name="RowModifiedSYSUserID" Type="int" Nullable="false" />
-          <Property Name="RowModifiedDateTime" Type="datetime" />
-        </EntityType>
-        <EntityType Name="SYSUserRole">
-          <Key>
-            <PropertyRef Name="SYSUserRoleID" />
-          </Key>
-          <Property Name="SYSUserRoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SYSUserID" Type="int" Nullable="false" />
-          <Property Name="LOOKUPRoleID" Type="int" Nullable="false" />
-          <Property Name="IsActive" Type="bit" />
-          <Property Name="RowCreatedSYSUserID" Type="int" Nullable="false" />
-          <Property Name="RowCreatedDateTime" Type="datetime" />
-          <Property Name="RowModifiedSYSUserID" Type="int" Nullable="false" />
-          <Property Name="RowModifiedDateTime" Type="datetime" />
-        </EntityType>
+      <Schema Namespace="bdTexelFredAlexModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblCategorieTest">
           <Key>
             <PropertyRef Name="idCategorieTest" />
@@ -207,42 +156,6 @@
           <Property Name="matricule" Type="char" MaxLength="7" />
           <Property Name="administre" Type="tinyint" Nullable="false" />
         </EntityType>
-        <Association Name="FK__SYSUserPr__SYSUs__5441852A">
-          <End Role="SYSUser" Type="Self.SYSUser" Multiplicity="1" />
-          <End Role="SYSUserProfile" Type="Self.SYSUserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SYSUser">
-              <PropertyRef Name="SYSUserID" />
-            </Principal>
-            <Dependent Role="SYSUserProfile">
-              <PropertyRef Name="SYSUserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__SYSUserRo__LOOKU__59FA5E80">
-          <End Role="LOOKUPRole" Type="Self.LOOKUPRole" Multiplicity="1" />
-          <End Role="SYSUserRole" Type="Self.SYSUserRole" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LOOKUPRole">
-              <PropertyRef Name="LOOKUPRoleID" />
-            </Principal>
-            <Dependent Role="SYSUserRole">
-              <PropertyRef Name="LOOKUPRoleID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__SYSUserRo__SYSUs__5AEE82B9">
-          <End Role="SYSUser" Type="Self.SYSUser" Multiplicity="1" />
-          <End Role="SYSUserRole" Type="Self.SYSUserRole" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SYSUser">
-              <PropertyRef Name="SYSUserID" />
-            </Principal>
-            <Dependent Role="SYSUserRole">
-              <PropertyRef Name="SYSUserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__tblEmploy__idEqu__412EB0B6">
           <End Role="tblEquipe" Type="Self.tblEquipe" Multiplicity="1" />
           <End Role="tblEmployeEquipe" Type="Self.tblEmployeEquipe" Multiplicity="*" />
@@ -412,10 +325,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="bdTexelFredAlexModelStoreContainer">
-          <EntitySet Name="LOOKUPRole" EntityType="Self.LOOKUPRole" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SYSUser" EntityType="Self.SYSUser" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SYSUserProfile" EntityType="Self.SYSUserProfile" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SYSUserRole" EntityType="Self.SYSUserRole" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblCategorieTest" EntityType="Self.tblCategorieTest" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblClassification" EntityType="Self.tblClassification" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblEmploye" EntityType="Self.tblEmploye" Schema="dbo" store:Type="Tables" />
@@ -431,18 +340,6 @@
           <EntitySet Name="tblTheme" EntityType="Self.tblTheme" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblTravail" EntityType="Self.tblTravail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__SYSUserPr__SYSUs__5441852A" Association="Self.FK__SYSUserPr__SYSUs__5441852A">
-            <End Role="SYSUser" EntitySet="SYSUser" />
-            <End Role="SYSUserProfile" EntitySet="SYSUserProfile" />
-          </AssociationSet>
-          <AssociationSet Name="FK__SYSUserRo__LOOKU__59FA5E80" Association="Self.FK__SYSUserRo__LOOKU__59FA5E80">
-            <End Role="LOOKUPRole" EntitySet="LOOKUPRole" />
-            <End Role="SYSUserRole" EntitySet="SYSUserRole" />
-          </AssociationSet>
-          <AssociationSet Name="FK__SYSUserRo__SYSUs__5AEE82B9" Association="Self.FK__SYSUserRo__SYSUs__5AEE82B9">
-            <End Role="SYSUser" EntitySet="SYSUser" />
-            <End Role="SYSUserRole" EntitySet="SYSUserRole" />
-          </AssociationSet>
           <AssociationSet Name="FK__tblEmploy__idEqu__412EB0B6" Association="Self.FK__tblEmploy__idEqu__412EB0B6">
             <End Role="tblEquipe" EntitySet="tblEquipe" />
             <End Role="tblEmployeEquipe" EntitySet="tblEmployeEquipe" />
@@ -500,7 +397,8 @@
             <End Role="tblUser" EntitySet="tblUser" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="bdTexelFredAlexModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -888,116 +786,7 @@
             <End Role="tblEquipe" EntitySet="tblEquipe" />
             <End Role="tblEmploye" EntitySet="tblEmploye" />
           </AssociationSet>
-          <EntitySet Name="LOOKUPRole" EntityType="bdTexelFredAlexModel.LOOKUPRole" />
-          <EntitySet Name="SYSUser" EntityType="bdTexelFredAlexModel.SYSUser" />
-          <EntitySet Name="SYSUserProfile" EntityType="bdTexelFredAlexModel.SYSUserProfile" />
-          <EntitySet Name="SYSUserRole" EntityType="bdTexelFredAlexModel.SYSUserRole" />
-          <AssociationSet Name="FK__SYSUserRo__LOOKU__59FA5E80" Association="bdTexelFredAlexModel.FK__SYSUserRo__LOOKU__59FA5E80">
-            <End Role="LOOKUPRole" EntitySet="LOOKUPRole" />
-            <End Role="SYSUserRole" EntitySet="SYSUserRole" />
-          </AssociationSet>
-          <AssociationSet Name="FK__SYSUserPr__SYSUs__5441852A" Association="bdTexelFredAlexModel.FK__SYSUserPr__SYSUs__5441852A">
-            <End Role="SYSUser" EntitySet="SYSUser" />
-            <End Role="SYSUserProfile" EntitySet="SYSUserProfile" />
-          </AssociationSet>
-          <AssociationSet Name="FK__SYSUserRo__SYSUs__5AEE82B9" Association="bdTexelFredAlexModel.FK__SYSUserRo__SYSUs__5AEE82B9">
-            <End Role="SYSUser" EntitySet="SYSUser" />
-            <End Role="SYSUserRole" EntitySet="SYSUserRole" />
-          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="LOOKUPRole">
-          <Key>
-            <PropertyRef Name="LOOKUPRoleID" />
-          </Key>
-          <Property Name="LOOKUPRoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RoleName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="RoleDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="RowCreatedSYSUserID" Type="Int32" Nullable="false" />
-          <Property Name="RowCreatedDateTime" Type="DateTime" Precision="3" />
-          <Property Name="RowModifiedSYSUserID" Type="Int32" Nullable="false" />
-          <Property Name="RowModifiedDateTime" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="SYSUserRole" Relationship="bdTexelFredAlexModel.FK__SYSUserRo__LOOKU__59FA5E80" FromRole="LOOKUPRole" ToRole="SYSUserRole" />
-        </EntityType>
-        <EntityType Name="SYSUser">
-          <Key>
-            <PropertyRef Name="SYSUserID" />
-          </Key>
-          <Property Name="SYSUserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LoginName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="PasswordEncryptedText" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="RowCreatedSYSUserID" Type="Int32" Nullable="false" />
-          <Property Name="RowCreatedDateTime" Type="DateTime" Precision="3" />
-          <Property Name="RowModifiedSYSUserID" Type="Int32" Nullable="false" />
-          <Property Name="RowMOdifiedDateTime" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="SYSUserProfile" Relationship="bdTexelFredAlexModel.FK__SYSUserPr__SYSUs__5441852A" FromRole="SYSUser" ToRole="SYSUserProfile" />
-          <NavigationProperty Name="SYSUserRole" Relationship="bdTexelFredAlexModel.FK__SYSUserRo__SYSUs__5AEE82B9" FromRole="SYSUser" ToRole="SYSUserRole" />
-        </EntityType>
-        <EntityType Name="SYSUserProfile">
-          <Key>
-            <PropertyRef Name="SYSUserProfileID" />
-          </Key>
-          <Property Name="SYSUserProfileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SYSUserID" Type="Int32" Nullable="false" />
-          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Gender" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="RowCreatedSYSUserID" Type="Int32" Nullable="false" />
-          <Property Name="RowCreatedDateTime" Type="DateTime" Precision="3" />
-          <Property Name="RowModifiedSYSUserID" Type="Int32" Nullable="false" />
-          <Property Name="RowModifiedDateTime" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="SYSUser" Relationship="bdTexelFredAlexModel.FK__SYSUserPr__SYSUs__5441852A" FromRole="SYSUserProfile" ToRole="SYSUser" />
-        </EntityType>
-        <EntityType Name="SYSUserRole">
-          <Key>
-            <PropertyRef Name="SYSUserRoleID" />
-          </Key>
-          <Property Name="SYSUserRoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SYSUserID" Type="Int32" Nullable="false" />
-          <Property Name="LOOKUPRoleID" Type="Int32" Nullable="false" />
-          <Property Name="IsActive" Type="Boolean" />
-          <Property Name="RowCreatedSYSUserID" Type="Int32" Nullable="false" />
-          <Property Name="RowCreatedDateTime" Type="DateTime" Precision="3" />
-          <Property Name="RowModifiedSYSUserID" Type="Int32" Nullable="false" />
-          <Property Name="RowModifiedDateTime" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="LOOKUPRole" Relationship="bdTexelFredAlexModel.FK__SYSUserRo__LOOKU__59FA5E80" FromRole="SYSUserRole" ToRole="LOOKUPRole" />
-          <NavigationProperty Name="SYSUser" Relationship="bdTexelFredAlexModel.FK__SYSUserRo__SYSUs__5AEE82B9" FromRole="SYSUserRole" ToRole="SYSUser" />
-        </EntityType>
-        <Association Name="FK__SYSUserRo__LOOKU__59FA5E80">
-          <End Type="bdTexelFredAlexModel.LOOKUPRole" Role="LOOKUPRole" Multiplicity="1" />
-          <End Type="bdTexelFredAlexModel.SYSUserRole" Role="SYSUserRole" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LOOKUPRole">
-              <PropertyRef Name="LOOKUPRoleID" />
-            </Principal>
-            <Dependent Role="SYSUserRole">
-              <PropertyRef Name="LOOKUPRoleID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__SYSUserPr__SYSUs__5441852A">
-          <End Type="bdTexelFredAlexModel.SYSUser" Role="SYSUser" Multiplicity="1" />
-          <End Type="bdTexelFredAlexModel.SYSUserProfile" Role="SYSUserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SYSUser">
-              <PropertyRef Name="SYSUserID" />
-            </Principal>
-            <Dependent Role="SYSUserProfile">
-              <PropertyRef Name="SYSUserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__SYSUserRo__SYSUs__5AEE82B9">
-          <End Type="bdTexelFredAlexModel.SYSUser" Role="SYSUser" Multiplicity="1" />
-          <End Type="bdTexelFredAlexModel.SYSUserRole" Role="SYSUserRole" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SYSUser">
-              <PropertyRef Name="SYSUserID" />
-            </Principal>
-            <Dependent Role="SYSUserRole">
-              <PropertyRef Name="SYSUserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1167,61 +956,6 @@
               <ScalarProperty Name="matricule" ColumnName="matricule" />
             </EndProperty>
           </AssociationSetMapping>
-          <EntitySetMapping Name="LOOKUPRole">
-            <EntityTypeMapping TypeName="bdTexelFredAlexModel.LOOKUPRole">
-              <MappingFragment StoreEntitySet="LOOKUPRole">
-                <ScalarProperty Name="RowModifiedDateTime" ColumnName="RowModifiedDateTime" />
-                <ScalarProperty Name="RowModifiedSYSUserID" ColumnName="RowModifiedSYSUserID" />
-                <ScalarProperty Name="RowCreatedDateTime" ColumnName="RowCreatedDateTime" />
-                <ScalarProperty Name="RowCreatedSYSUserID" ColumnName="RowCreatedSYSUserID" />
-                <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
-                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
-                <ScalarProperty Name="LOOKUPRoleID" ColumnName="LOOKUPRoleID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SYSUser">
-            <EntityTypeMapping TypeName="bdTexelFredAlexModel.SYSUser">
-              <MappingFragment StoreEntitySet="SYSUser">
-                <ScalarProperty Name="RowMOdifiedDateTime" ColumnName="RowMOdifiedDateTime" />
-                <ScalarProperty Name="RowModifiedSYSUserID" ColumnName="RowModifiedSYSUserID" />
-                <ScalarProperty Name="RowCreatedDateTime" ColumnName="RowCreatedDateTime" />
-                <ScalarProperty Name="RowCreatedSYSUserID" ColumnName="RowCreatedSYSUserID" />
-                <ScalarProperty Name="PasswordEncryptedText" ColumnName="PasswordEncryptedText" />
-                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
-                <ScalarProperty Name="SYSUserID" ColumnName="SYSUserID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SYSUserProfile">
-            <EntityTypeMapping TypeName="bdTexelFredAlexModel.SYSUserProfile">
-              <MappingFragment StoreEntitySet="SYSUserProfile">
-                <ScalarProperty Name="RowModifiedDateTime" ColumnName="RowModifiedDateTime" />
-                <ScalarProperty Name="RowModifiedSYSUserID" ColumnName="RowModifiedSYSUserID" />
-                <ScalarProperty Name="RowCreatedDateTime" ColumnName="RowCreatedDateTime" />
-                <ScalarProperty Name="RowCreatedSYSUserID" ColumnName="RowCreatedSYSUserID" />
-                <ScalarProperty Name="Gender" ColumnName="Gender" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="SYSUserID" ColumnName="SYSUserID" />
-                <ScalarProperty Name="SYSUserProfileID" ColumnName="SYSUserProfileID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SYSUserRole">
-            <EntityTypeMapping TypeName="bdTexelFredAlexModel.SYSUserRole">
-              <MappingFragment StoreEntitySet="SYSUserRole">
-                <ScalarProperty Name="RowModifiedDateTime" ColumnName="RowModifiedDateTime" />
-                <ScalarProperty Name="RowModifiedSYSUserID" ColumnName="RowModifiedSYSUserID" />
-                <ScalarProperty Name="RowCreatedDateTime" ColumnName="RowCreatedDateTime" />
-                <ScalarProperty Name="RowCreatedSYSUserID" ColumnName="RowCreatedSYSUserID" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="LOOKUPRoleID" ColumnName="LOOKUPRoleID" />
-                <ScalarProperty Name="SYSUserID" ColumnName="SYSUserID" />
-                <ScalarProperty Name="SYSUserRoleID" ColumnName="SYSUserRoleID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

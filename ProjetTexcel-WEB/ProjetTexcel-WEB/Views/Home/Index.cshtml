@@ -3,29 +3,50 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Texcel</h1>
+    <p class="lead">Bienvenu sur la console d'administration de gestion de test de jeux vidéo de texcel</p>
+    
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+<div class="row marginLeft">
+    <div class="col-md-4 light-primary-color indexBox">
+        <h2>Employés</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            afficher la liste des employés.
+
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p>@Html.ActionLink("Classifications","Index","tblClassifications", null, new { @class = "btn btn-default btnIndex" })</p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="col-md-4 light-primary-color indexBox">
+        <h2>Jeux</h2>
+        <p>Afficher la liste des Jeux vidéo disponible.</p>
+        <p>@Html.ActionLink("Jeux", "Index", "tblJeus", null, new { @class = "btn btn-default btnIndex" })</p>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="col-md-4 light-primary-color indexBox">
+        <h2>Classifications</h2>
+        <p>Afficher la liste des classification.</p>
+        <p>@Html.ActionLink("Classifications", "Index", "tblClassifications", null, new { @class = "btn btn-default btnIndex" })</p>
     </div>
+    <div class="col-md-4 light-primary-color indexBox">
+        <h2>Genres</h2>
+        <p>Afficher la liste des genres.</p>
+        <p>@Html.ActionLink("Genres", "Index", "tblGenres", null, new { @class = "btn btn-default btnIndex" })</p>
+    </div>
+    <div class="col-md-4 light-primary-color indexBox">
+        <h2>Thèmes</h2>
+        <p>Afficher la liste des système des Thèmes disponible.</p>
+        <p>@Html.ActionLink("Thèmes", "Index", "tblThemes", null, new { @class = "btn btn-default btnIndex" })</p>
+    </div>
+    
+    <div class="col-md-4 light-primary-color indexBox">
+        <h2>Système d'exploitation</h2>
+        <p>Afficher la liste des système d'exploitation disponible.</p>
+        <p>@Html.ActionLink("Systèmes d'exploitations", "Index", "tblSystemExploitations", null, new { @class = "btn btn-default btnIndex" })</p>
+    </div>
+    <div class="col-md-4 light-primary-color indexBox">
+        <h2>Platformes</h2>
+        <p>Afficher la liste des Platformes disponible.</p>
+        <p>@Html.ActionLink("Platformes", "Index", "tblPlatforms", null, new { @class = "btn btn-default btnIndex" })</p>
+    </div>
+    
 </div>

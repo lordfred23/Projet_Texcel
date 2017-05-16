@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top navColor">
+    <div class="navbar navbar-inverse navbar-fixed-top navColor default-primary-color">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -31,7 +31,7 @@
                             <span class="navTextColor">Table</span>
                             <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu navColor">
+                        <ul class="dropdown-menu navColor default-primary-color">
                             <li>@Html.ActionLink("Classifications","Index","tblClassifications", null, new { @class = "navTextColor" })</li>
                             <li>@Html.ActionLink("Employés","Index","tblEmployes", null, new { @class = "navTextColor" })</li>
                             <li>@Html.ActionLink("Genres","Index","tblGenres", null, new { @class = "navTextColor" })</li>
@@ -42,7 +42,6 @@
                             @*<li>@Html.ActionLink("Utilisateurs", "Index", "tblUsers")</li>*@
                         </ul>
                     </li>
-                    <li>@Html.ActionLink("S'inscrire", "SignUp", "Account", null, new { @class = "navTextColor" })</li>
                 </ul>
                 
                 @Html.Partial("_LoginPartial")

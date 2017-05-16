@@ -13,12 +13,6 @@ namespace ProjetTexcel_WEB.Controllers
             return View();
         }
 
-        [Authorize]
-        public ActionResult Welcome()
-        {
-            return View();
-        }
-
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

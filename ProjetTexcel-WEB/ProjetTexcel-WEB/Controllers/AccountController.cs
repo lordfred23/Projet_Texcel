@@ -9,10 +9,10 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ProjetTexcel_WEB.Models;
-using System.Web.Security;
 
 namespace ProjetTexcel_WEB.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -22,7 +22,7 @@ namespace ProjetTexcel_WEB.Controllers
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -34,9 +34,9 @@ namespace ProjetTexcel_WEB.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set
-            {
-                _signInManager = value;
+            private set 
+            { 
+                _signInManager = value; 
             }
         }
 
@@ -50,30 +50,6 @@ namespace ProjetTexcel_WEB.Controllers
             {
                 _userManager = value;
             }
-        }
-
-        public ActionResult SignUp()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult SignUp(UserSignUpView USV)
-        {
-            if (ModelState.IsValid)
-            {
-                UserManager UM = new UserManager();
-                if (!UM.IsLoginNameExist(USV.LoginName))
-                {
-                    UM.AddUserAccount(USV);
-                    FormsAuthentication.SetAuthCookie(USV.FirstName, false);
-                    return RedirectToAction("Welcome", "Home");
-
-                }
-                else
-                    ModelState.AddModelError("", "Login Name already taken.");
-            }
-            return View();
         }
 
         //
@@ -99,7 +75,7 @@ namespace ProjetTexcel_WEB.Controllers
 
             // Ceci ne comptabilise pas les échecs de connexion pour le verrouillage du compte
             // Pour que les échecs de mot de passe déclenchent le verrouillage du compte, utilisez shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: false);
+            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -144,7 +120,7 @@ namespace ProjetTexcel_WEB.Controllers
             // Si un utilisateur entre des codes incorrects pendant un certain intervalle, le compte de cet utilisateur 
             // est alors verrouillé pendant une durée spécifiée. 
             // Vous pouvez configurer les paramètres de verrouillage du compte dans IdentityConfig
-            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent: model.RememberMe, rememberBrowser: model.RememberBrowser);
+            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent:  model.RememberMe, rememberBrowser: model.RememberBrowser);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -179,8 +155,8 @@ namespace ProjetTexcel_WEB.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-
+                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    
                     // Pour plus d'informations sur l'activation de la confirmation du compte et la réinitialisation du mot de passe, consultez http://go.microsoft.com/fwlink/?LinkID=320771
                     // Envoyer un message électronique avec ce lien
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

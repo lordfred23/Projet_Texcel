@@ -211,14 +211,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="LOOKUPRole.cs">
-      <DependentUpon>modelTexcel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\UserManager.cs" />
-    <Compile Include="Models\UserSignUpView.cs" />
     <Compile Include="modelTexcel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -236,15 +231,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="SYSUser.cs">
-      <DependentUpon>modelTexcel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SYSUserProfile.cs">
-      <DependentUpon>modelTexcel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SYSUserRole.cs">
-      <DependentUpon>modelTexcel.tt</DependentUpon>
-    </Compile>
     <Compile Include="tblCategorieTest.cs">
       <DependentUpon>modelTexcel.tt</DependentUpon>
     </Compile>
@@ -403,8 +389,6 @@
     <Content Include="Views\tblUsers\Details.cshtml" />
     <Content Include="Views\tblUsers\Edit.cshtml" />
     <Content Include="Views\tblUsers\Index.cshtml" />
-    <Content Include="Views\Home\Welcome.cshtml" />
-    <Content Include="Views\Account\SignUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
